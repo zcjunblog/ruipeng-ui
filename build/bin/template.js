@@ -1,16 +1,31 @@
-const path = require('path');
-const templates = path.resolve(process.cwd(), './examples/pages/template');
+/*
+ * @Date: 2022-01-27 17:12:59
+ * @LastEditors: zhaozc
+ * @LastEditTime: 2022-01-28 16:10:30
+ * @FilePath: \ruipeng-ui\build\bin\template.js
+ */
+/**
+ * 监听 /examples/pages/template 目录下的所有模版文件，当模版文件发生改变时自动执行 npm run i18n，
+ * 即执行 i18n.js 脚本，重新生成四种语言的 .vue 文件
+ */
+const path = require('path')
+// 监听目录
+const templates = path.resolve(process.cwd(), './examples/pages/template')
 
-const chokidar = require('chokidar');
-let watcher = chokidar.watch([templates]);
+// 负责监听用到的库
+const chokidar = require('chokidar')
 
-watcher.on('ready', function() {
-  watcher
-    .on('change', function() {
-      exec('npm run i18n');
-    });
-});
+// 监听模板目录
+let watcher = chokidar.watch([templates])
 
+// 当目录下的文件发生改变时，自动执行 npm run i18n
+watcher.on('ready', function () {
+    watcher.on('change', function () {
+        exec('npm run i18n')
+    })
+})
+
+// 负责执行命令
 function exec(cmd) {
-  return require('child_process').execSync(cmd).toString().trim();
+    return require('child_process').execSync(cmd).toString().trim()
 }

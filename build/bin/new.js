@@ -1,7 +1,7 @@
 'use strict'
 /**
  * 添加新组件
- *  比如：make new city 城市列表
+ *  比如：make new city 城市列表 （make new comp-name 中文名）
  *  1、在 /packages 目录下新建组件目录，并完成目录结构的创建
  *  2、创建组件文档，/examples/docs/{lang}/city.md
  *  3、创建组件单元测试文件，/test/unit/specs/city.spec.js

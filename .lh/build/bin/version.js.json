@@ -1,0 +1,18 @@
+{
+    "sourceFile": "build/bin/version.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643358558160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643358558160,
+            "name": "Commit-0",
+            "content": "/**\n * 根据 package.json 自动生成 /examples/version.json，用于记录组件库的版本信息\n * 这些版本信息在官网组件页面的头部导航栏会用到\n */\nvar fs = require('fs')\nvar path = require('path')\nvar version = process.env.VERSION || require('../../package.json').version\nvar content = {\n    '1.4.13': '1.4',\n    '2.0.11': '2.0',\n    '2.1.0': '2.1',\n    '2.2.2': '2.2',\n    '2.3.9': '2.3',\n    '2.4.11': '2.4',\n    '2.5.4': '2.5',\n    '2.6.3': '2.6',\n    '2.7.2': '2.7',\n    '2.8.2': '2.8',\n    '2.9.2': '2.9',\n    '2.10.1': '2.10',\n    '2.11.1': '2.11',\n    '2.12.0': '2.12',\n    '2.13.2': '2.13',\n    '2.14.1': '2.14'\n}\nif (!content[version]) content[version] = '2.15'\nfs.writeFileSync(path.resolve(__dirname, '../../examples/versions.json'), JSON.stringify(content))\n"
+        }
+    ]
+}

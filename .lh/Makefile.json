@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Makefile",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1643356483417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644198489557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,4 +43,7 @@\n \t@echo \"   \\033[35mmake dist\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  编译项目，生成目标文件\"\n \t@echo \"   \\033[35mmake deploy\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  部署 demo\"\n \t@echo \"   \\033[35mmake pub\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  发布到 npm 上\"\n \t@echo \"   \\033[35mmake new-lang <lang>\\033[0m\\t\\033[0m\\t\\033[0m\\t---  为网站添加新语言. 例如 'make new-lang fr'\"\n+\t\n+export LC_ALL=zh_CN.GB2312\n+export LANG=zh_CN.GB2312\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644198663011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,7 +43,4 @@\n \t@echo \"   \\033[35mmake dist\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  编译项目，生成目标文件\"\n \t@echo \"   \\033[35mmake deploy\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  部署 demo\"\n \t@echo \"   \\033[35mmake pub\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  发布到 npm 上\"\n \t@echo \"   \\033[35mmake new-lang <lang>\\033[0m\\t\\033[0m\\t\\033[0m\\t---  为网站添加新语言. 例如 'make new-lang fr'\"\n-\t\n-export LC_ALL=zh_CN.GB2312\n-export LANG=zh_CN.GB2312\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644202821552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,12 @@\n test:\n \tnpm run test:watch\n \n help:\n-\t@echo \"   \\033[35mmake\\033[0m \\033[1m命令使用说明\\033[0m\"\n-\t@echo \"   \\033[35mmake install\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  安装依赖\"\n-\t@echo \"   \\033[35mmake new <component-name> [中文名]\\033[0m\\t---  创建新组件 package. 例如 'make new button 按钮'\"\n-\t@echo \"   \\033[35mmake dev\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  开发模式\"\n-\t@echo \"   \\033[35mmake dist\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  编译项目，生成目标文件\"\n-\t@echo \"   \\033[35mmake deploy\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  部署 demo\"\n-\t@echo \"   \\033[35mmake pub\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  发布到 npm 上\"\n-\t@echo \"   \\033[35mmake new-lang <lang>\\033[0m\\t\\033[0m\\t\\033[0m\\t---  为网站添加新语言. 例如 'make new-lang fr'\"\n+\t@echo \"   make 命令使用说明\\033[0m\"\n+\t@echo \"   make install  ---  安装依赖\"\n+\t@echo \"   make new <component-name> [中文名]  ---  创建新组件 package. 例如 'make new button 按钮'\"\n+\t@echo \"   make dev  ---  开发模式\"\n+\t@echo \"   make dist  ---  编译项目，生成目标文件\"\n+\t@echo \"   make deploy  ---  部署 demo\"\n+\t@echo \"   make pub  ---  发布到 npm 上\"\n+\t@echo \"   make new-lang <lang>  ---  为网站添加新语言. 例如 'make new-lang fr'\"\n"
+                }
+            ],
+            "date": 1643356483417,
+            "name": "Commit-0",
+            "content": ".PHONY: dist test\ndefault: help\n\n# build all theme\nbuild-theme:\n\tnpm run build:theme\n\ninstall:\n\tnpm install\n\ninstall-cn:\n\tnpm install --registry=http://registry.npm.taobao.org\n\ndev:\n\tnpm run dev\n\nplay:\n\tnpm run dev:play\n\nnew:\n\tnode build/bin/new.js $(filter-out $@,$(MAKECMDGOALS)) && npm run build:file\n\nnew-lang:\n\tnode build/bin/new-lang.js $(filter-out $@,$(MAKECMDGOALS))\n\ndist: install\n\tnpm run dist\n\ndeploy:\n\t@npm run deploy\n\npub:\n\tnpm run pub\n\ntest:\n\tnpm run test:watch\n\nhelp:\n\t@echo \"   \\033[35mmake\\033[0m \\033[1m命令使用说明\\033[0m\"\n\t@echo \"   \\033[35mmake install\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  安装依赖\"\n\t@echo \"   \\033[35mmake new <component-name> [中文名]\\033[0m\\t---  创建新组件 package. 例如 'make new button 按钮'\"\n\t@echo \"   \\033[35mmake dev\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  开发模式\"\n\t@echo \"   \\033[35mmake dist\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  编译项目，生成目标文件\"\n\t@echo \"   \\033[35mmake deploy\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  部署 demo\"\n\t@echo \"   \\033[35mmake pub\\033[0m\\t\\033[0m\\t\\033[0m\\t\\033[0m\\t---  发布到 npm 上\"\n\t@echo \"   \\033[35mmake new-lang <lang>\\033[0m\\t\\033[0m\\t\\033[0m\\t---  为网站添加新语言. 例如 'make new-lang fr'\"\n"
+        }
+    ]
+}

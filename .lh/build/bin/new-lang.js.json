@@ -1,0 +1,18 @@
+{
+    "sourceFile": "build/bin/new-lang.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643354226274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643354226274,
+            "name": "Commit-0",
+            "content": "'use strict'\n/**\n * 为组件库添加新语言，比如 fr（法语）\n *  分别为涉及到的文件（components.json、page.json、route.json、nav.config.json、docs）设置该语言的相关配置\n *  具体的配置项默认为英语，你只需要在相应的文件中将这些英文配置项翻译为对应的语言即可\n */\n\nconsole.log()\nprocess.on('exit', () => {\n    console.log()\n})\n\nif (!process.argv[2]) {\n    console.error('[language] is required!')\n    process.exit(1)\n}\n\nvar fs = require('fs')\nconst path = require('path')\nconst fileSave = require('file-save')\nconst lang = process.argv[2]\n// const configPath = path.resolve(__dirname, '../../examples/i18n', lang);\n\n// 添加到 components.json\nconst componentFile = require('../../examples/i18n/component.json')\nif (componentFile.some(item => item.lang === lang)) {\n    console.error(`${lang} already exists.`)\n    process.exit(1)\n}\nlet componentNew = Object.assign({}, componentFile.filter(item => item.lang === 'en-US')[0], { lang })\ncomponentFile.push(componentNew)\nfileSave(path.join(__dirname, '../../examples/i18n/component.json')).write(JSON.stringify(componentFile, null, '  '), 'utf8').end('\\n')\n\n// 添加到 page.json\nconst pageFile = require('../../examples/i18n/page.json')\n// 新语言的默认配置为英语，你只需要去 page.json 中将该语言配置中的应为翻译为该语言即可\nlet pageNew = Object.assign({}, pageFile.filter(item => item.lang === 'en-US')[0], { lang })\npageFile.push(pageNew)\nfileSave(path.join(__dirname, '../../examples/i18n/page.json')).write(JSON.stringify(pageFile, null, '  '), 'utf8').end('\\n')\n\n// 添加到 route.json\nconst routeFile = require('../../examples/i18n/route.json')\nrouteFile.push({ lang })\nfileSave(path.join(__dirname, '../../examples/i18n/route.json')).write(JSON.stringify(routeFile, null, '  '), 'utf8').end('\\n')\n\n// 添加到 nav.config.json\nconst navFile = require('../../examples/nav.config.json')\nnavFile[lang] = navFile['en-US']\nfileSave(path.join(__dirname, '../../examples/nav.config.json')).write(JSON.stringify(navFile, null, '  '), 'utf8').end('\\n')\n\n// docs 下新建对应文件夹\ntry {\n    fs.statSync(path.resolve(__dirname, `../../examples/docs/${lang}`))\n} catch (e) {\n    fs.mkdirSync(path.resolve(__dirname, `../../examples/docs/${lang}`))\n}\n\nconsole.log('DONE!')\n"
+        }
+    ]
+}

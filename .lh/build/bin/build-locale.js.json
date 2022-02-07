@@ -1,0 +1,26 @@
+{
+    "sourceFile": "build/bin/build-locale.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1643342207571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643342245094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,10 @@\n+/*\n+ * @Date: 2022-01-27 17:12:59\n+ * @LastEditors: zhaozc\n+ * @LastEditTime: 2022-01-28 11:56:48\n+ * @FilePath: \\ruipeng-ui\\build\\bin\\build-locale.js\n+ */\n /**\n  * 通过 babel 将 ES Module 风格的翻译文件转译成 UMD 风格\n  */\n var fs = require('fs')\n@@ -30,9 +36,9 @@\n         return /\\.js$/.test(file)\n     })\n     .forEach(function (file) {\n         var name = basename(file, '.js')\n-\n+        // 调用转换函数，将转换后的代码写入到 lib/umd/locale 目录下\n         transform(file, name, function (err, result) {\n             if (err) {\n                 console.error(err)\n             } else {\n"
+                },
+                {
+                    "date": 1643342316802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*\n  * @Date: 2022-01-27 17:12:59\n  * @LastEditors: zhaozc\n- * @LastEditTime: 2022-01-28 11:56:48\n+ * @LastEditTime: 2022-01-28 11:58:36\n  * @FilePath: \\ruipeng-ui\\build\\bin\\build-locale.js\n  */\n /**\n  * 通过 babel 将 ES Module 风格的翻译文件转译成 UMD 风格\n@@ -36,8 +36,9 @@\n         return /\\.js$/.test(file)\n     })\n     .forEach(function (file) {\n         var name = basename(file, '.js')\n+\n         // 调用转换函数，将转换后的代码写入到 lib/umd/locale 目录下\n         transform(file, name, function (err, result) {\n             if (err) {\n                 console.error(err)\n"
+                }
+            ],
+            "date": 1643342207571,
+            "name": "Commit-0",
+            "content": "/**\n * 通过 babel 将 ES Module 风格的翻译文件转译成 UMD 风格\n */\nvar fs = require('fs')\nvar save = require('file-save')\nvar resolve = require('path').resolve\nvar basename = require('path').basename\n\n// 翻译文件目录，这些文件用于官网\nvar localePath = resolve(__dirname, '../../src/locale/lang')\n\n// 得到目录下的所有翻译文件\nvar fileList = fs.readdirSync(localePath)\n\n// 转换函数\nvar transform = function (filename, name, cb) {\n    require('babel-core').transformFile(\n        resolve(localePath, filename),\n        {\n            plugins: ['add-module-exports', ['transform-es2015-modules-umd', { loose: true }]],\n            moduleId: name\n        },\n        cb\n    )\n}\n\n// 遍历所有文件\nfileList // 只处理 js 文件，其实目录下不存在非 js 文件\n    .filter(function (file) {\n        return /\\.js$/.test(file)\n    })\n    .forEach(function (file) {\n        var name = basename(file, '.js')\n\n        transform(file, name, function (err, result) {\n            if (err) {\n                console.error(err)\n            } else {\n                var code = result.code\n\n                code = code\n                    .replace(\"define('\", \"define('element/locale/\")\n                    .replace('global.', 'global.ELEMENT.lang = global.ELEMENT.lang || {}; \\n    global.ELEMENT.lang.')\n                save(resolve(__dirname, '../../lib/umd/locale', file)).write(code)\n\n                console.log(file)\n            }\n        })\n    })\n"
+        }
+    ]
+}

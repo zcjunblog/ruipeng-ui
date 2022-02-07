@@ -1,0 +1,22 @@
+{
+    "sourceFile": "build/release.sh",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1643445676506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643445698172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,11 @@\n #!/usr/bin/env sh\n+###\n+ # @Date: 2022-01-27 17:12:59\n+ # @LastEditors: zhaozc\n+ # @LastEditTime: 2022-01-29 16:41:16\n+ # @FilePath: \\ruipeng-ui\\build\\release.sh\n+### \n set -e\n # 合并 dev 分支到 master\n # 编译打包\n # 修改样式包和组件库的版本号\n@@ -47,18 +53,19 @@\n \n   # commit\n   git add -A\n   git commit -m \"[build] $VERSION\"\n-    # 更改组件库的版本信息\n+  # 更改组件库的版本信息\n   npm version $VERSION --message \"[release] $VERSION\"\n \n-  # publish\n+  # publish，将 master 推到远程仓库\n   git push eleme master\n   git push eleme refs/tags/v$VERSION\n   git checkout dev\n   git rebase master\n   git push eleme dev\n \n+  # 发布组件库\n   if [[ $VERSION =~ \"beta\" ]]\n   then\n     npm publish --tag beta\n   else\n"
+                }
+            ],
+            "date": 1643445676506,
+            "name": "Commit-0",
+            "content": "#!/usr/bin/env sh\nset -e\n# 合并 dev 分支到 master\n# 编译打包\n# 修改样式包和组件库的版本号\n# 发布样式包和组件库\n# 提交 master 和 dev 分支到远程仓库\n\n\n# 合并 dev 分支到 master\ngit checkout master\ngit merge dev\n\n\n# 版本选择 cli\nVERSION=`npx select-version-cli`\n\n\n# 是否确认当前版本信息\nread -p \"Releasing $VERSION - are you sure? (y/n)\" -n 1 -r\necho    # (optional) move to a new line\nif [[ $REPLY =~ ^[Yy]$ ]]\nthen\n  echo \"Releasing $VERSION ...\"\n\n  # build，编译打包\n  VERSION=$VERSION npm run dist\n\n  # ssr test\n  node test/ssr/require.test.js            \n\n  # publish theme\n  echo \"Releasing theme-chalk $VERSION ...\"\n  cd packages/theme-chalk\n\n  # 更改主题包的版本信息\n  npm version $VERSION --message \"[release] $VERSION\"\n\n  # 发布主题\n  if [[ $VERSION =~ \"beta\" ]]\n  then\n    npm publish --tag beta\n  else\n    npm publish\n  fi\n  cd ../..\n\n  # commit\n  git add -A\n  git commit -m \"[build] $VERSION\"\n    # 更改组件库的版本信息\n  npm version $VERSION --message \"[release] $VERSION\"\n\n  # publish\n  git push eleme master\n  git push eleme refs/tags/v$VERSION\n  git checkout dev\n  git rebase master\n  git push eleme dev\n\n  if [[ $VERSION =~ \"beta\" ]]\n  then\n    npm publish --tag beta\n  else\n    npm publish\n  fi\nfi\n"
+        }
+    ]
+}

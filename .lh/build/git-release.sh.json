@@ -1,0 +1,18 @@
+{
+    "sourceFile": "build/git-release.sh",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643445445388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643445445388,
+            "name": "Commit-0",
+            "content": "#!/usr/bin/env sh\ngit checkout dev\n\n# 这里主要是和远程的 dev 分支做 diff 然后合并\n\nif test -n \"$(git status --porcelain)\"; then\n  echo 'Unclean working tree. Commit or stash changes first.' >&2;\n  exit 128;\nfi\n\nif ! git fetch --quiet 2>/dev/null; then\n  echo 'There was a problem fetching your branch. Run `git fetch` to see more...' >&2;\n  exit 128;\nfi\n\nif test \"0\" != \"$(git rev-list --count --left-only @'{u}'...HEAD)\"; then\n  echo 'Remote history differ. Please pull changes.' >&2;\n  exit 128;\nfi\n\necho 'No conflicts.' >&2;\n"
+        }
+    ]
+}

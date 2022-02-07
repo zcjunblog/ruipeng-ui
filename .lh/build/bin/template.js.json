@@ -1,0 +1,22 @@
+{
+    "sourceFile": "build/bin/template.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1643357343385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643357430228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,31 @@\n /*\n  * @Date: 2022-01-27 17:12:59\n  * @LastEditors: zhaozc\n- * @LastEditTime: 2022-01-28 16:09:03\n+ * @LastEditTime: 2022-01-28 16:10:30\n  * @FilePath: \\ruipeng-ui\\build\\bin\\template.js\n  */\n /**\n  * 监听 /examples/pages/template 目录下的所有模版文件，当模版文件发生改变时自动执行 npm run i18n，\n  * 即执行 i18n.js 脚本，重新生成四种语言的 .vue 文件\n  */\n const path = require('path')\n+// 监听目录\n const templates = path.resolve(process.cwd(), './examples/pages/template')\n \n+// 负责监听用到的库\n const chokidar = require('chokidar')\n+\n+// 监听模板目录\n let watcher = chokidar.watch([templates])\n \n+// 当目录下的文件发生改变时，自动执行 npm run i18n\n watcher.on('ready', function () {\n     watcher.on('change', function () {\n         exec('npm run i18n')\n     })\n })\n \n+// 负责执行命令\n function exec(cmd) {\n     return require('child_process').execSync(cmd).toString().trim()\n }\n"
+                }
+            ],
+            "date": 1643357343385,
+            "name": "Commit-0",
+            "content": "/**\n * 监听 /examples/pages/template 目录下的所有模版文件，当模版文件发生改变时自动执行 npm run i18n，\n * 即执行 i18n.js 脚本，重新生成四种语言的 .vue 文件\n */\nconst path = require('path')\nconst templates = path.resolve(process.cwd(), './examples/pages/template')\n\nconst chokidar = require('chokidar')\nlet watcher = chokidar.watch([templates])\n\nwatcher.on('ready', function () {\n    watcher.on('change', function () {\n        exec('npm run i18n')\n    })\n})\n\nfunction exec(cmd) {\n    return require('child_process').execSync(cmd).toString().trim()\n}\n"
+        }
+    ]
+}

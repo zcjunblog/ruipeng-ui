@@ -1,0 +1,26 @@
+{
+    "sourceFile": "build/bin/i18n.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1643344705886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643349928726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*\n  * @Date: 2022-01-27 17:12:59\n  * @LastEditors: zhaozc\n- * @LastEditTime: 2022-01-28 12:38:26\n+ * @LastEditTime: 2022-01-28 14:05:28\n  * @FilePath: \\ruipeng-ui\\build\\bin\\i18n.js\n  */\n 'use strict'\n \n@@ -22,9 +22,11 @@\n     }\n \n     // 遍历所有的页面，根据 page.tpl 自动生成对应语言的 .vue 文件 zhaozc: ? 直接生成了不同语言的vue文件 上面的.lang有什么用\n     Object.keys(lang.pages).forEach(page => {\n+        // 比如 /examples/pages/template/index.tpl\n         var templatePath = path.resolve(__dirname, `../../examples/pages/template/${page}.tpl`)\n+        // /examples/pages/zh-CN/index.vue\n         var outputPath = path.resolve(__dirname, `../../examples/pages/${lang.lang}/${page}.vue`)\n         var content = fs.readFileSync(templatePath, 'utf8')\n         var pairs = lang.pages[page]\n \n"
+                },
+                {
+                    "date": 1643351156159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /*\n  * @Date: 2022-01-27 17:12:59\n  * @LastEditors: zhaozc\n- * @LastEditTime: 2022-01-28 14:05:28\n+ * @LastEditTime: 2022-01-28 14:25:56\n  * @FilePath: \\ruipeng-ui\\build\\bin\\i18n.js\n  */\n 'use strict'\n \n@@ -13,27 +13,29 @@\n var langConfig = require('../../examples/i18n/page.json')\n \n // 遍历所有语言\n langConfig.forEach(lang => {\n-    // 创建 /examples/pages/{lang}，比如: /examples/pages/zh-CN TODO: zhaozc: ? 并未找到zh-CN.lang和其他语言包文件\n+    // 创建 /examples/pages/{lang}，比如: /examples/pages/zh-CN TODO: zhaozc: ? 并未找到zh-CN和其他语言包文件夹\n     try {\n         fs.statSync(path.resolve(__dirname, `../../examples/pages/${lang.lang}`))\n     } catch (e) {\n         fs.mkdirSync(path.resolve(__dirname, `../../examples/pages/${lang.lang}`))\n     }\n \n     // 遍历所有的页面，根据 page.tpl 自动生成对应语言的 .vue 文件 zhaozc: ? 直接生成了不同语言的vue文件 上面的.lang有什么用\n     Object.keys(lang.pages).forEach(page => {\n-        // 比如 /examples/pages/template/index.tpl\n+        // 以下以 /examples/pages/template/index.tpl 为例\n         var templatePath = path.resolve(__dirname, `../../examples/pages/template/${page}.tpl`)\n         // /examples/pages/zh-CN/index.vue\n         var outputPath = path.resolve(__dirname, `../../examples/pages/${lang.lang}/${page}.vue`)\n+        // 读取模版文件\n         var content = fs.readFileSync(templatePath, 'utf8')\n+        // 读取 index页面的语言配置\n         var pairs = lang.pages[page]\n-\n+        // 遍历这些键值对，通过正则匹配的方式替换掉模版中对应的 key\n         Object.keys(pairs).forEach(key => {\n             content = content.replace(new RegExp(`<%=\\\\s*${key}\\\\s*>`, 'g'), pairs[key])\n         })\n-\n+        // 将替换后的内容写入 vue 文件\n         fs.writeFileSync(outputPath, content)\n     })\n })\n"
+                }
+            ],
+            "date": 1643344705886,
+            "name": "Commit-0",
+            "content": "'use strict'\n\nvar fs = require('fs')\nvar path = require('path')\n\n// 官网页面翻译配置，内置了四种语言\nvar langConfig = require('../../examples/i18n/page.json')\n\n// 遍历所有语言\nlangConfig.forEach(lang => {\n    // 创建 /examples/pages/{lang}，比如: /examples/pages/zh-CN TODO: zhaozc: ? 并未找到zh-CN.lang和其他语言包文件\n    try {\n        fs.statSync(path.resolve(__dirname, `../../examples/pages/${lang.lang}`))\n    } catch (e) {\n        fs.mkdirSync(path.resolve(__dirname, `../../examples/pages/${lang.lang}`))\n    }\n\n    // 遍历所有的页面，根据 page.tpl 自动生成对应语言的 .vue 文件 zhaozc: ? 直接生成了不同语言的vue文件 上面的.lang有什么用\n    Object.keys(lang.pages).forEach(page => {\n        var templatePath = path.resolve(__dirname, `../../examples/pages/template/${page}.tpl`)\n        var outputPath = path.resolve(__dirname, `../../examples/pages/${lang.lang}/${page}.vue`)\n        var content = fs.readFileSync(templatePath, 'utf8')\n        var pairs = lang.pages[page]\n\n        Object.keys(pairs).forEach(key => {\n            content = content.replace(new RegExp(`<%=\\\\s*${key}\\\\s*>`, 'g'), pairs[key])\n        })\n\n        fs.writeFileSync(outputPath, content)\n    })\n})\n"
+        }
+    ]
+}

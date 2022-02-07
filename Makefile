@@ -36,7 +36,7 @@ test:
 	npm run test:watch
 
 help:
-	@echo "   make 命令使用说明\033[0m"
+	@echo "   make 命令使用说明"
 	@echo "   make install  ---  安装依赖"
 	@echo "   make new <component-name> [中文名]  ---  创建新组件 package. 例如 'make new button 按钮'"
 	@echo "   make dev  ---  开发模式"

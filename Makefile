@@ -36,11 +36,11 @@ test:
 	npm run test:watch
 
 help:
-	@echo "   \033[35mmake\033[0m \033[1m命令使用说明\033[0m"
-	@echo "   \033[35mmake install\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  安装依赖"
-	@echo "   \033[35mmake new <component-name> [中文名]\033[0m\t---  创建新组件 package. 例如 'make new button 按钮'"
-	@echo "   \033[35mmake dev\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  开发模式"
-	@echo "   \033[35mmake dist\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  编译项目，生成目标文件"
-	@echo "   \033[35mmake deploy\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  部署 demo"
-	@echo "   \033[35mmake pub\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  发布到 npm 上"
-	@echo "   \033[35mmake new-lang <lang>\033[0m\t\033[0m\t\033[0m\t---  为网站添加新语言. 例如 'make new-lang fr'"
+	@echo "   make 命令使用说明\033[0m"
+	@echo "   make install  ---  安装依赖"
+	@echo "   make new <component-name> [中文名]  ---  创建新组件 package. 例如 'make new button 按钮'"
+	@echo "   make dev  ---  开发模式"
+	@echo "   make dist  ---  编译项目，生成目标文件"
+	@echo "   make deploy  ---  部署 demo"
+	@echo "   make pub  ---  发布到 npm 上"
+	@echo "   make new-lang <lang>  ---  为网站添加新语言. 例如 'make new-lang fr'"

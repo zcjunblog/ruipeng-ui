@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Menu Item Component */
-export declare class RpMenuItem extends RpementUIComponent {
+export declare class RpMenuItem extends RuipengUIComponent {
   /** Unique identification */
   index: string
 

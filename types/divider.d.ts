@@ -1,9 +1,9 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type ContentPosition = 'left' | 'center' | 'right'
 
 /** Divider Component */
-export declare class RpDivider extends RpementUIComponent {
+export declare class RpDivider extends RuipengUIComponent {
   /** enable vertical divider */
   vertical: boolean
 

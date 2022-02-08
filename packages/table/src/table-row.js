@@ -78,7 +78,7 @@ export default {
                             on-mouseenter={$event => this.handleCellMouseEnter($event, row)}
                             on-mouseleave={this.handleCellMouseLeave}
                         >
-                            {column.renderCell.call(this._renderProxy, this.$createRpement, data, columnsHidden[cellIndex])}
+                            {column.renderCell.call(this._renderProxy, this.$createElement, data, columnsHidden[cellIndex])}
                         </td>
                     )
                 })}

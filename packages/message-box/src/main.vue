@@ -204,7 +204,7 @@ export default {
                 const inputPattern = this.inputPattern
                 if (inputPattern && !inputPattern.test(this.inputValue || '')) {
                     this.editorErrorMessage = this.inputErrorMessage || t('el.messagebox.error')
-                    addClass(this.getInputRpement(), 'invalid')
+                    addClass(this.getInputElement(), 'invalid')
                     return false
                 }
                 const inputValidator = this.inputValidator
@@ -212,18 +212,18 @@ export default {
                     const validateResult = inputValidator(this.inputValue)
                     if (validateResult === false) {
                         this.editorErrorMessage = this.inputErrorMessage || t('el.messagebox.error')
-                        addClass(this.getInputRpement(), 'invalid')
+                        addClass(this.getInputElement(), 'invalid')
                         return false
                     }
                     if (typeof validateResult === 'string') {
                         this.editorErrorMessage = validateResult
-                        addClass(this.getInputRpement(), 'invalid')
+                        addClass(this.getInputElement(), 'invalid')
                         return false
                     }
                 }
             }
             this.editorErrorMessage = ''
-            removeClass(this.getInputRpement(), 'invalid')
+            removeClass(this.getInputElement(), 'invalid')
             return true
         },
         getFirstFocus() {
@@ -231,7 +231,7 @@ export default {
             const title = this.$el.querySelector('.rp-message-box__btns .rp-message-box__title')
             return btn || title
         },
-        getInputRpement() {
+        getInputElement() {
             const inputRefs = this.$refs.input.$refs
             return inputRefs.input || inputRefs.textarea
         },
@@ -260,7 +260,7 @@ export default {
                         this.$refs.confirm.$el.focus()
                     })
                 }
-                this.focusAfterClosed = document.activeRpement
+                this.focusAfterClosed = document.activeElement
                 messageBox = new Dialog(this.$el, this.focusAfterClosed, this.getFirstFocus())
             }
 
@@ -269,12 +269,12 @@ export default {
             if (val) {
                 setTimeout(() => {
                     if (this.$refs.input && this.$refs.input.$el) {
-                        this.getInputRpement().focus()
+                        this.getInputElement().focus()
                     }
                 }, 500)
             } else {
                 this.editorErrorMessage = ''
-                removeClass(this.getInputRpement(), 'invalid')
+                removeClass(this.getInputElement(), 'invalid')
             }
         }
     },

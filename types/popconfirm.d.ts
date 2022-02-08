@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 import { RpPopover } from './popover'
 
 /** Popconfirm Component */

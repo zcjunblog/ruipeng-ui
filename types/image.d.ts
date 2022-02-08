@@ -1,5 +1,5 @@
 import { VNode } from 'vue'
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type ObjectFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
 
@@ -14,7 +14,7 @@ export interface ImageSlots {
 }
 
 /** Image Component */
-export declare class RpImage extends RpementUIComponent {
+export declare class RpImage extends RuipengUIComponent {
   /** Image source */
   src: string
 
@@ -25,7 +25,7 @@ export declare class RpImage extends RpementUIComponent {
   lazy: boolean
 
   /** Scroll container that to add scroll listener when using lazy load */
-  scrollContainer: string | HTMLRpement
+  scrollContainer: string | HTMLElement
 
   /** Native 'alt' attribute */
   alt: string

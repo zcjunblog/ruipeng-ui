@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Checkbox Button Component */
-export declare class RpCheckboxButton extends RpementUIComponent {
+export declare class RpCheckboxButton extends RuipengUIComponent {
   /** Value of the checkbox when used inside a checkbox-group */
   label: string | number | boolean
 

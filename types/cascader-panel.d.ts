@@ -1,5 +1,5 @@
-import { VNode, CreateRpement } from 'vue';
-import { RpementUIComponent } from './component'
+import { VNode, CreateElement } from 'vue';
+import { RuipengUIComponent } from './component'
 
 /** Trigger mode of expanding current item */
 export type ExpandTrigger = 'click' | 'hover'
@@ -52,7 +52,7 @@ export interface CascaderPanelSlots {
 }
 
 /** CascaderPanel Component */
-export declare class RpCascaderPanel<V = any, D = CascaderOption> extends RpementUIComponent {
+export declare class RpCascaderPanel<V = any, D = CascaderOption> extends RuipengUIComponent {
   /** Selected value */
   value: V | V[]
 
@@ -66,7 +66,7 @@ export declare class RpCascaderPanel<V = any, D = CascaderOption> extends Rpemen
   border: boolean
 
   /** Render function of custom label content */
-  renderLabel: (h: CreateRpement, context: { node: CascaderNode<V, D>; data: D }) => VNode
+  renderLabel: (h: CreateElement, context: { node: CascaderNode<V, D>; data: D }) => VNode
 
   $slots: CascaderPanelSlots
 }

@@ -1,4 +1,4 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 /** Button type */
 export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text'
@@ -7,9 +7,9 @@ export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info' |
 export type ButtonNativeType = 'button' | 'submit' | 'reset' | 'menu'
 
 /** Button Component */
-export declare class RpButton extends RpementUIComponent {
+export declare class RpButton extends RuipengUIComponent {
   /** Button size */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Button type */
   type: ButtonType
@@ -26,7 +26,7 @@ export declare class RpButton extends RpementUIComponent {
   /** Disable the button */
   disabled: boolean
 
-  /** Button icon, accepts an icon name of Rpement icon component */
+  /** Button icon, accepts an icon name of Ruipeng icon component */
   icon: string
 
   /** Same as native button's autofocus */

@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Pagination Component */
-export declare class RpPagination extends RpementUIComponent {
+export declare class RpPagination extends RuipengUIComponent {
   /** Whether to use small pagination */
   small: boolean
 
@@ -21,7 +21,7 @@ export declare class RpPagination extends RpementUIComponent {
   currentPage: number
 
   /**
-   * Layout of Pagination. Rpements separated with a comma.
+   * Layout of Pagination. Elements separated with a comma.
    * Accepted values: `sizes`, `prev`, `pager`, `next`, `jumper`, `->`, `total`, `slot`
    */
   layout: string

@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Dropdown Select Option Group Component */
-export declare class RpOptionGroup extends RpementUIComponent {
+export declare class RpOptionGroup extends RuipengUIComponent {
   /** Name of the group */
   label: string
 

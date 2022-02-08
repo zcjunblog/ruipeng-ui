@@ -1,5 +1,5 @@
-import { CreateRpement, VNode } from 'vue';
-import { RpementUIComponent } from './component';
+import { CreateElement, VNode } from 'vue';
+import { RuipengUIComponent } from './component';
 
 export interface TreeData {
   id?: any;
@@ -45,7 +45,7 @@ export interface TreeStore<K, D> {
 }
 
 /** Tree Component */
-export declare class RpTree<K, D extends TreeData> extends RpementUIComponent {
+export declare class RpTree<K, D extends TreeData> extends RuipengUIComponent {
   /** TreeStore */
   store: TreeStore<K, D>;
 
@@ -69,7 +69,7 @@ export declare class RpTree<K, D extends TreeData> extends RpementUIComponent {
    *
    * @param h The render function
    */
-  renderContent: (h: CreateRpement, context: { node: TreeNode<K, D>; data: D; store: TreeStore<K, D> }) => VNode;
+  renderContent: (h: CreateElement, context: { node: TreeNode<K, D>; data: D; store: TreeStore<K, D> }) => VNode;
 
   /** Whether current node is highlighted */
   highlightCurrent: boolean;

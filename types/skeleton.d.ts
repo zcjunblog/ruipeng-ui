@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 import { VNode } from 'vue'
 
 interface RpSkeletonSlots {
@@ -12,7 +12,7 @@ interface RpSkeletonSlots {
 }
 
 /** When loading data, and you need a rich experience for visual and interactions for your end users */
-export declare class RpSkeleton extends RpementUIComponent {
+export declare class RpSkeleton extends RuipengUIComponent {
   /** whether showing the animation; default: false */
   animated: boolean
 

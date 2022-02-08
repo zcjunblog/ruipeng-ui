@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Displays the location of the current page, making it easier to browser back */
-export declare class RpBreadcrumb extends RpementUIComponent {
+export declare class RpBreadcrumb extends RuipengUIComponent {
   /** Separator character */
   separator: string
 

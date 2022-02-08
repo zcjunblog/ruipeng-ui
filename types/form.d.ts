@@ -1,4 +1,4 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 export type FormItemLabelPosition = 'left' | 'right' | 'top'
 
@@ -22,7 +22,7 @@ export interface ValidateFieldCallback {
 }
 
 /** Form Component */
-export declare class RpForm extends RpementUIComponent {
+export declare class RpForm extends RuipengUIComponent {
   /** Data of form component */
   model: object
 
@@ -57,7 +57,7 @@ export declare class RpForm extends RpementUIComponent {
   validateOnRuleChange: boolean
 
   /** Controls the size of components in this form */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /**
    * Validate the whole form

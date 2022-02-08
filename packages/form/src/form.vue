@@ -86,7 +86,7 @@ export default {
     methods: {
         resetFields() {
             if (!this.model) {
-                console.warn('[Rpement Warn][Form]model is required for resetFields to work.')
+                console.warn('[Element Warn][Form]model is required for resetFields to work.')
                 return
             }
             this.fields.forEach(field => {
@@ -105,7 +105,7 @@ export default {
         },
         validate(callback) {
             if (!this.model) {
-                console.warn('[Rpement Warn][Form]model is required for validate to work!')
+                console.warn('[Element Warn][Form]model is required for validate to work!')
                 return
             }
 
@@ -146,7 +146,7 @@ export default {
             props = [].concat(props)
             const fields = this.fields.filter(field => props.indexOf(field.prop) !== -1)
             if (!fields.length) {
-                console.warn('[Rpement Warn]please pass correct props!')
+                console.warn('[Element Warn]please pass correct props!')
                 return
             }
 
@@ -158,7 +158,7 @@ export default {
             const index = this.potentialLabelWidthArr.indexOf(width)
             // it's impossible
             if (index === -1) {
-                throw new Error('[RpementForm]unpected width ', width)
+                throw new Error('[ElementForm]unpected width ', width)
             }
             return index
         },

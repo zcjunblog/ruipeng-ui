@@ -28,7 +28,7 @@ loadingDirective.install = Vue => {
                             el.maskStyle[property] =
                                 el.getBoundingClientRect()[property] +
                                 document.body[scroll] +
-                                document.documentRpement[scroll] -
+                                document.documentElement[scroll] -
                                 parseInt(getStyle(document.body, `margin-${property}`), 10) +
                                 'px'
                         })
@@ -98,7 +98,7 @@ loadingDirective.install = Vue => {
             const customClassExr = el.getAttribute('ruipeng-loading-custom-class')
             const vm = vnode.context
             const mask = new Mask({
-                el: document.createRpement('div'),
+                el: document.createElement('div'),
                 data: {
                     text: (vm && vm[textExr]) || textExr,
                     spinner: (vm && vm[spinnerExr]) || spinnerExr,

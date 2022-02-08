@@ -323,7 +323,7 @@ export default {
                 filterPanel.table = table
                 filterPanel.cell = cell
                 filterPanel.column = column
-                !this.$isServer && filterPanel.$mount(document.createRpement('div'))
+                !this.$isServer && filterPanel.$mount(document.createElement('div'))
             }
 
             setTimeout(() => {

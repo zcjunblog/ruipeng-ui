@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Switch Component */
-export declare class RpSwitch extends RpementUIComponent {
+export declare class RpSwitch extends RuipengUIComponent {
   /** Whether Switch is on */
   value: boolean
 

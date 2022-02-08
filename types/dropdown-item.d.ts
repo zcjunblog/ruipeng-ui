@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Toggleable menu for displaying lists of links and actions. */
-export declare class RpDropdownItem extends RpementUIComponent {
+export declare class RpDropdownItem extends RuipengUIComponent {
   /** A command to be dispatched to Dropdown's command callback */
   command: string | number | object
 

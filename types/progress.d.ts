@@ -1,10 +1,10 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type ProgressType = 'line' | 'circle'
 export type ProgressStatus = 'success' | 'exception'
 
 /** Progress Component */
-export declare class RpProgress extends RpementUIComponent {
+export declare class RpProgress extends RuipengUIComponent {
   /** Percentage, required */
   percentage: number
 

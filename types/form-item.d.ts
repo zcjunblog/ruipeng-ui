@@ -1,7 +1,7 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 /** FormItem Component */
-export declare class RpFormItem extends RpementUIComponent {
+export declare class RpFormItem extends RuipengUIComponent {
   /** A key of `model` of the enclosing `el-form` component */
   prop: string
 
@@ -27,7 +27,7 @@ export declare class RpFormItem extends RpementUIComponent {
   inlineMessage: boolean
 
   /** Controls the size of components in this form */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Reset current field and remove validation result */
   resetField (): void

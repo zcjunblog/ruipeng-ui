@@ -49,7 +49,7 @@ Vue.component('rp-step', RpStep)
 | ----------- | ---------- | ------------------------------------------------------------------- | ------ | ------ |
 | title       | 标题       | string                                                              | —      | —      |
 | description | 描述性文字 | string                                                              | —      | —      |
-| icon        | 图标       | Rpement Icon 提供的图标，如果要使用自定义图标可以通过 slot 方式写入 | string | —      |
+| icon        | 图标       | Element Icon 提供的图标，如果要使用自定义图标可以通过 slot 方式写入 | string | —      |
 
 ### Step Slot
 

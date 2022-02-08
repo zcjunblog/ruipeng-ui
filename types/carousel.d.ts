@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type CarouselIndicatorTrigger = 'hover' | 'click'
 export type CarouselIndicatorPosition = 'outside' | 'none'
@@ -7,7 +7,7 @@ export type CarouselType = 'card'
 export type CarouselDirection = 'horizontal' | 'vertical'
 
 /** Loop a series of images or texts in a limited space */
-export declare class RpCarousel extends RpementUIComponent {
+export declare class RpCarousel extends RuipengUIComponent {
   /** Height of the carousel */
   height: number
 

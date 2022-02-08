@@ -1,4 +1,4 @@
-import { RpementUIComponent, RpementUIComponentSize, RpementUIHorizontalAlignment } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize, RuipengUIHorizontalAlignment } from './component'
 
 export type DatePickerType = 'year' | 'month' | 'date' | 'datetime' | 'week' | 'datetimerange' | 'daterange' | 'dates'
 export type FirstDayOfWeek = 1 | 2 | 3 | 4 | 5 | 6 | 7
@@ -62,7 +62,7 @@ export interface DatePickerOptions {
 }
 
 /** DatePicker Component */
-export declare class RpDatePicker extends RpementUIComponent {
+export declare class RpDatePicker extends RuipengUIComponent {
   /** The value of the date picker */
   value: Date | string | Date[] | string[]
 
@@ -73,7 +73,7 @@ export declare class RpDatePicker extends RpementUIComponent {
   disabled: boolean
 
   /** Size of Input */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Whether the input is editable */
   editable: boolean
@@ -97,7 +97,7 @@ export declare class RpDatePicker extends RpementUIComponent {
   format: string
 
   /** Alignment */
-  align: RpementUIHorizontalAlignment
+  align: RuipengUIHorizontalAlignment
 
   /** Custom class name for DatePicker's dropdown */
   popperClass: string

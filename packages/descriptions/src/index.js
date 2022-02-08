@@ -83,7 +83,7 @@ export default {
             const children = vnode.children || componentOptions.children || []
             const slots = {}
             children.forEach(child => {
-                if (!this.isEmptyRpement(child)) {
+                if (!this.isEmptyElement(child)) {
                     const name = (child.data && child.data.slot) || 'default'
                     slots[name] = slots[name] || []
                     if (child.tag === 'template') {
@@ -95,7 +95,7 @@ export default {
             })
             return { ...slots }
         },
-        isEmptyRpement(c) {
+        isEmptyElement(c) {
             return !(c.tag || (c.text && c.text.trim() !== ''))
         },
         filledNode(node, span, count, isLast = false) {

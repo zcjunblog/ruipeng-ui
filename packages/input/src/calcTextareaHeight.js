@@ -28,8 +28,8 @@ const CONTEXT_STYLE = [
     'box-sizing'
 ]
 
-function calculateNodeStyling(targetRpement) {
-    const style = window.getComputedStyle(targetRpement)
+function calculateNodeStyling(targetElement) {
+    const style = window.getComputedStyle(targetElement)
 
     const boxSizing = style.getPropertyValue('box-sizing')
 
@@ -42,16 +42,16 @@ function calculateNodeStyling(targetRpement) {
     return { contextStyle, paddingSize, borderSize, boxSizing }
 }
 
-export default function calcTextareaHeight(targetRpement, minRows = 1, maxRows = null) {
+export default function calcTextareaHeight(targetElement, minRows = 1, maxRows = null) {
     if (!hiddenTextarea) {
-        hiddenTextarea = document.createRpement('textarea')
+        hiddenTextarea = document.createElement('textarea')
         document.body.appendChild(hiddenTextarea)
     }
 
-    let { paddingSize, borderSize, boxSizing, contextStyle } = calculateNodeStyling(targetRpement)
+    let { paddingSize, borderSize, boxSizing, contextStyle } = calculateNodeStyling(targetElement)
 
     hiddenTextarea.setAttribute('style', `${contextStyle};${HIDDEN_STYLE}`)
-    hiddenTextarea.value = targetRpement.value || targetRpement.placeholder || ''
+    hiddenTextarea.value = targetElement.value || targetElement.placeholder || ''
 
     let height = hiddenTextarea.scrollHeight
     const result = {}

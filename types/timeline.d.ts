@@ -1,6 +1,6 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Timeline Component */
-export declare class RpTimeline extends RpementUIComponent {
+export declare class RpTimeline extends RuipengUIComponent {
   reverse: boolean
 }

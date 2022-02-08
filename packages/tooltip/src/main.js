@@ -100,13 +100,13 @@ export default {
             )
         }
 
-        const firstRpement = this.getFirstRpement()
-        if (!firstRpement) return null
+        const firstElement = this.getFirstElement()
+        if (!firstElement) return null
 
-        const data = (firstRpement.data = firstRpement.data || {})
+        const data = (firstElement.data = firstElement.data || {})
         data.staticClass = this.addTooltipClass(data.staticClass)
 
-        return firstRpement
+        return firstElement
     },
 
     mounted() {
@@ -214,7 +214,7 @@ export default {
             this.expectedState = expectedState
         },
 
-        getFirstRpement() {
+        getFirstElement() {
             const slots = this.$slots.default
             if (!Array.isArray(slots)) return null
             let element = null

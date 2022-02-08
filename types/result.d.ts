@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 import { VNode } from 'vue'
 
 interface RpResultSlots {
@@ -18,7 +18,7 @@ interface RpResultSlots {
 }
 
 /** Used to give feedback on the result of user's operation or access exception. **/
-export declare class RpResult extends RpementUIComponent {
+export declare class RpResult extends RuipengUIComponent {
 
   /* title */
   title: string

@@ -372,7 +372,7 @@ export default {
                 const renderExpanded = this.table.renderExpanded
                 const tr = this.rowRender(row, $index)
                 if (!renderExpanded) {
-                    console.error('[Rpement Error]renderExpanded is required.')
+                    console.error('[Element Error]renderExpanded is required.')
                     return tr
                 }
                 // 使用二维数组，避免修改 $index
@@ -381,7 +381,7 @@ export default {
                         tr,
                         <tr key={'expanded-row__' + tr.key}>
                             <td colspan={this.columnsCount} class="rp-table__cell rp-table__expanded-cell">
-                                {renderExpanded(this.$createRpement, { row, $index, store: this.store })}
+                                {renderExpanded(this.$createElement, { row, $index, store: this.store })}
                             </td>
                         </tr>
                     ]

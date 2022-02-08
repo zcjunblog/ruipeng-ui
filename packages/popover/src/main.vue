@@ -121,7 +121,7 @@ export default {
             on(popper, 'mouseleave', this.handleMouseLeave)
         } else if (this.trigger === 'focus') {
             if (this.tabindex < 0) {
-                console.warn('[Rpement Warn][Popover]a negative taindex means that the element cannot be focused by tab key')
+                console.warn('[Element Warn][Popover]a negative taindex means that the element cannot be focused by tab key')
             }
             if (reference.querySelector('input, textarea')) {
                 on(reference, 'focusin', this.doShow)

@@ -2,7 +2,7 @@
     <div class="rp-result">
         <div class="rp-result__icon">
             <slot name="icon">
-                <component :is="iconRpement" :class="iconRpement" />
+                <component :is="iconElement" :class="iconElement" />
             </slot>
         </div>
         <div v-if="title || $slots.title" class="rp-result__title">
@@ -56,7 +56,7 @@ export default {
         }
     },
     computed: {
-        iconRpement() {
+        iconElement() {
             const icon = this.icon
             return icon && IconMap[icon] ? IconMap[icon] : 'icon-info'
         }

@@ -1,10 +1,10 @@
 import throttle from 'throttle-debounce/debounce'
-import { isHtmlRpement, isFunction, isUndefined, isDefined } from 'ruipeng-ui/src/utils/types'
+import { isHtmlElement, isFunction, isUndefined, isDefined } from 'ruipeng-ui/src/utils/types'
 import { getScrollContainer } from 'ruipeng-ui/src/utils/dom'
 
 const getStyleComputedProperty = (element, property) => {
     if (element === window) {
-        element = document.documentRpement
+        element = document.documentElement
     }
 
     if (element.nodeType !== 1) {
@@ -20,7 +20,7 @@ const entries = obj => {
 }
 
 const getPositionSize = (el, prop) => {
-    return el === window || el === document ? document.documentRpement[prop] : el[prop]
+    return el === window || el === document ? document.documentElement[prop] : el[prop]
 }
 
 const getOffsetHeight = el => {
@@ -52,7 +52,7 @@ const attributes = {
 }
 
 const getScrollOptions = (el, vm) => {
-    if (!isHtmlRpement(el)) return {}
+    if (!isHtmlElement(el)) return {}
 
     return entries(attributes).reduce((map, [key, option]) => {
         const { type, default: defaultValue } = option
@@ -74,7 +74,7 @@ const getScrollOptions = (el, vm) => {
     }, {})
 }
 
-const getRpementTop = el => el.getBoundingClientRect().top
+const getElementTop = el => el.getBoundingClientRect().top
 
 const handleScroll = function(cb) {
     const { el, vm, container, observer } = this[scope]
@@ -92,7 +92,7 @@ const handleScroll = function(cb) {
         const scrollBottom = container.scrollTop + getClientHeight(container)
         shouldTrigger = container.scrollHeight - scrollBottom <= distance
     } else {
-        const heightBelowTop = getOffsetHeight(el) + getRpementTop(el) - getRpementTop(container)
+        const heightBelowTop = getOffsetHeight(el) + getElementTop(el) - getElementTop(container)
         const offsetHeight = getOffsetHeight(container)
         const borderBottom = Number.parseFloat(getStyleComputedProperty(container, 'borderBottomWidth'))
         shouldTrigger = heightBelowTop - offsetHeight + borderBottom <= distance

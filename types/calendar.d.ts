@@ -1,9 +1,9 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type DateType = Date | String | Number
 
 /** Calendar Component */
-export declare class RpCalendar extends RpementUIComponent {
+export declare class RpCalendar extends RuipengUIComponent {
   /** Binding value */
   value: DateType
 

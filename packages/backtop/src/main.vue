@@ -67,7 +67,7 @@ export default {
     methods: {
         init() {
             this.container = document
-            this.el = document.documentRpement
+            this.el = document.documentElement
             if (this.target) {
                 this.el = document.querySelector(this.target)
                 if (!this.el) {

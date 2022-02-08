@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 import { VNode } from 'vue'
 
 interface RpDescriptionsSlots {
@@ -12,7 +12,7 @@ interface RpDescriptionsSlots {
 }
 
 /** Display multiple fields in list form. **/
-export declare class RpDescriptions extends RpementUIComponent {
+export declare class RpDescriptions extends RuipengUIComponent {
 
   /* with or without border */
   border: boolean

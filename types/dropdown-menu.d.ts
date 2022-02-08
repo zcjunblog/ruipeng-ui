@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Dropdown Menu Component */
-export declare class RpDropdownMenu extends RpementUIComponent {}
+export declare class RpDropdownMenu extends RuipengUIComponent {}

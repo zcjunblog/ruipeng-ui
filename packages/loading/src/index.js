@@ -51,7 +51,7 @@ const addStyle = (options, parent, instance) => {
         ;['top', 'left'].forEach(property => {
             let scroll = property === 'top' ? 'scrollTop' : 'scrollLeft'
             maskStyle[property] =
-                options.target.getBoundingClientRect()[property] + document.body[scroll] + document.documentRpement[scroll] + 'px'
+                options.target.getBoundingClientRect()[property] + document.body[scroll] + document.documentElement[scroll] + 'px'
         })
         ;['height', 'width'].forEach(property => {
             maskStyle[property] = options.target.getBoundingClientRect()[property] + 'px'
@@ -82,7 +82,7 @@ const Loading = (options = {}) => {
 
     let parent = options.body ? document.body : options.target
     let instance = new LoadingConstructor({
-        el: document.createRpement('div'),
+        el: document.createElement('div'),
         data: options
     })
 

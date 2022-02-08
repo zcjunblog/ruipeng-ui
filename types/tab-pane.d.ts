@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Tab Pane Component */
-export declare class RpTabPane extends RpementUIComponent {
+export declare class RpTabPane extends RuipengUIComponent {
   /** Title of the tab */
   label: string
 

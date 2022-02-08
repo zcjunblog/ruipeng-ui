@@ -1,10 +1,10 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Button type */
 export type LinkType = 'primary' | 'success' | 'warning' | 'danger' | 'info' 
 
 /** Link Component */
-export declare class RpLink extends RpementUIComponent {
+export declare class RpLink extends RuipengUIComponent {
   /** Link type */
   type: LinkType
   
@@ -14,7 +14,7 @@ export declare class RpLink extends RpementUIComponent {
   /** Link underline */
   underline: boolean
 
-  /** Link icon, accepts an icon name of Rpement icon component */
+  /** Link icon, accepts an icon name of Element icon component */
   icon: string
 
   /** Link href */

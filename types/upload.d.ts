@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type ListType = 'text' | 'picture' | 'picture-card'
 export type FileUploadStatus = 'ready' | 'uploading' | 'success' | 'fail'
@@ -40,7 +40,7 @@ export interface HttpRequestOptions {
 }
 
 /** Upload Component */
-export declare class RpUpload extends RpementUIComponent {
+export declare class RpUpload extends RuipengUIComponent {
   /** Request URL (required) */
   action: string
 

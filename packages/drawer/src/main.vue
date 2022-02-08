@@ -119,7 +119,7 @@ export default {
     data() {
         return {
             closed: false,
-            prevActiveRpement: null
+            prevActiveElement: null
         }
     },
     watch: {
@@ -130,7 +130,7 @@ export default {
                 if (this.appendToBody) {
                     document.body.appendChild(this.$el)
                 }
-                this.prevActiveRpement = document.activeRpement
+                this.prevActiveElement = document.activeElement
             } else {
                 if (!this.closed) {
                     this.$emit('close')
@@ -139,8 +139,8 @@ export default {
                     }
                 }
                 this.$nextTick(() => {
-                    if (this.prevActiveRpement) {
-                        this.prevActiveRpement.focus()
+                    if (this.prevActiveElement) {
+                        this.prevActiveElement.focus()
                     }
                 })
             }

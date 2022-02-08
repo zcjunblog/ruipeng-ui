@@ -244,7 +244,7 @@ export default {
             validator(val) {
                 process.env.NODE_ENV !== 'production' &&
                     console.warn(
-                        "[Rpement Warn][Select]'auto-complete' property will be deprecated in next major version. please use 'autocomplete' instead."
+                        "[Element Warn][Select]'auto-complete' property will be deprecated in next major version. please use 'autocomplete' instead."
                     )
                 return true
             }
@@ -408,7 +408,7 @@ export default {
                 this.resetInputHeight()
             }
             let inputs = this.$el.querySelectorAll('input')
-            if ([].indexOf.call(inputs, document.activeRpement) === -1) {
+            if ([].indexOf.call(inputs, document.activeElement) === -1) {
                 this.setSelected()
             }
             if (this.defaultFirstOption && (this.filterable || this.remote) && this.filteredOptionsCount) {

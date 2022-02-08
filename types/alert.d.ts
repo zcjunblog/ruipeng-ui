@@ -4,13 +4,13 @@
  * @LastEditTime: 2022-02-08 17:10:29
  * @FilePath: \ruipeng-ui\types\alert.d.ts
  */
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type AlertType = 'success' | 'warning' | 'info' | 'error'
 export type AlertEffect = 'dark' | 'light'
 
 /** Alert Component */
-export declare class RpAlert extends RpementUIComponent {
+export declare class RpAlert extends RuipengUIComponent {
   /** Title */
   title: string
 

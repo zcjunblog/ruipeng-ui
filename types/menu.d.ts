@@ -1,10 +1,10 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export type MenuDisplayMode = 'horizontal' | 'vertical'
 export type MenuTheme = 'light' | 'dark'
 
 /** Menu that provides navigation for your website */
-export declare class RpMenu extends RpementUIComponent {
+export declare class RpMenu extends RuipengUIComponent {
   /** Menu display mode */
   mode: MenuDisplayMode
 

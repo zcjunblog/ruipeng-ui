@@ -1,4 +1,4 @@
-import { RpementUIComponent, RpementUIComponentSize, RpementUIHorizontalAlignment } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize, RuipengUIHorizontalAlignment } from './component'
 
 export interface TimePickerOptions {
   /**
@@ -13,7 +13,7 @@ export interface TimePickerOptions {
 }
 
 /** TimePicker Component */
-export declare class RpTimePicker extends RpementUIComponent {
+export declare class RpTimePicker extends RuipengUIComponent {
   /** Whether DatePicker is read only */
   readonly: boolean
 
@@ -27,7 +27,7 @@ export declare class RpTimePicker extends RpementUIComponent {
   clearable: boolean
 
   /** Size of Input */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Placeholder */
   placeholder: string
@@ -45,7 +45,7 @@ export declare class RpTimePicker extends RpementUIComponent {
   value: string | Date
 
   /** Alignment */
-  align: RpementUIHorizontalAlignment
+  align: RuipengUIHorizontalAlignment
 
   /** Custom class name for TimePicker's dropdown */
   popperClass: string

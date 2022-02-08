@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Use Collapse to store contents. */
-export declare class RpCollapse extends RpementUIComponent {
+export declare class RpCollapse extends RuipengUIComponent {
   /** Whether to activate accordion mode */
   accordion: boolean
 

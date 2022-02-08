@@ -1,4 +1,4 @@
 export * from './ruipeng-ui'
 
-import * as RpementUI from './ruipeng-ui'
-export default RpementUI
+import * as RuipengUI from './ruipeng-ui'
+export default RuipengUI

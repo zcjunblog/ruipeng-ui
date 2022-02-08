@@ -1,5 +1,5 @@
-import { CreateRpement, VNode } from 'vue'
-import { RpementUIComponent } from './component'
+import { CreateElement, VNode } from 'vue'
+import { RuipengUIComponent } from './component'
 
 export type TransferPanelPosition = 'left' | 'right'
 
@@ -27,11 +27,11 @@ export interface TransferRenderContent {
    * @param h The render function
    * @param option The option data object
    */
-  (h: CreateRpement, option: TransferData): VNode
+  (h: CreateElement, option: TransferData): VNode
 }
 
 /** Transfer Component */
-export declare class RpTransfer extends RpementUIComponent {
+export declare class RpTransfer extends RuipengUIComponent {
   /** Data source */
   data: TransferData[]
 

@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 import { VNode } from 'vue'
 
 interface RpDescriptionsItemSlots {
@@ -12,7 +12,7 @@ interface RpDescriptionsItemSlots {
 }
 
 /** description item. **/
-export declare class RpDescriptionsItem extends RpementUIComponent {
+export declare class RpDescriptionsItem extends RuipengUIComponent {
 
   /* label text */
   label: string

@@ -328,11 +328,11 @@ export default {
 
             const menus = this.$refs.menu || []
             menus.forEach(menu => {
-                const menuRpement = menu.$el
-                if (menuRpement) {
-                    const container = menuRpement.querySelector('.rp-scrollbar__wrap')
+                const menuElement = menu.$el
+                if (menuElement) {
+                    const container = menuElement.querySelector('.rp-scrollbar__wrap')
                     const activeNode =
-                        menuRpement.querySelector('.rp-cascader-node.is-active') || menuRpement.querySelector('.rp-cascader-node.in-active-path')
+                        menuElement.querySelector('.rp-cascader-node.is-active') || menuElement.querySelector('.rp-cascader-node.in-active-path')
                     scrollIntoView(container, activeNode)
                 }
             })

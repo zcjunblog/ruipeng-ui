@@ -1,9 +1,9 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 export type ColorFormat = 'hsl' | 'hsv' | 'hex' | 'rgb'
 
 /** ColorPicker Component */
-export declare class RpColorPicker extends RpementUIComponent {
+export declare class RpColorPicker extends RuipengUIComponent {
   /** Whether to display the alpha slider */
   showAlpha: boolean
 
@@ -11,7 +11,7 @@ export declare class RpColorPicker extends RpementUIComponent {
   disabled: boolean
 
   /** Size of ColorPicker */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Whether to display the alpha slider */
   popperClass: string

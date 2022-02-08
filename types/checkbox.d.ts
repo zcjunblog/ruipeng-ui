@@ -1,7 +1,7 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 /** Checkbox Component */
-export declare class RpCheckbox extends RpementUIComponent {
+export declare class RpCheckbox extends RuipengUIComponent {
   /** The form input value */
   value: string | string[]
 
@@ -21,7 +21,7 @@ export declare class RpCheckbox extends RpementUIComponent {
   border: boolean
 
   /** Size of the Checkbox, only works when border is true */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** If the checkbox is disabled */
   disabled: boolean

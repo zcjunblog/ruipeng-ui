@@ -1,5 +1,5 @@
 import { VNode } from 'vue';
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export interface SliderTooltipFormat {
   /**
@@ -12,7 +12,7 @@ export interface SliderTooltipFormat {
 }
 
 /** Slider Component */
-export declare class RpSlider extends RpementUIComponent {
+export declare class RpSlider extends RuipengUIComponent {
   /** Current value of the slider */
   value: number | number[]
 

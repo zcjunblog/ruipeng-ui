@@ -147,7 +147,7 @@ export default {
             validator(val) {
                 process.env.NODE_ENV !== 'production' &&
                     console.warn(
-                        "[Rpement Warn][Input]'auto-complete' property will be deprecated in next major version. please use 'autocomplete' instead."
+                        "[Element Warn][Input]'auto-complete' property will be deprecated in next major version. please use 'autocomplete' instead."
                     )
                 return true
             }

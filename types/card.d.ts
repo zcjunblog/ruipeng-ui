@@ -1,5 +1,5 @@
 import { VNode, VNodeDirective } from 'vue'
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export interface CardSlots {
   /** Content of the card */
@@ -12,7 +12,7 @@ export interface CardSlots {
 }
 
 /** Integrate information in a card container */
-export declare class RpCard extends RpementUIComponent {
+export declare class RpCard extends RuipengUIComponent {
   /** Title of the card */
   header: string
 

@@ -129,7 +129,7 @@ export default {
                         try {
                             file.url = URL.createObjectURL(file.raw)
                         } catch (err) {
-                            console.error('[Rpement Error][Upload]', err)
+                            console.error('[Element Error][Upload]', err)
                         }
                     }
                     return file
@@ -164,7 +164,7 @@ export default {
                 try {
                     file.url = URL.createObjectURL(rawFile)
                 } catch (err) {
-                    console.error('[Rpement Error][Upload]', err)
+                    console.error('[Element Error][Upload]', err)
                     return
                 }
             }

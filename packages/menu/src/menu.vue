@@ -47,7 +47,7 @@ export default {
   components: {
     'rp-menu-collapse-transition': {
       functional: true,
-      render(createRpement, context) {
+      render(createElement, context) {
         const data = {
           props: {
             mode: 'out-in'
@@ -92,7 +92,7 @@ export default {
             }
           }
         };
-        return createRpement('transition', data, context.children);
+        return createElement('transition', data, context.children);
       }
     }
   },

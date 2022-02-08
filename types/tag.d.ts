@@ -1,10 +1,10 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 export type TagType = 'primary' | 'gray' | 'success' | 'warning' | 'danger'
 export type TagTheme = 'dark' | 'light' | 'plain'
 
 /** Tag Component */
-export declare class RpTag extends RpementUIComponent {
+export declare class RpTag extends RuipengUIComponent {
   /** Tag type */
   type: TagType
 
@@ -21,7 +21,7 @@ export declare class RpTag extends RpementUIComponent {
   color: string
 
   /** Tag size */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Tag theme */
   effect: TagTheme

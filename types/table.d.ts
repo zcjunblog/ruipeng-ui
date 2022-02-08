@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 import { TooltipEffect } from './tooltip'
 
 export type SortOrder = 'ascending' | 'descending'
@@ -38,7 +38,7 @@ export interface treeNode {
 }
 
 /** Table Component */
-export declare class RpTable extends RpementUIComponent {
+export declare class RpTable extends RuipengUIComponent {
   /** Table data */
   data: object[]
 

@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Badge Component */
-export declare class RpBadge extends RpementUIComponent {
+export declare class RpBadge extends RuipengUIComponent {
   /** Display value */
   value: string | number
 

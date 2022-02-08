@@ -1,4 +1,4 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 /** The resizability of el-input component */
 export type Resizability = 'none' | 'both' | 'horizontal' | 'vertical'
@@ -14,7 +14,7 @@ export interface AutoSize {
 }
 
 /** Input Component */
-export declare class RpInput extends RpementUIComponent {
+export declare class RpInput extends RuipengUIComponent {
   /** Type of input */
   type: InputType
 
@@ -34,7 +34,7 @@ export declare class RpInput extends RpementUIComponent {
   disabled: boolean
 
   /** Size of Input, works when type is not 'textarea' */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Prefix icon class */
   prefixIcon: string

@@ -85,7 +85,7 @@ export default {
             }
             if (parentType === 'card') {
                 if (parentDirection === 'vertical') {
-                    console.warn('[Rpement Warn][Carousel]vertical direction is not supported in card mode')
+                    console.warn('[Element Warn][Carousel]vertical direction is not supported in card mode')
                 }
                 this.inStage = Math.round(Math.abs(index - activeIndex)) <= 1
                 this.active = index === activeIndex

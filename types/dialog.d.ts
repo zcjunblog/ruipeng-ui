@@ -1,5 +1,5 @@
 import { VNode } from 'vue'
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 export interface DialogSlots {
   /** Content of the Dialog */
@@ -15,7 +15,7 @@ export interface DialogSlots {
 }
 
 /** Informs users while preserving the current page state */
-export declare class RpDialog extends RpementUIComponent {
+export declare class RpDialog extends RuipengUIComponent {
   /** Title of Dialog */
   title: string
 

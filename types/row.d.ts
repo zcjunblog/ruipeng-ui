@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Horizontal alignment of flex layout */
 export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 'space-between'
@@ -7,7 +7,7 @@ export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 
 export type VertialAlignment = 'top' | 'middle' | 'bottom'
 
 /** Row Layout Component */
-export declare class RpRow extends RpementUIComponent {
+export declare class RpRow extends RuipengUIComponent {
   /** Grid spacing */
   gutter: number
 

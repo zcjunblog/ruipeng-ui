@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** PageHeader Component */
-export declare class RpPageHeader extends RpementUIComponent {
+export declare class RpPageHeader extends RuipengUIComponent {
   /** title */
   title: String
 

@@ -77,14 +77,14 @@ export default {
         closed(newVal) {
             if (newVal) {
                 this.visible = false
-                this.$el.addEventListener('transitionend', this.destroyRpement)
+                this.$el.addEventListener('transitionend', this.destroyElement)
             }
         }
     },
 
     methods: {
-        destroyRpement() {
-            this.$el.removeEventListener('transitionend', this.destroyRpement)
+        destroyElement() {
+            this.$el.removeEventListener('transitionend', this.destroyElement)
             this.$destroy(true)
             this.$el.parentNode.removeChild(this.$el)
         },

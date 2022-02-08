@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Avatar Component */
-export declare class RpAvatar extends RpementUIComponent {
+export declare class RpAvatar extends RuipengUIComponent {
   icon: string;
 
   size: string | number;

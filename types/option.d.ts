@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Dropdown Select Option Component */
-export declare class RpOption extends RpementUIComponent {
+export declare class RpOption extends RuipengUIComponent {
   /** Value of option */
   value: any
 

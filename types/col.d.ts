@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Responsive column props */
 export interface ResponsiveColumnProperties {
@@ -13,7 +13,7 @@ export interface ResponsiveColumnProperties {
 export type ResponsiveColumn = number | ResponsiveColumnProperties
 
 /** Colunm Layout Component */
-export declare class RpCol extends RpementUIComponent {
+export declare class RpCol extends RuipengUIComponent {
   /** Number of column the grid spans */
   span: number
 

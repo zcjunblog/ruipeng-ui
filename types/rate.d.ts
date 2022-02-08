@@ -1,4 +1,4 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 interface Option {
   value: string,
@@ -13,7 +13,7 @@ export type RateColors = Options
 export type RateIconClasses = Options
 
 /** Rate Component */
-export declare class RpRate extends RpementUIComponent {
+export declare class RpRate extends RuipengUIComponent {
   /** Max rating score */
   max: number
 

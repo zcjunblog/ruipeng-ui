@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Spinner Component */
-export declare class RpSpinner extends RpementUIComponent {
+export declare class RpSpinner extends RuipengUIComponent {
   /** The type of spinner */
   type: string
   	

@@ -1,4 +1,4 @@
-import { RpementUIComponent, RpementUIComponentSize } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 export interface QueryChangeHandler {
   /**
@@ -8,7 +8,7 @@ export interface QueryChangeHandler {
 }
 
 /** Dropdown Select Component */
-export declare class RpSelect extends RpementUIComponent {
+export declare class RpSelect extends RuipengUIComponent {
   /** The form input value */
   value: any
 
@@ -22,7 +22,7 @@ export declare class RpSelect extends RpementUIComponent {
   valueKey: string
 
   /** Size of Input */
-  size: RpementUIComponentSize
+  size: RuipengUIComponentSize
 
   /** Whether single select can be cleared */
   clearable: boolean

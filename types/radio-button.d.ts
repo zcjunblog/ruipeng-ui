@@ -1,7 +1,7 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 
 /** Radio Button Component */
-export declare class RpRadioButton extends RpementUIComponent {
+export declare class RpRadioButton extends RuipengUIComponent {
   /** The form input value */
   value: string
 

@@ -124,7 +124,7 @@ class TableLayout {
             if (getComputedStyle(headerChild).display === 'none') {
                 return true
             }
-            headerChild = headerChild.parentRpement
+            headerChild = headerChild.parentElement
         }
         return false
     }

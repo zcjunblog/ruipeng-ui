@@ -732,7 +732,7 @@ export default {
                 } else {
                     // user may change focus between two input
                     setTimeout(() => {
-                        if (this.refInput.indexOf(document.activeRpement) === -1) {
+                        if (this.refInput.indexOf(document.activeElement) === -1) {
                             this.pickerVisible = false
                             this.blur()
                             event.stopPropagation()

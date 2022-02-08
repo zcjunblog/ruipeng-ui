@@ -1,5 +1,5 @@
 import Vue, { PluginObject } from 'vue'
-import { RpementUIComponent, RpementUIComponentSize, RpementUIHorizontalAlignment } from './component'
+import { RuipengUIComponent, RuipengUIComponentSize, RuipengUIHorizontalAlignment } from './component'
 
 import { RpAlert } from './alert'
 import { RpAside } from './aside'
@@ -101,18 +101,18 @@ export const version: string
 /**
  * Install all ruipeng-ui components into Vue.
  * Please do not invoke this method directly.
- * Call `Vue.use(RpementUI)` to install.
+ * Call `Vue.use(RuipengUI)` to install.
  */
 export function install (vue: typeof Vue, options: InstallationOptions): void
 
-/** RpementUI component common definition */
-export type Component = RpementUIComponent
+/** RuipengUI component common definition */
+export type Component = RuipengUIComponent
 
 /** Component size definition for button, input, etc */
-export type ComponentSize = RpementUIComponentSize
+export type ComponentSize = RuipengUIComponentSize
 
 /** Horizontal alignment */
-export type HorizontalAlignment = RpementUIHorizontalAlignment
+export type HorizontalAlignment = RuipengUIHorizontalAlignment
 
 /** Show animation while loading data */
 export const Loading: RpLoading

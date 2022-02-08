@@ -1,10 +1,10 @@
-import { RpementUIComponent } from './component'
+import { RuipengUIComponent } from './component'
 import { PopoverPlacement } from './popover'
 
 export type TooltipEffect = 'dark' | 'light'
 
 /** Tooltip Component */
-export declare class RpTooltip extends RpementUIComponent {
+export declare class RpTooltip extends RuipengUIComponent {
   /** Tooltip theme */
   effect: TooltipEffect
 

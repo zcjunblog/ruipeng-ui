@@ -26,10 +26,10 @@
 import ImageViewer from './image-viewer'
 import Locale from 'ruipeng-ui/src/mixins/locale'
 import { on, off, getScrollContainer, isInContainer } from 'ruipeng-ui/src/utils/dom'
-import { isString, isHtmlRpement } from 'ruipeng-ui/src/utils/types'
+import { isString, isHtmlElement } from 'ruipeng-ui/src/utils/types'
 import throttle from 'throttle-debounce/throttle'
 
-const isSupportObjectFit = () => document.documentRpement.style.objectFit !== undefined
+const isSupportObjectFit = () => document.documentElement.style.objectFit !== undefined
 
 const ObjectFit = {
     NONE: 'none',
@@ -166,7 +166,7 @@ export default {
             const { scrollContainer } = this
             let _scrollContainer = null
 
-            if (isHtmlRpement(scrollContainer)) {
+            if (isHtmlElement(scrollContainer)) {
                 _scrollContainer = scrollContainer
             } else if (isString(scrollContainer)) {
                 _scrollContainer = document.querySelector(scrollContainer)

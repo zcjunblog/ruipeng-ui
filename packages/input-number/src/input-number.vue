@@ -154,7 +154,7 @@ export default {
             const stepPrecision = getPrecision(step)
             if (precision !== undefined) {
                 if (stepPrecision > precision) {
-                    console.warn('[Rpement Warn][InputNumber]precision should not be less than the decimal places of step')
+                    console.warn('[Element Warn][InputNumber]precision should not be less than the decimal places of step')
                 }
                 return precision
             } else {

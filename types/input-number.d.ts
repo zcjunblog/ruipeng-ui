@@ -1,9 +1,9 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 export type InputNumberSize = 'large' | 'small'
 
 /** InputNumber Component */
-export declare class ElInputNumber extends ElementUIComponent {
+export declare class RpInputNumber extends RpementUIComponent {
   /** Binding value */
   value: number
 

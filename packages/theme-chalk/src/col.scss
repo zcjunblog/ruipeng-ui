@@ -2,54 +2,54 @@
 @import "./common/var.scss";
 @import "./mixins/mixins.scss";
 
-[class*="el-col-"] {
+[class*="rp-col-"] {
   float: left;
   box-sizing: border-box;
 }
 
-.el-col-0 {
+.rp-col-0 {
   display: none;
 }
 
 @for $i from 0 through 24 {
-  .el-col-#{$i} {
+  .rp-col-#{$i} {
     width: (math.div(1 , 24) * $i * 100) * 1%;
   }
 
-  .el-col-offset-#{$i} {
+  .rp-col-offset-#{$i} {
     margin-left: (math.div(1 , 24) * $i * 100) * 1%;
   }
 
-  .el-col-pull-#{$i} {
+  .rp-col-pull-#{$i} {
     position: relative;
     right: (math.div(1 , 24) * $i * 100) * 1%;
   }
 
-  .el-col-push-#{$i} {
+  .rp-col-push-#{$i} {
     position: relative;
     left: (math.div(1 , 24) * $i * 100) * 1%;
   }
 }
 
 @include res(xs) {
-  .el-col-xs-0 {
+  .rp-col-xs-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-xs-#{$i} {
+    .rp-col-xs-#{$i} {
       width: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-xs-offset-#{$i} {
+    .rp-col-xs-offset-#{$i} {
       margin-left: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-xs-pull-#{$i} {
+    .rp-col-xs-pull-#{$i} {
       position: relative;
       right: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-xs-push-#{$i} {
+    .rp-col-xs-push-#{$i} {
       position: relative;
       left: (math.div(1 , 24) * $i * 100) * 1%;
     }
@@ -57,24 +57,24 @@
 }
 
 @include res(sm) {
-  .el-col-sm-0 {
+  .rp-col-sm-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-sm-#{$i} {
+    .rp-col-sm-#{$i} {
       width: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-sm-offset-#{$i} {
+    .rp-col-sm-offset-#{$i} {
       margin-left: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-sm-pull-#{$i} {
+    .rp-col-sm-pull-#{$i} {
       position: relative;
       right: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-sm-push-#{$i} {
+    .rp-col-sm-push-#{$i} {
       position: relative;
       left: (math.div(1 , 24) * $i * 100) * 1%;
     }
@@ -82,24 +82,24 @@
 }
 
 @include res(md) {
-  .el-col-md-0 {
+  .rp-col-md-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-md-#{$i} {
+    .rp-col-md-#{$i} {
       width: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-md-offset-#{$i} {
+    .rp-col-md-offset-#{$i} {
       margin-left: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-md-pull-#{$i} {
+    .rp-col-md-pull-#{$i} {
       position: relative;
       right: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-md-push-#{$i} {
+    .rp-col-md-push-#{$i} {
       position: relative;
       left: (math.div(1 , 24) * $i * 100) * 1%;
     }
@@ -107,24 +107,24 @@
 }
 
 @include res(lg) {
-  .el-col-lg-0 {
+  .rp-col-lg-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-lg-#{$i} {
+    .rp-col-lg-#{$i} {
       width: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-lg-offset-#{$i} {
+    .rp-col-lg-offset-#{$i} {
       margin-left: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-lg-pull-#{$i} {
+    .rp-col-lg-pull-#{$i} {
       position: relative;
       right: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-lg-push-#{$i} {
+    .rp-col-lg-push-#{$i} {
       position: relative;
       left: (math.div(1 , 24) * $i * 100) * 1%;
     }
@@ -132,24 +132,24 @@
 }
 
 @include res(xl) {
-  .el-col-xl-0 {
+  .rp-col-xl-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-xl-#{$i} {
+    .rp-col-xl-#{$i} {
       width: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-xl-offset-#{$i} {
+    .rp-col-xl-offset-#{$i} {
       margin-left: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-xl-pull-#{$i} {
+    .rp-col-xl-pull-#{$i} {
       position: relative;
       right: (math.div(1 , 24) * $i * 100) * 1%;
     }
 
-    .el-col-xl-push-#{$i} {
+    .rp-col-xl-push-#{$i} {
       position: relative;
       left: (math.div(1 , 24) * $i * 100) * 1%;
     }

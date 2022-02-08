@@ -2,7 +2,7 @@
 
 @include b(time-spinner) {
   &.has-seconds {
-    .el-time-spinner__wrapper {
+    .rp-time-spinner__wrapper {
       width: 33.3%;
     }
   }
@@ -15,7 +15,7 @@
     vertical-align: top;
     position: relative;
 
-    & .el-scrollbar__wrap:not(.el-scrollbar__wrap--hidden-default) {
+    & .rp-scrollbar__wrap:not(.rp-scrollbar__wrap--hidden-default) {
       padding-bottom: 15px;
     }
 
@@ -24,11 +24,11 @@
       text-align: center;
       overflow: hidden;
 
-      .el-time-spinner__list {
+      .rp-time-spinner__list {
         transform: translateY(-32px);
       }
 
-      .el-time-spinner__item:hover:not(.disabled):not(.active) {
+      .rp-time-spinner__item:hover:not(.disabled):not(.active) {
         background: $--color-white;
         cursor: default;
       }
@@ -51,20 +51,20 @@
       color: $--color-primary;
     }
 
-    &.el-icon-arrow-up {
+    &.rp-icon-arrow-up {
       top: 10px;
     }
 
-    &.el-icon-arrow-down {
+    &.rp-icon-arrow-down {
       bottom: 10px;
     }
   }
 
   @include e(input) {
-    &.el-input {
+    &.rp-input {
       width: 70%;
 
-      .el-input__inner {
+      .rp-input__inner {
         padding: 0;
         text-align: center;
       }

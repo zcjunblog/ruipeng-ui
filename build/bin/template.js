@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-01-27 17:12:59
  * @LastEditors: zhaozc
- * @LastEditTime: 2022-01-28 16:10:30
+ * @LastEditTime: 2022-02-08 14:13:01
  * @FilePath: \ruipeng-ui\build\bin\template.js
  */
 /**
@@ -19,13 +19,16 @@ const chokidar = require('chokidar')
 let watcher = chokidar.watch([templates])
 
 // 当目录下的文件发生改变时，自动执行 npm run i18n
-watcher.on('ready', function () {
-    watcher.on('change', function () {
+watcher.on('ready', function() {
+    watcher.on('change', function() {
         exec('npm run i18n')
     })
 })
 
 // 负责执行命令
 function exec(cmd) {
-    return require('child_process').execSync(cmd).toString().trim()
+    return require('child_process')
+        .execSync(cmd)
+        .toString()
+        .trim()
 }

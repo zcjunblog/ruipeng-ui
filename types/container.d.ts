@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Container Component */
-export declare class ElContainer extends ElementUIComponent {
+export declare class RpContainer extends RpementUIComponent {
   /** Layout direction for child elements */
   direction: 'horizontal' | 'vertical'
 }

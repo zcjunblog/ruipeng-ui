@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 import { VNode } from 'vue'
 
-interface ElDescriptionsItemSlots {
+interface RpDescriptionsItemSlots {
   /* label slot: custom label */
   label: VNode[]
 
@@ -12,7 +12,7 @@ interface ElDescriptionsItemSlots {
 }
 
 /** description item. **/
-export declare class ElDescriptionsItem extends ElementUIComponent {
+export declare class RpDescriptionsItem extends RpementUIComponent {
 
   /* label text */
   label: string
@@ -32,6 +32,6 @@ export declare class ElDescriptionsItem extends ElementUIComponent {
   /* custom content style */
   contentStyle: object
 
-  $slots: ElDescriptionsItemSlots
+  $slots: RpDescriptionsItemSlots
 
 }

@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** PageHeader Component */
-export declare class ElPageHeader extends ElementUIComponent {
+export declare class RpPageHeader extends RpementUIComponent {
   /** title */
   title: String
 

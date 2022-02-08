@@ -4,12 +4,12 @@ import { MessageType } from './message'
 export type NotificationPosition = 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
 
 /** Notification Component */
-export declare class ElNotificationComponent extends Vue {
+export declare class RpNotificationComponent extends Vue {
   /** Close the Notification instance */
   close (): void
 }
 
-export interface ElNotificationOptions {
+export interface RpNotificationOptions {
   /** Title */
   title: string
 
@@ -47,38 +47,38 @@ export interface ElNotificationOptions {
   position?: NotificationPosition
 }
 
-export interface ElNotification {
+export interface RpNotification {
   /** Show a notification */
-  (options: ElNotificationOptions): ElNotificationComponent
+  (options: RpNotificationOptions): RpNotificationComponent
 
   /** Show a success notification */
-  success (message: string | VNode): ElNotificationComponent
+  success (message: string | VNode): RpNotificationComponent
 
   /** Show a success notification */
-  success (options: ElNotificationOptions): ElNotificationComponent
+  success (options: RpNotificationOptions): RpNotificationComponent
 
   /** Show a warning notification */
-  warning (message: string | VNode): ElNotificationComponent
+  warning (message: string | VNode): RpNotificationComponent
 
   /** Show a warning notification */
-  warning (options: ElNotificationOptions): ElNotificationComponent
+  warning (options: RpNotificationOptions): RpNotificationComponent
 
   /** Show an info notification */
-  info (message: string | VNode): ElNotificationComponent
+  info (message: string | VNode): RpNotificationComponent
 
   /** Show an info notification */
-  info (options: ElNotificationOptions): ElNotificationComponent
+  info (options: RpNotificationOptions): RpNotificationComponent
 
   /** Show an error notification */
-  error (message: string | VNode): ElNotificationComponent
+  error (message: string | VNode): RpNotificationComponent
 
   /** Show an error notification */
-  error (options: ElNotificationOptions): ElNotificationComponent
+  error (options: RpNotificationOptions): RpNotificationComponent
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
     /** Displays a global notification message at the upper right corner of the page */
-    $notify: ElNotification
+    $notify: RpNotification
   }
 }

@@ -1,44 +1,48 @@
 export default {
-  name: 'ElRow',
+    name: 'RpRow',
 
-  componentName: 'ElRow',
+    componentName: 'RpRow',
 
-  props: {
-    tag: {
-      type: String,
-      default: 'div'
+    props: {
+        tag: {
+            type: String,
+            default: 'div'
+        },
+        gutter: Number,
+        type: String,
+        justify: {
+            type: String,
+            default: 'start'
+        },
+        align: String
     },
-    gutter: Number,
-    type: String,
-    justify: {
-      type: String,
-      default: 'start'
+
+    computed: {
+        style() {
+            const ret = {}
+
+            if (this.gutter) {
+                ret.marginLeft = `-${this.gutter / 2}px`
+                ret.marginRight = ret.marginLeft
+            }
+
+            return ret
+        }
     },
-    align: String
-  },
 
-  computed: {
-    style() {
-      const ret = {};
-
-      if (this.gutter) {
-        ret.marginLeft = `-${this.gutter / 2}px`;
-        ret.marginRight = ret.marginLeft;
-      }
-
-      return ret;
+    render(h) {
+        return h(
+            this.tag,
+            {
+                class: [
+                    'rp-row',
+                    this.justify !== 'start' ? `is-justify-${this.justify}` : '',
+                    this.align ? `is-align-${this.align}` : '',
+                    { 'rp-row--flex': this.type === 'flex' }
+                ],
+                style: this.style
+            },
+            this.$slots.default
+        )
     }
-  },
-
-  render(h) {
-    return h(this.tag, {
-      class: [
-        'el-row',
-        this.justify !== 'start' ? `is-justify-${this.justify}` : '',
-        this.align ? `is-align-${this.align}` : '',
-        { 'el-row--flex': this.type === 'flex' }
-      ],
-      style: this.style
-    }, this.$slots.default);
-  }
-};
+}

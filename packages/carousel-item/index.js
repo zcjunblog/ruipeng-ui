@@ -1,8 +1,8 @@
-import ElCarouselItem from '../carousel/src/item';
+import RpCarouselItem from '../carousel/src/item'
 
 /* istanbul ignore next */
-ElCarouselItem.install = function(Vue) {
-  Vue.component(ElCarouselItem.name, ElCarouselItem);
-};
+RpCarouselItem.install = function(Vue) {
+    Vue.component(RpCarouselItem.name, RpCarouselItem)
+}
 
-export default ElCarouselItem;
+export default RpCarouselItem

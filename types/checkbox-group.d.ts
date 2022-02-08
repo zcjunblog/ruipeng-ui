@@ -1,9 +1,9 @@
-import { ElementUIComponent, ElementUIComponentSize } from './component'
+import { RpementUIComponent, RpementUIComponentSize } from './component'
 
 /** Checkbox Group Component */
-export declare class ElCheckboxGroup extends ElementUIComponent {
+export declare class RpCheckboxGroup extends RpementUIComponent {
   /** Size of checkbox buttons or bordered checkboxes */
-  size: ElementUIComponentSize
+  size: RpementUIComponentSize
 
   /** Whether the nesting checkboxes are disabled */
   disabled: boolean

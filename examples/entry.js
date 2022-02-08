@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-01-27 17:12:59
  * @LastEditors: zhaozc
- * @LastEditTime: 2022-02-07 15:51:30
+ * @LastEditTime: 2022-02-08 16:29:32
  * @FilePath: \ruipeng-ui\examples\entry.js
  */
 // 官网项目的入口，就是一个普通的 vue 项目
@@ -10,7 +10,7 @@ import entry from './app'
 import VueRouter from 'vue-router'
 
 // 引入组件库，main 是别名，在 /build/config.js 中有配置
-import Element from 'main/index.js'
+import Ruipeng from 'main/index.js'
 import hljs from 'highlight.js'
 
 // 路由配置
@@ -33,7 +33,7 @@ import './assets/styles/fonts/style.css'
 // 将 icon 信息挂载到 Vue 原型链上，在 markdown 文档中被使用，在官网的 icon 图标 页面展示出所有的 icon 图标
 import icon from './icon.json'
 
-Vue.use(Element)
+Vue.use(Ruipeng)
 Vue.use(VueRouter)
 Vue.component('demo-block', demoBlock)
 Vue.component('main-footer', MainFooter)
@@ -77,7 +77,7 @@ router.afterEach(route => {
             return
         }
     }
-    document.title = 'Element'
+    document.title = 'Ruipeng Ui'
     ga('send', 'event', 'PageView', route.name)
 })
 

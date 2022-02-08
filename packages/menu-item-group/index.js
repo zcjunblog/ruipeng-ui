@@ -1,8 +1,8 @@
-import ElMenuItemGroup from '../menu/src/menu-item-group';
+import RpMenuItemGroup from '../menu/src/menu-item-group'
 
 /* istanbul ignore next */
-ElMenuItemGroup.install = function(Vue) {
-  Vue.component(ElMenuItemGroup.name, ElMenuItemGroup);
-};
+RpMenuItemGroup.install = function(Vue) {
+    Vue.component(RpMenuItemGroup.name, RpMenuItemGroup)
+}
 
-export default ElMenuItemGroup;
+export default RpMenuItemGroup

@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 import { VNode } from 'vue'
 
 interface ELEmptySlots {
@@ -16,7 +16,7 @@ interface ELEmptySlots {
 }
 
 /** Placeholder hints for empty states. */
-export declare class ElEmpty extends ElementUIComponent {
+export declare class RpEmpty extends RpementUIComponent {
   /* image URL */
   image: string
   	

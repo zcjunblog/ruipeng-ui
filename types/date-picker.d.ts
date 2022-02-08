@@ -1,4 +1,4 @@
-import { ElementUIComponent, ElementUIComponentSize, ElementUIHorizontalAlignment } from './component'
+import { RpementUIComponent, RpementUIComponentSize, RpementUIHorizontalAlignment } from './component'
 
 export type DatePickerType = 'year' | 'month' | 'date' | 'datetime' | 'week' | 'datetimerange' | 'daterange' | 'dates'
 export type FirstDayOfWeek = 1 | 2 | 3 | 4 | 5 | 6 | 7
@@ -34,7 +34,7 @@ export interface ShortcutClickEventHandler {
    * You can change the picker value by emitting the pick event.
    * Example: `vm.$emit('pick', new Date())`
    */
-  (vm: ElDatePicker): void
+  (vm: RpDatePicker): void
 }
 
 /** Shortcut options */
@@ -62,7 +62,7 @@ export interface DatePickerOptions {
 }
 
 /** DatePicker Component */
-export declare class ElDatePicker extends ElementUIComponent {
+export declare class RpDatePicker extends RpementUIComponent {
   /** The value of the date picker */
   value: Date | string | Date[] | string[]
 
@@ -73,7 +73,7 @@ export declare class ElDatePicker extends ElementUIComponent {
   disabled: boolean
 
   /** Size of Input */
-  size: ElementUIComponentSize
+  size: RpementUIComponentSize
 
   /** Whether the input is editable */
   editable: boolean
@@ -97,7 +97,7 @@ export declare class ElDatePicker extends ElementUIComponent {
   format: string
 
   /** Alignment */
-  align: ElementUIHorizontalAlignment
+  align: RpementUIHorizontalAlignment
 
   /** Custom class name for DatePicker's dropdown */
   popperClass: string

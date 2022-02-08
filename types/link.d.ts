@@ -1,10 +1,10 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Button type */
 export type LinkType = 'primary' | 'success' | 'warning' | 'danger' | 'info' 
 
 /** Link Component */
-export declare class ElLink extends ElementUIComponent {
+export declare class RpLink extends RpementUIComponent {
   /** Link type */
   type: LinkType
   
@@ -14,7 +14,7 @@ export declare class ElLink extends ElementUIComponent {
   /** Link underline */
   underline: boolean
 
-  /** Link icon, accepts an icon name of Element icon component */
+  /** Link icon, accepts an icon name of Rpement icon component */
   icon: string
 
   /** Link href */

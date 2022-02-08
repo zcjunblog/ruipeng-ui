@@ -1,7 +1,7 @@
 @import "mixins/mixins";
 @import "common/var";
 
-@keyframes el-drawer-fade-in {
+@keyframes rp-drawer-fade-in {
   0% {
     opacity: 0;
   }
@@ -91,7 +91,7 @@
 }
 
 @mixin animation-in($direction) {
-  .el-drawer__open &.#{$direction} {
+  .rp-drawer__open &.#{$direction} {
     animation: #{$direction}-drawer-in .3s 1ms;
   }
 }
@@ -200,7 +200,7 @@ $directions: rtl, ltr, ttb, btt;
   }
 }
 
-.el-drawer__container {
+.rp-drawer__container {
   position: relative;
   left: 0;
   right: 0;
@@ -210,10 +210,10 @@ $directions: rtl, ltr, ttb, btt;
   width: 100%;
 }
 
-.el-drawer-fade-enter-active {
-  animation: el-drawer-fade-in .3s;
+.rp-drawer-fade-enter-active {
+  animation: rp-drawer-fade-in .3s;
 }
 
-.el-drawer-fade-leave-active {
-  animation: el-drawer-fade-in .3s reverse;
+.rp-drawer-fade-leave-active {
+  animation: rp-drawer-fade-in .3s reverse;
 }

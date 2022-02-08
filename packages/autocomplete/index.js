@@ -1,8 +1,8 @@
-import ElAutocomplete from './src/autocomplete';
+import RpAutocomplete from './src/autocomplete'
 
 /* istanbul ignore next */
-ElAutocomplete.install = function(Vue) {
-  Vue.component(ElAutocomplete.name, ElAutocomplete);
-};
+RpAutocomplete.install = function(Vue) {
+    Vue.component(RpAutocomplete.name, RpAutocomplete)
+}
 
-export default ElAutocomplete;
+export default RpAutocomplete

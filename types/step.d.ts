@@ -1,5 +1,5 @@
 import { VNode } from 'vue'
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 export type StepStatus = 'wait' | 'process' | 'finish' | 'error' | 'success'
 
@@ -17,7 +17,7 @@ export interface StepRenderSlots {
 }
 
 /** Step Component */
-export declare class ElStep extends ElementUIComponent {
+export declare class RpStep extends RpementUIComponent {
   /** Step title */
   title: string
 

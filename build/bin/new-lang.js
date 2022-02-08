@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-01-27 17:12:59
  * @LastEditors: zhaozc
- * @LastEditTime: 2022-01-28 15:17:06
+ * @LastEditTime: 2022-02-08 12:20:43
  * @FilePath: \ruipeng-ui\build\bin\new-lang.js
  */
 'use strict'
@@ -35,24 +35,32 @@ if (componentFile.some(item => item.lang === lang)) {
 }
 let componentNew = Object.assign({}, componentFile.filter(item => item.lang === 'en-US')[0], { lang })
 componentFile.push(componentNew)
-fileSave(path.join(__dirname, '../../examples/i18n/component.json')).write(JSON.stringify(componentFile, null, '  '), 'utf8').end('\n')
+fileSave(path.join(__dirname, '../../examples/i18n/component.json'))
+    .write(JSON.stringify(componentFile, null, '  '), 'utf8')
+    .end('\n')
 
 // 添加到 page.json
 const pageFile = require('../../examples/i18n/page.json')
 // 新语言的默认配置为英语，你只需要去 page.json 中将该语言配置中的应为翻译为该语言即可
 let pageNew = Object.assign({}, pageFile.filter(item => item.lang === 'en-US')[0], { lang })
 pageFile.push(pageNew)
-fileSave(path.join(__dirname, '../../examples/i18n/page.json')).write(JSON.stringify(pageFile, null, '  '), 'utf8').end('\n')
+fileSave(path.join(__dirname, '../../examples/i18n/page.json'))
+    .write(JSON.stringify(pageFile, null, '  '), 'utf8')
+    .end('\n')
 
 // 添加到 route.json
 const routeFile = require('../../examples/i18n/route.json')
 routeFile.push({ lang })
-fileSave(path.join(__dirname, '../../examples/i18n/route.json')).write(JSON.stringify(routeFile, null, '  '), 'utf8').end('\n')
+fileSave(path.join(__dirname, '../../examples/i18n/route.json'))
+    .write(JSON.stringify(routeFile, null, '  '), 'utf8')
+    .end('\n')
 
 // 添加到 nav.config.json
 const navFile = require('../../examples/nav.config.json')
 navFile[lang] = navFile['en-US']
-fileSave(path.join(__dirname, '../../examples/nav.config.json')).write(JSON.stringify(navFile, null, '  '), 'utf8').end('\n')
+fileSave(path.join(__dirname, '../../examples/nav.config.json'))
+    .write(JSON.stringify(navFile, null, '  '), 'utf8')
+    .end('\n')
 
 // docs 下新建对应文件夹
 try {

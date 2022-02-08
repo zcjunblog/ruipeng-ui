@@ -1,4 +1,4 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 import { VNode } from 'vue'
 
 type hide = (shouldCancel: boolean) => void
@@ -19,7 +19,7 @@ interface DrawerSlots {
     [key: string]: VNode[]
 }
 /** Drawer Component */
-export declare class ElDrawer extends ElementUIComponent {
+export declare class RpDrawer extends RpementUIComponent {
     /* Equivalent to `Dialog`'s append to body attribute, when applying nested drawer, make sure this one is set to true */
     appendToBody: boolean
 

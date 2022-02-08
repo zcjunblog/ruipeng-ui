@@ -1,26 +1,26 @@
 {
-  "zh-CN": {
-    "home": "Element - 网站快速成型工具",
-    "guide": "指南 | Element",
-    "component": "组件 | Element",
-    "resource": "资源 | Element"
-  },
-  "en-US": {
-    "home": "Element - A Desktop UI Toolkit for Web",
-    "guide": "Guide | Element",
-    "component": "Component | Element",
-    "resource": "Resource | Element"
-  },
-  "es": {
-    "home": "Element - Un kit de interfaz de usuario para la web",
-    "guide": "Guía | Element",
-    "component": "Componentes | Element",
-    "resource": "Recursos | Element"
-  },
-  "fr-FR": {
-    "home": "Element - Un kit de composants d'interface pour le web",
-    "guide": "Guide | Element",
-    "component": "Composants | Element",
-    "resource": "Ressources | Element"
-  }
+    "zh-CN": {
+        "home": "ruipeng ui - 网站快速成型工具",
+        "guide": "指南 | ruipeng ui",
+        "component": "组件 | ruipeng ui",
+        "resource": "资源 | ruipeng ui"
+    },
+    "en-US": {
+        "home": "ruipeng ui - A Desktop UI Toolkit for Web",
+        "guide": "Guide | ruipeng ui",
+        "component": "Component | ruipeng ui",
+        "resource": "Resource | ruipeng ui"
+    },
+    "es": {
+        "home": "ruipeng ui - Un kit de interfaz de usuario para la web",
+        "guide": "Guía | ruipeng ui",
+        "component": "Componentes | ruipeng ui",
+        "resource": "Recursos | ruipeng ui"
+    },
+    "fr-FR": {
+        "home": "ruipeng ui - Un kit de composants d'interface pour le web",
+        "guide": "Guide | ruipeng ui",
+        "component": "Composants | ruipeng ui",
+        "resource": "Ressources | ruipeng ui"
+    }
 }

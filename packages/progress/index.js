@@ -1,8 +1,8 @@
-import ElProgress from './src/progress';
+import RpProgress from './src/progress'
 
 /* istanbul ignore next */
-ElProgress.install = function(Vue) {
-  Vue.component(ElProgress.name, ElProgress);
-};
+RpProgress.install = function(Vue) {
+    Vue.component(RpProgress.name, RpProgress)
+}
 
-export default ElProgress;
+export default RpProgress

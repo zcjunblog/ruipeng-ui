@@ -26,7 +26,7 @@
   @include when(fullscreen) {
     position: fixed;
 
-    .el-loading-spinner {
+    .rp-loading-spinner {
       margin-top: #{math.div(-$--loading-fullscreen-spinner-size, 2)};
 
       .circular {
@@ -44,7 +44,7 @@
   text-align: center;
   position: absolute;
 
-  .el-loading-text {
+  .rp-loading-text {
     color: $--color-primary;
     margin: 3px 0;
     font-size: 14px;
@@ -70,8 +70,8 @@
   }
 }
 
-.el-loading-fade-enter,
-.el-loading-fade-leave-active {
+.rp-loading-fade-enter,
+.rp-loading-fade-leave-active {
   opacity: 0;
 }
 

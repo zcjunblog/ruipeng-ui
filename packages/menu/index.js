@@ -1,8 +1,8 @@
-import ElMenu from './src/menu';
+import RpMenu from './src/menu'
 
 /* istanbul ignore next */
-ElMenu.install = function(Vue) {
-  Vue.component(ElMenu.name, ElMenu);
-};
+RpMenu.install = function(Vue) {
+    Vue.component(RpMenu.name, RpMenu)
+}
 
-export default ElMenu;
+export default RpMenu

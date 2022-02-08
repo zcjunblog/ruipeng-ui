@@ -1,20 +1,20 @@
 <template>
-  <aside class="el-aside" :style="{ width }">
-    <slot></slot>
-  </aside>
+    <aside class="rp-aside" :style="{ width }">
+        <slot></slot>
+    </aside>
 </template>
 
 <script>
-  export default {
-    name: 'ElAside',
+export default {
+    name: 'RpAside',
 
-    componentName: 'ElAside',
+    componentName: 'RpAside',
 
     props: {
-      width: {
-        type: String,
-        default: '300px'
-      }
+        width: {
+            type: String,
+            default: '300px'
+        }
     }
-  };
+}
 </script>

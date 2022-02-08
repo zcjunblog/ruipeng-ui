@@ -10,8 +10,8 @@
   height: $--switch-height;
   vertical-align: middle;
   @include when(disabled) {
-    & .el-switch__core,
-    & .el-switch__label {
+    & .rp-switch__core,
+    & .rp-switch__label {
       cursor: not-allowed;
     }
   }
@@ -80,7 +80,7 @@
   }
 
   @include when(checked) {
-    .el-switch__core {
+    .rp-switch__core {
       border-color: $--switch-on-color;
       background-color: $--switch-on-color;
       &::after {
@@ -95,13 +95,13 @@
   }
 
   @include m(wide) {
-    .el-switch__label {
-      &.el-switch__label--left {
+    .rp-switch__label {
+      &.rp-switch__labrp--left {
         span {
           left: 10px;
         }
       }
-      &.el-switch__label--right {
+      &.rp-switch__labrp--right {
         span {
           right: 10px;
         }
@@ -109,8 +109,8 @@
     }
   }
 
-  & .label-fade-enter,
-  & .label-fade-leave-active {
+  & .labrp-fade-enter,
+  & .labrp-fade-leave-active {
     opacity: 0;
   }
 }

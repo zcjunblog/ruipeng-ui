@@ -9,7 +9,7 @@
   width: 180px;
   line-height: #{$--input-height - 2};
 
-  .el-input {
+  .rp-input {
     display: block;
 
     &__inner {
@@ -35,7 +35,7 @@
     &:hover {
       color: $--color-primary;
 
-      &:not(.is-disabled) ~ .el-input .el-input__inner:not(.is-disabled) {
+      &:not(.is-disabled) ~ .rp-input .rp-input__inner:not(.is-disabled) {
         border-color: $--input-focus-border;
       }
     }
@@ -79,7 +79,7 @@
       font-size: $--input-medium-font-size;
     }
 
-    .el-input__inner {
+    .rp-input__inner {
       padding-left: #{$--input-medium-height + 7};
       padding-right: #{$--input-medium-height + 7};
     }
@@ -93,12 +93,12 @@
       width: $--input-small-height;
       font-size: $--input-small-font-size;
 
-      [class*=el-icon] {
+      [class*=rp-icon] {
         transform: scale(.9);
       }
     }
 
-    .el-input__inner {
+    .rp-input__inner {
       padding-left: #{$--input-small-height + 7};
       padding-right: #{$--input-small-height + 7};
     }
@@ -112,26 +112,26 @@
       width: $--input-mini-height;
       font-size: $--input-mini-font-size;
 
-      [class*=el-icon] {
+      [class*=rp-icon] {
         transform: scale(.8);
       }
     }
 
-    .el-input__inner {
+    .rp-input__inner {
       padding-left: #{$--input-mini-height + 7};
       padding-right: #{$--input-mini-height + 7};
     }
   }
 
   @include when(without-controls) {
-    .el-input__inner {
+    .rp-input__inner {
       padding-left: 15px;
       padding-right: 15px;
     }
   }
 
   @include when(controls-right) {
-    .el-input__inner {
+    .rp-input__inner {
       padding-left: 15px;
       padding-right: #{$--input-height + 10};
     }
@@ -140,7 +140,7 @@
       height: auto;
       line-height: #{math.div($--input-height - 2, 2)};
 
-      [class*=el-icon] {
+      [class*=rp-icon] {
         transform: scale(.8);
       }
     }

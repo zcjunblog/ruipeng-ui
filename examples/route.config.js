@@ -11,16 +11,10 @@ const LOAD_MAP = {
     },
     'en-US': name => {
         return r => require.ensure([], () => r(require(`./pages/en-US/${name}.vue`)), 'en-US')
-    },
-    es: name => {
-        return r => require.ensure([], () => r(require(`./pages/es/${name}.vue`)), 'es')
-    },
-    'fr-FR': name => {
-        return r => require.ensure([], () => r(require(`./pages/fr-FR/${name}.vue`)), 'fr-FR')
     }
 }
 
-const load = function (lang, path) {
+const load = function(lang, path) {
     return LOAD_MAP[lang](path)
 }
 
@@ -31,16 +25,10 @@ const LOAD_DOCS_MAP = {
     },
     'en-US': path => {
         return r => require.ensure([], () => r(require(`./docs/en-US${path}.md`)), 'en-US')
-    },
-    es: path => {
-        return r => require.ensure([], () => r(require(`./docs/es${path}.md`)), 'es')
-    },
-    'fr-FR': path => {
-        return r => require.ensure([], () => r(require(`./docs/fr-FR${path}.md`)), 'fr-FR')
     }
 }
 
-const loadDocs = function (lang, path) {
+const loadDocs = function(lang, path) {
     return LOAD_DOCS_MAP[lang](path)
 }
 
@@ -107,7 +95,7 @@ const registerRoute = navConfig => {
 // 得到组件页面所有侧边栏的路由配置
 let route = registerRoute(navConfig)
 
-const generateMiscRoutes = function (lang) {
+const generateMiscRoutes = function(lang) {
     let guideRoute = {
         path: `/${lang}/guide`, // 指南
         redirect: `/${lang}/guide/design`,

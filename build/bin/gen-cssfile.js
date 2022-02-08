@@ -30,12 +30,12 @@ function fileExists(filePath) {
 
 // 遍历所有组件包，生成引入所有组件包样式的 import 语句，然后自动生成 packages/theme-chalk/src/index.scss|css 文件
 themes.forEach(theme => {
-    // 是否是 scss，element-ui 默认使用 scss 编写样式
+    // 是否是 scss，ruipeng-ui 默认使用 scss 编写样式
     var isSCSS = theme !== 'theme-default'
     // 导入基础样式文件 @import "./base.scss|css";\n
     var indexContent = isSCSS ? '@import "./base.scss";\n' : '@import "./base.css";\n'
     // 遍历所有组件包，并生成 @import "./comp-package.scss|css";\n
-    Components.forEach(function (key) {
+    Components.forEach(function(key) {
         // 跳过这三个组件包
         if (['icon', 'option', 'option-group'].indexOf(key) > -1) return
         // comp-package.scss|css

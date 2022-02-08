@@ -1,5 +1,5 @@
-import { CreateElement, VNode } from 'vue'
-import { ElementUIComponent } from './component'
+import { CreateRpement, VNode } from 'vue'
+import { RpementUIComponent } from './component'
 
 export type TransferPanelPosition = 'left' | 'right'
 
@@ -27,11 +27,11 @@ export interface TransferRenderContent {
    * @param h The render function
    * @param option The option data object
    */
-  (h: CreateElement, option: TransferData): VNode
+  (h: CreateRpement, option: TransferData): VNode
 }
 
 /** Transfer Component */
-export declare class ElTransfer extends ElementUIComponent {
+export declare class RpTransfer extends RpementUIComponent {
   /** Data source */
   data: TransferData[]
 

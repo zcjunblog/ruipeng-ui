@@ -1,8 +1,8 @@
-import ElDropdown from './src/dropdown';
+import RpDropdown from './src/dropdown'
 
 /* istanbul ignore next */
-ElDropdown.install = function(Vue) {
-  Vue.component(ElDropdown.name, ElDropdown);
-};
+RpDropdown.install = function(Vue) {
+    Vue.component(RpDropdown.name, RpDropdown)
+}
 
-export default ElDropdown;
+export default RpDropdown

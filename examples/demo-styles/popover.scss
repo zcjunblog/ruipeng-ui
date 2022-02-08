@@ -1,11 +1,11 @@
 .demo-block.demo-popover {
-  .el-popover + .el-popover {
+  .rp-popover + .rp-popover {
     margin-left: 10px;
   }
-  .el-input {
+  .rp-input {
     width: 360px;
   }
-  .el-button {
+  .rp-button {
     margin-left: 10px;
   }
 }

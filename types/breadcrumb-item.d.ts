@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Breadcrumb Item Component */
-export declare class ElBreadcrumbItem extends ElementUIComponent {
+export declare class RpBreadcrumbItem extends RpementUIComponent {
   /** Target route of the link, same as to of vue-router */
   to: string | object
 

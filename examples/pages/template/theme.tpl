@@ -66,17 +66,17 @@
         </li>
       </ul>
     </section>
-    <el-dialog :visible.sync="copyDialogVisible">
-      <el-form :model="copyForm" ref="copyForm" :rules="copyFormRule">
-        <el-form-item label="<%= 3 >" prop="name">
-          <el-input v-model="copyForm.name"></el-input>
-        </el-form-item>
-      </el-form>
+    <rp-dialog :visible.sync="copyDialogVisible">
+      <rp-form :model="copyForm" ref="copyForm" :rules="copyFormRule">
+        <rp-form-item label="<%= 3 >" prop="name">
+          <rp-input v-model="copyForm.name"></rp-input>
+        </rp-form-item>
+      </rp-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</el-button>
-        <el-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</el-button>
+        <rp-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</rp-button>
+        <rp-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</rp-button>
       </div>
-    </el-dialog>
+    </rp-dialog>
   </div>
 </template>
 <script>

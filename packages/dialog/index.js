@@ -1,8 +1,8 @@
-import ElDialog from './src/component';
+import RpDialog from './src/component'
 
 /* istanbul ignore next */
-ElDialog.install = function(Vue) {
-  Vue.component(ElDialog.name, ElDialog);
-};
+RpDialog.install = function(Vue) {
+    Vue.component(RpDialog.name, RpDialog)
+}
 
-export default ElDialog;
+export default RpDialog

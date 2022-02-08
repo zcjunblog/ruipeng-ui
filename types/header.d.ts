@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Header Component */
-export declare class ElHeader extends ElementUIComponent {
+export declare class RpHeader extends RpementUIComponent {
   /** Height of the header */
   height: string
 }

@@ -1,8 +1,8 @@
-import ElTabs from './src/tabs';
+import RpTabs from './src/tabs'
 
 /* istanbul ignore next */
-ElTabs.install = function(Vue) {
-  Vue.component(ElTabs.name, ElTabs);
-};
+RpTabs.install = function(Vue) {
+    Vue.component(RpTabs.name, RpTabs)
+}
 
-export default ElTabs;
+export default RpTabs

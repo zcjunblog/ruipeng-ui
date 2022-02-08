@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 import { VNode } from 'vue'
 
-interface ElResultSlots {
+interface RpResultSlots {
   /* title slot: custom title */
   title: VNode[]
 
@@ -18,7 +18,7 @@ interface ElResultSlots {
 }
 
 /** Used to give feedback on the result of user's operation or access exception. **/
-export declare class ElResult extends ElementUIComponent {
+export declare class RpResult extends RpementUIComponent {
 
   /* title */
   title: string
@@ -29,5 +29,5 @@ export declare class ElResult extends ElementUIComponent {
   /* icon type */
   icon: 'success' | 'warning' | 'info' | 'error'
 
-  $slots: ElResultSlots
+  $slots: RpResultSlots
 }

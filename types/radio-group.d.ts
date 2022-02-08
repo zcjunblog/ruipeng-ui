@@ -1,9 +1,9 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 export type RadioGroupSize = 'large' | 'small'
 
 /** Radio Group Component */
-export declare class ElRadioGroup extends ElementUIComponent {
+export declare class RpRadioGroup extends RpementUIComponent {
   /** The size of radio buttons */
   size: RadioGroupSize
 

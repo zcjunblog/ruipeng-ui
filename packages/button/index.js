@@ -1,8 +1,8 @@
-import ElButton from './src/button';
+import RpButton from './src/button'
 
 /* istanbul ignore next */
-ElButton.install = function(Vue) {
-  Vue.component(ElButton.name, ElButton);
-};
+RpButton.install = function(Vue) {
+    Vue.component(RpButton.name, RpButton)
+}
 
-export default ElButton;
+export default RpButton

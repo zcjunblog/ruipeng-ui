@@ -1,8 +1,8 @@
-import ElInputNumber from './src/input-number';
+import RpInputNumber from './src/input-number'
 
 /* istanbul ignore next */
-ElInputNumber.install = function(Vue) {
-  Vue.component(ElInputNumber.name, ElInputNumber);
-};
+RpInputNumber.install = function(Vue) {
+    Vue.component(RpInputNumber.name, RpInputNumber)
+}
 
-export default ElInputNumber;
+export default RpInputNumber

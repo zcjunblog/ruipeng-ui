@@ -89,7 +89,7 @@
   $selector: &;
   $currentSelector: "";
   @each $unit in $element {
-    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+    $currentSelector: #{$currentSelector + "." + $B + $ruipeng-separator + $unit + ","};
   }
 
   @if hitAllSpecialNestRule($selector) {
@@ -128,7 +128,7 @@
   $interpolation: '';
 
   @if $E-flag {
-    $interpolation: $element-separator + $E-flag;
+    $interpolation: $ruipeng-separator + $E-flag;
   }
 
   @at-root {
@@ -148,7 +148,7 @@
   }
 
   @at-root {
-    #{&}#{$specSelector}.#{$block+$element-separator+$element+$modifierCombo} {
+    #{&}#{$specSelector}.#{$block+$ruipeng-separator+$element+$modifierCombo} {
       @content
     }
   }
@@ -164,7 +164,7 @@
 
   @at-root {
     #{$selector} {
-      .#{$block+$element-separator+$element+$modifierCombo} {
+      .#{$block+$ruipeng-separator+$element+$modifierCombo} {
         @content
       }
     }

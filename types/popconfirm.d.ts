@@ -1,8 +1,8 @@
-import { ElementUIComponent } from './component'
-import { ElPopover } from './popover'
+import { RpementUIComponent } from './component'
+import { RpPopover } from './popover'
 
 /** Popconfirm Component */
-export declare class ElPopconfirm extends ElPopover {
+export declare class RpPopconfirm extends RpPopover {
   /** Popconfirm title */
   title: string
 

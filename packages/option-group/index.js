@@ -1,8 +1,8 @@
-import ElOptionGroup from '../select/src/option-group';
+import RpOptionGroup from '../select/src/option-group'
 
 /* istanbul ignore next */
-ElOptionGroup.install = function(Vue) {
-  Vue.component(ElOptionGroup.name, ElOptionGroup);
-};
+RpOptionGroup.install = function(Vue) {
+    Vue.component(RpOptionGroup.name, RpOptionGroup)
+}
 
-export default ElOptionGroup;
+export default RpOptionGroup

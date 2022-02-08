@@ -1,8 +1,8 @@
-import ElButtonGroup from '../button/src/button-group';
+import RpButtonGroup from '../button/src/button-group'
 
 /* istanbul ignore next */
-ElButtonGroup.install = function(Vue) {
-  Vue.component(ElButtonGroup.name, ElButtonGroup);
-};
+RpButtonGroup.install = function(Vue) {
+    Vue.component(RpButtonGroup.name, RpButtonGroup)
+}
 
-export default ElButtonGroup;
+export default RpButtonGroup

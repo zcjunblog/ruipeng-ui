@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Footer Component */
-export declare class ElFooter extends ElementUIComponent {
+export declare class RpFooter extends RpementUIComponent {
   /** Height of the footer */
   height: string
 }

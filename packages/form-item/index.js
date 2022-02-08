@@ -1,8 +1,8 @@
-import ElFormItem from '../form/src/form-item';
+import RpFormItem from '../form/src/form-item'
 
 /* istanbul ignore next */
-ElFormItem.install = function(Vue) {
-  Vue.component(ElFormItem.name, ElFormItem);
-};
+RpFormItem.install = function(Vue) {
+    Vue.component(RpFormItem.name, RpFormItem)
+}
 
-export default ElFormItem;
+export default RpFormItem

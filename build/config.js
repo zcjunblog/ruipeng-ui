@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-01-27 17:12:59
  * @LastEditors: zhaozc
- * @LastEditTime: 2022-01-29 12:23:39
+ * @LastEditTime: 2022-02-08 14:20:43
  * @FilePath: \ruipeng-ui\build\config.js
  */
 /**
@@ -22,28 +22,28 @@ var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'
  *     包括 locale、utils、mixins、transitions 这些公共内容，也会出现冗余代码
  *     但有了 externals 的设置，就会将告诉 webpack 不需要将这些 import 的包打包到 bundle 中，运行时从外部获去
  *     获取这些扩展依赖。这样就可以在打包后 /lib/tables.js 中看到编译后的 table.js 对 Checkbox 组件的依赖引入：
- *     module.exports = require("element-ui/lib/checkbox")
- *     这么处理之后就不会出现冗余的 JS 代码，但是对于 CSS 部分，element-ui 并未处理冗余情况。
+ *     module.exports = require("ruipeng-ui/lib/checkbox")
+ *     这么处理之后就不会出现冗余的 JS 代码，但是对于 CSS 部分，ruipeng-ui 并未处理冗余情况。
  *     可以看到 /lib/theme-chalk/table.css 和 /lib/theme-chalk/checkbox.css 中都有 Checkbox 组件的样式
  */
 var externals = {}
 
-Object.keys(Components).forEach(function (key) {
-    externals[`element-ui/packages/${key}`] = `element-ui/lib/${key}`
+Object.keys(Components).forEach(function(key) {
+    externals[`ruipeng-ui/packages/${key}`] = `ruipeng-ui/lib/${key}`
 })
 
-externals['element-ui/src/locale'] = 'element-ui/lib/locale'
-utilsList.forEach(function (file) {
+externals['ruipeng-ui/src/locale'] = 'ruipeng-ui/lib/locale'
+utilsList.forEach(function(file) {
     file = path.basename(file, '.js')
-    externals[`element-ui/src/utils/${file}`] = `element-ui/lib/utils/${file}`
+    externals[`ruipeng-ui/src/utils/${file}`] = `ruipeng-ui/lib/utils/${file}`
 })
-mixinsList.forEach(function (file) {
+mixinsList.forEach(function(file) {
     file = path.basename(file, '.js')
-    externals[`element-ui/src/mixins/${file}`] = `element-ui/lib/mixins/${file}`
+    externals[`ruipeng-ui/src/mixins/${file}`] = `ruipeng-ui/lib/mixins/${file}`
 })
-transitionList.forEach(function (file) {
+transitionList.forEach(function(file) {
     file = path.basename(file, '.js')
-    externals[`element-ui/src/transitions/${file}`] = `element-ui/lib/transitions/${file}`
+    externals[`ruipeng-ui/src/transitions/${file}`] = `ruipeng-ui/lib/transitions/${file}`
 })
 
 externals = [
@@ -63,7 +63,7 @@ exports.alias = {
     main: path.resolve(__dirname, '../src'),
     packages: path.resolve(__dirname, '../packages'),
     examples: path.resolve(__dirname, '../examples'),
-    'element-ui': path.resolve(__dirname, '../')
+    'ruipeng-ui': path.resolve(__dirname, '../')
 }
 
 exports.vue = {

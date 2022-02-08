@@ -1,5 +1,5 @@
 import { VNode } from 'vue'
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 export interface CollapseItemSlots {
   /** Content of the collapse item */
@@ -12,7 +12,7 @@ export interface CollapseItemSlots {
 }
 
 /** Collapse Item Component */
-export declare class ElCollapseItem extends ElementUIComponent {
+export declare class RpCollapseItem extends RpementUIComponent {
   /** Unique identification of the panel */
   name: string | number
 

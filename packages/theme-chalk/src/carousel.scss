@@ -23,19 +23,19 @@
     outline: none;
     padding: 0;
     margin: 0;
-    height: $--carousel-arrow-size;
-    width: $--carousel-arrow-size;
+    height: $--carousrp-arrow-size;
+    width: $--carousrp-arrow-size;
     cursor: pointer;
     transition: .3s;
     border-radius: 50%;
-    background-color: $--carousel-arrow-background;
+    background-color: $--carousrp-arrow-background;
     color: $--color-white;
     position: absolute;
     top: 50%;
     z-index: 10;
     transform: translateY(-50%);
     text-align: center;
-    font-size: $--carousel-arrow-font-size;
+    font-size: $--carousrp-arrow-font-size;
 
     @include m(left) {
       left: 16px;
@@ -46,7 +46,7 @@
     }
 
     &:hover {
-      background-color: $--carousel-arrow-hover-background;
+      background-color: $--carousrp-arrow-hover-background;
     }
 
     & i {
@@ -74,15 +74,15 @@
     }
 
     @include m(outside) {
-      bottom: #{$--carousel-indicator-height + $--carousel-indicator-padding-vertical * 2};
+      bottom: #{$--carousrp-indicator-height + $--carousrp-indicator-padding-vertical * 2};
       text-align: center;
       position: static;
       transform: none;
-      .el-carousel__indicator:hover button {
+      .rp-carousel__indicator:hover button {
         opacity: 0.64;
       }
       button {
-        background-color: $--carousel-indicator-out-color;
+        background-color: $--carousrp-indicator-out-color;
         opacity: 0.24;
       }
     }
@@ -93,14 +93,14 @@
       transform: none;
       text-align: center;
 
-      .el-carousel__button {
+      .rp-carousel__button {
         height: auto;
         width: auto;
         padding: 2px 18px;
         font-size: 12px;
       }
 
-      .el-carousel__indicator {
+      .rp-carousel__indicator {
         padding: 6px 4px;
       }
     }
@@ -116,14 +116,14 @@
 
     @include m(horizontal) {
       display: inline-block;
-      padding: $--carousel-indicator-padding-vertical $--carousel-indicator-padding-horizontal;
+      padding: $--carousrp-indicator-padding-vertical $--carousrp-indicator-padding-horizontal;
     }
 
     @include m(vertical) {
-      padding: $--carousel-indicator-padding-horizontal $--carousel-indicator-padding-vertical;
-      .el-carousel__button {
-        width: $--carousel-indicator-height;
-        height: #{math.div($--carousel-indicator-width, 2)};
+      padding: $--carousrp-indicator-padding-horizontal $--carousrp-indicator-padding-vertical;
+      .rp-carousel__button {
+        width: $--carousrp-indicator-height;
+        height: #{math.div($--carousrp-indicator-width, 2)};
       }
     }
 
@@ -137,8 +137,8 @@
   @include e(button) {
     display: block;
     opacity: 0.48;
-    width: $--carousel-indicator-width;
-    height: $--carousel-indicator-height;
+    width: $--carousrp-indicator-width;
+    height: $--carousrp-indicator-height;
     background-color: $--color-white;
     border: none;
     outline: none;
@@ -149,14 +149,14 @@
   }
 }
 
-.carousel-arrow-left-enter,
-.carousel-arrow-left-leave-active {
+.carousrp-arrow-left-enter,
+.carousrp-arrow-left-leave-active {
   transform: translateY(-50%) translateX(-10px);
   opacity: 0;
 }
 
-.carousel-arrow-right-enter,
-.carousel-arrow-right-leave-active {
+.carousrp-arrow-right-enter,
+.carousrp-arrow-right-leave-active {
   transform: translateY(-50%) translateX(10px);
   opacity: 0;
 }

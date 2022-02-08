@@ -1,8 +1,8 @@
-import ElSubmenu from '../menu/src/submenu';
+import RpSubmenu from '../menu/src/submenu'
 
 /* istanbul ignore next */
-ElSubmenu.install = function(Vue) {
-  Vue.component(ElSubmenu.name, ElSubmenu);
-};
+RpSubmenu.install = function(Vue) {
+    Vue.component(RpSubmenu.name, RpSubmenu)
+}
 
-export default ElSubmenu;
+export default RpSubmenu

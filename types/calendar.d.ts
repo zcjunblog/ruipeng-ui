@@ -1,9 +1,9 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 export type DateType = Date | String | Number
 
 /** Calendar Component */
-export declare class ElCalendar extends ElementUIComponent {
+export declare class RpCalendar extends RpementUIComponent {
   /** Binding value */
   value: DateType
 

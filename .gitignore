@@ -12,12 +12,12 @@ lib
 .lh
 .idea
 .vscode
-examples/element-ui
+examples/ruipeng-ui
 examples/pages/en-US
 examples/pages/zh-CN
 examples/pages/es
 examples/pages/fr-FR
-fe.element/element-ui
+fe.ruipeng/ruipeng-ui
 .npmrc
 coverage
 waiter.config.js

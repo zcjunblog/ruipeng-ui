@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Menu Item Group Component */
-export declare class ElMenuItemGroup extends ElementUIComponent {
+export declare class RpMenuItemGroup extends RpementUIComponent {
   /** Group title */
   title: string
 }

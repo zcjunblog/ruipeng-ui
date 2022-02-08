@@ -1,9 +1,9 @@
-import { ElementUIComponent, ElementUIComponentSize } from './component'
+import { RpementUIComponent, RpementUIComponentSize } from './component'
 
 export type ColorFormat = 'hsl' | 'hsv' | 'hex' | 'rgb'
 
 /** ColorPicker Component */
-export declare class ElColorPicker extends ElementUIComponent {
+export declare class RpColorPicker extends RpementUIComponent {
   /** Whether to display the alpha slider */
   showAlpha: boolean
 
@@ -11,7 +11,7 @@ export declare class ElColorPicker extends ElementUIComponent {
   disabled: boolean
 
   /** Size of ColorPicker */
-  size: ElementUIComponentSize
+  size: RpementUIComponentSize
 
   /** Whether to display the alpha slider */
   popperClass: string

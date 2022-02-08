@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Menu Item Component */
-export declare class ElMenuItem extends ElementUIComponent {
+export declare class RpMenuItem extends RpementUIComponent {
   /** Unique identification */
   index: string
 

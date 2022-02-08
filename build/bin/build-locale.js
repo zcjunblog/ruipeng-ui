@@ -19,7 +19,7 @@ var localePath = resolve(__dirname, '../../src/locale/lang')
 var fileList = fs.readdirSync(localePath)
 
 // 转换函数
-var transform = function (filename, name, cb) {
+var transform = function(filename, name, cb) {
     require('babel-core').transformFile(
         resolve(localePath, filename),
         {
@@ -32,22 +32,22 @@ var transform = function (filename, name, cb) {
 
 // 遍历所有文件
 fileList // 只处理 js 文件，其实目录下不存在非 js 文件
-    .filter(function (file) {
+    .filter(function(file) {
         return /\.js$/.test(file)
     })
-    .forEach(function (file) {
+    .forEach(function(file) {
         var name = basename(file, '.js')
 
         // 调用转换函数，将转换后的代码写入到 lib/umd/locale 目录下
-        transform(file, name, function (err, result) {
+        transform(file, name, function(err, result) {
             if (err) {
                 console.error(err)
             } else {
                 var code = result.code
 
                 code = code
-                    .replace("define('", "define('element/locale/")
-                    .replace('global.', 'global.ELEMENT.lang = global.ELEMENT.lang || {}; \n    global.ELEMENT.lang.')
+                    .replace("define('", "define('ruipeng/locale/")
+                    .replace('global.', 'global.RUIPENG.lang = global.RUIPENG.lang || {}; \n    global.RUIPENG.lang.')
                 save(resolve(__dirname, '../../lib/umd/locale', file)).write(code)
 
                 console.log(file)

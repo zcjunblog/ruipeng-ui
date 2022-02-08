@@ -1,5 +1,5 @@
-import { CreateElement, VNode } from 'vue'
-import { ElementUIComponent, ElementUIHorizontalAlignment } from './component'
+import { CreateRpement, VNode } from 'vue'
+import { RpementUIComponent, RpementUIHorizontalAlignment } from './component'
 import { PopoverPlacement } from './popover'
 
 export type TableColumnType = 'default' | 'selection' | 'index' | 'expand'
@@ -39,7 +39,7 @@ export interface TableColumnFilter {
 }
 
 /** TableColumn Component */
-export declare class ElTableColumn extends ElementUIComponent {
+export declare class RpTableColumn extends RpementUIComponent {
   /** Type of the column. If set to `selection`, the column will display checkbox. If set to `index`, the column will display index of the row (staring from 1). If set to `expand`, the column will display expand icon. */
   type: TableColumnType
 
@@ -62,7 +62,7 @@ export declare class ElTableColumn extends ElementUIComponent {
   fixed: boolean | TableColumnFixedType
 
   /** Render function for table header of this column */
-  renderHeader: (h: CreateElement, data: RenderHeaderData) => VNode | string
+  renderHeader: (h: CreateRpement, data: RenderHeaderData) => VNode | string
 
   /** Whether column can be sorted */
   sortable: boolean | 'custom'
@@ -83,10 +83,10 @@ export declare class ElTableColumn extends ElementUIComponent {
   showOverflowTooltip: boolean
 
   /** Alignment */
-  align: ElementUIHorizontalAlignment
+  align: RpementUIHorizontalAlignment
 
   /** Alignment of the table header. If omitted, the value of the `align` attribute will be applied */
-  headerAlign: ElementUIHorizontalAlignment
+  headerAlign: RpementUIHorizontalAlignment
 
   /** Class name of cells in the column */
   className: string

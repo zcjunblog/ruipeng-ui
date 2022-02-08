@@ -11,7 +11,7 @@
  *      在 /components.json 文件中配置组件信息
  *      在 /examples/nav.config.json 中添加该组件的路由配置
  *      在 /packages/theme-chalk/src/index.scss 文件中自动引入该组件的样式文件
- *      将类型声明文件在 /types/element-ui.d.ts 中自动引入
+ *      将类型声明文件在 /types/ruipeng-ui.d.ts 中自动引入
  *  总之，该脚本的存在，让你只需专注于编写你的组件代码，其它的一概不用管
  */
 
@@ -62,12 +62,12 @@ export default ${ComponentName};`
         filename: 'src/main.vue',
         // 文件内容，sfc
         content: `<template>
-  <div class="el-${componentname}"></div>
+  <div class="rp-${componentname}"></div>
 </template>
 
 <script>
 export default {
-  name: 'El${ComponentName}'
+  name: 'Rp${ComponentName}'
 };
 </script>`
     },
@@ -122,10 +122,10 @@ describe('${ComponentName}', () => {
     {
         filename: path.join('../../types', `${componentname}.d.ts`),
         // 类型声明文件基本结构
-        content: `import { ElementUIComponent } from './component'
+        content: `import { RuipengUIComponent } from './component'
 
 /** ${ComponentName} Component */
-export declare class El${ComponentName} extends ElementUIComponent {
+export declare class Rp${ComponentName} extends RuipengUIComponent {
 }`
     }
 ]
@@ -137,30 +137,38 @@ if (componentsFile[componentname]) {
     process.exit(1)
 }
 componentsFile[componentname] = `./packages/${componentname}/index.js`
-fileSave(path.join(__dirname, '../../components.json')).write(JSON.stringify(componentsFile, null, '  '), 'utf8').end('\n')
+fileSave(path.join(__dirname, '../../components.json'))
+    .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
+    .end('\n')
 
 // 将组件样式文件在 index.scss 中引入
 const sassPath = path.join(__dirname, '../../packages/theme-chalk/src/index.scss')
 const sassImportText = `${fs.readFileSync(sassPath)}@import "./${componentname}.scss";`
-fileSave(sassPath).write(sassImportText, 'utf8').end('\n')
+fileSave(sassPath)
+    .write(sassImportText, 'utf8')
+    .end('\n')
 
-// 将组件的类型声明文件在 element-ui.d.ts 中引入
-const elementTsPath = path.join(__dirname, '../../types/element-ui.d.ts')
+// 将组件的类型声明文件在 ruipeng-ui.d.ts 中引入
+const ruipengTsPath = path.join(__dirname, '../../types/ruipeng-ui.d.ts')
 
-let elementTsText = `${fs.readFileSync(elementTsPath)}
+let ruipengTsText = `${fs.readFileSync(ruipengTsPath)}
 /** ${ComponentName} Component */
-export class ${ComponentName} extends El${ComponentName} {}`
+export class ${ComponentName} extends Rp${ComponentName} {}`
 
-const index = elementTsText.indexOf('export') - 1
-const importString = `import { El${ComponentName} } from './${componentname}'`
+const index = ruipengTsText.indexOf('export') - 1
+const importString = `import { Rp${ComponentName} } from './${componentname}'`
 
-elementTsText = elementTsText.slice(0, index) + importString + '\n' + elementTsText.slice(index)
+ruipengTsText = ruipengTsText.slice(0, index) + importString + '\n' + ruipengTsText.slice(index)
 
-fileSave(elementTsPath).write(elementTsText, 'utf8').end('\n')
+fileSave(ruipengTsPath)
+    .write(ruipengTsText, 'utf8')
+    .end('\n')
 
 // 遍历 Files 数组，创建列出的所有文件并写入文件内容
 Files.forEach(file => {
-    fileSave(path.join(PackagePath, file.filename)).write(file.content, 'utf8').end('\n')
+    fileSave(path.join(PackagePath, file.filename))
+        .write(file.content, 'utf8')
+        .end('\n')
 })
 
 // 在 nav.config.json 中添加新组件对应的路由配置
@@ -175,6 +183,8 @@ Object.keys(navConfigFile).forEach(lang => {
     })
 })
 
-fileSave(path.join(__dirname, '../../examples/nav.config.json')).write(JSON.stringify(navConfigFile, null, '  '), 'utf8').end('\n')
+fileSave(path.join(__dirname, '../../examples/nav.config.json'))
+    .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
+    .end('\n')
 
 console.log('DONE!')

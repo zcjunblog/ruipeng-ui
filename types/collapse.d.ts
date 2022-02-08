@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Use Collapse to store contents. */
-export declare class ElCollapse extends ElementUIComponent {
+export declare class RpCollapse extends RpementUIComponent {
   /** Whether to activate accordion mode */
   accordion: boolean
 

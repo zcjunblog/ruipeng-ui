@@ -9,8 +9,8 @@ Scroll down to see the bottom-right button.
 
 ```html
 <template>
-  Scroll down to see the bottom-right button.
-  <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
+    Scroll down to see the bottom-right button.
+    <rp-backtop target=".page-component__scroll .rp-scrollbar__wrap"></rp-backtop>
 </template>
 ```
 
@@ -23,10 +23,10 @@ Display area is 40px \* 40px.
 
 ```html
 <template>
-  Scroll down to see the bottom-right button.
-  <el-backtop target=".page-component__scroll .el-scrollbar__wrap" :bottom="100">
-    <div
-      style="{
+    Scroll down to see the bottom-right button.
+    <rp-backtop target=".page-component__scroll .rp-scrollbar__wrap" :bottom="100">
+        <div
+            style="{
         height: 100%;
         width: 100%;
         background-color: #f2f5f6;
@@ -35,10 +35,10 @@ Display area is 40px \* 40px.
         line-height: 40px;
         color: #1989fa;
       }"
-    >
-      UP
-    </div>
-  </el-backtop>
+        >
+            UP
+        </div>
+    </rp-backtop>
 </template>
 ```
 
@@ -46,9 +46,9 @@ Display area is 40px \* 40px.
 
 ### Attributes
 
-| Attribute         | Description                                                         | Type            | Accepted Values | Default |
-| ----------------- | ------------------------------------------------------------------- | --------------- | --------------- | ------- |
-| target            | the target to trigger scroll                                        | string          |                 |         |
+| Attribute         | Description                                                         | Type   | Accepted Values | Default |
+| ----------------- | ------------------------------------------------------------------- | ------ | --------------- | ------- |
+| target            | the target to trigger scroll                                        | string |                 |         |
 | visibility-height | the button will not show until the scroll height reaches this value | number |                 | 200     |
 | right             | right distance                                                      | number |                 | 40      |
 | bottom            | bottom distance                                                     | number |                 | 40      |

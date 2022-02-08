@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 import { VNode } from 'vue'
 
-interface ElDescriptionsSlots {
+interface RpDescriptionsSlots {
   /* title slot: custom title, display on the top left */
   title: VNode[]
 
@@ -12,7 +12,7 @@ interface ElDescriptionsSlots {
 }
 
 /** Display multiple fields in list form. **/
-export declare class ElDescriptions extends ElementUIComponent {
+export declare class RpDescriptions extends RpementUIComponent {
 
   /* with or without border */
   border: boolean
@@ -47,6 +47,6 @@ export declare class ElDescriptions extends ElementUIComponent {
   /* custom content style */
   contentStyle: object
 
-  $slots: ElDescriptionsSlots
+  $slots: RpDescriptionsSlots
 
 }

@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Icon Component */
-export declare class ElIcon extends ElementUIComponent {
+export declare class RpIcon extends RpementUIComponent {
   /** Icon name */
   name: string  
 }

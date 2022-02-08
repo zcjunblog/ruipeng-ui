@@ -24,8 +24,8 @@ var classList = []
 // 遍历所有的样式节点
 nodes.forEach(node => {
     var selector = node.selector || ''
-    var reg = new RegExp(/\.el-icon-([^:]+):before/)
-    // 从选择器中匹配出 icon 名称，比如 el-icon-add，匹配得到 add
+    var reg = new RegExp(/\.rp-icon-([^:]+):before/)
+    // 从选择器中匹配出 icon 名称，比如 rp-icon-add，匹配得到 add
     var arr = selector.match(reg)
 
     // 将 icon 名称写入数组

@@ -10,56 +10,47 @@ Displays animation in a container (such as a table) while loading data.
 
 ```html
 <template>
-  <el-table
-    v-loading="loading"
-    :data="tableData"
-    style="width: 100%">
-    <el-table-column
-      prop="date"
-      label="Date"
-      width="180">
-    </el-table-column>
-    <el-table-column
-      prop="name"
-      label="Name"
-      width="180">
-    </el-table-column>
-    <el-table-column
-      prop="address"
-      label="Address">
-    </el-table-column>
-  </el-table>
+    <rp-table v-loading="loading" :data="tableData" style="width: 100%">
+        <rp-table-column prop="date" label="Date" width="180"></rp-table-column>
+        <rp-table-column prop="name" label="Name" width="180"></rp-table-column>
+        <rp-table-column prop="address" label="Address"></rp-table-column>
+    </rp-table>
 </template>
 
 <style>
-  body {
-    margin: 0;
-  }
+    body {
+        margin: 0;
+    }
 </style>
 
 <script>
-  export default {
-    data() {
-      return {
-        tableData: [{
-          date: '2016-05-02',
-          name: 'John Smith',
-          address: 'No.1518,  Jinshajiang Road, Putuo District'
-        }, {
-          date: '2016-05-04',
-          name: 'John Smith',
-          address: 'No.1518,  Jinshajiang Road, Putuo District'
-        }, {
-          date: '2016-05-01',
-          name: 'John Smith',
-          address: 'No.1518,  Jinshajiang Road, Putuo District'
-        }],
-        loading: true
-      };
+    export default {
+        data() {
+            return {
+                tableData: [
+                    {
+                        date: '2016-05-02',
+                        name: 'John Smith',
+                        address: 'No.1518,  Jinshajiang Road, Putuo District'
+                    },
+                    {
+                        date: '2016-05-04',
+                        name: 'John Smith',
+                        address: 'No.1518,  Jinshajiang Road, Putuo District'
+                    },
+                    {
+                        date: '2016-05-01',
+                        name: 'John Smith',
+                        address: 'No.1518,  Jinshajiang Road, Putuo District'
+                    }
+                ],
+                loading: true
+            }
+        }
     }
-  };
 </script>
 ```
+
 :::
 
 ### Customization
@@ -67,55 +58,51 @@ Displays animation in a container (such as a table) while loading data.
 You can customize loading text, loading spinner and background color.
 
 :::demo Add attribute `element-loading-text` to the element on which `v-loading` is bound, and its value will be displayed under the spinner. Similarly, `element-loading-spinner` and `element-loading-background` are for customizing loading spinner class name and background color.
+
 ```html
 <template>
-  <el-table
-    v-loading="loading"
-    element-loading-text="Loading..."
-    element-loading-spinner="el-icon-loading"
-    element-loading-background="rgba(0, 0, 0, 0.8)"
-    :data="tableData"
-    style="width: 100%">
-    <el-table-column
-      prop="date"
-      label="Date"
-      width="180">
-    </el-table-column>
-    <el-table-column
-      prop="name"
-      label="Name"
-      width="180">
-    </el-table-column>
-    <el-table-column
-      prop="address"
-      label="Address">
-    </el-table-column>
-  </el-table>
+    <rp-table
+        v-loading="loading"
+        element-loading-text="Loading..."
+        element-loading-spinner="rp-icon-loading"
+        element-loading-background="rgba(0, 0, 0, 0.8)"
+        :data="tableData"
+        style="width: 100%"
+    >
+        <rp-table-column prop="date" label="Date" width="180"></rp-table-column>
+        <rp-table-column prop="name" label="Name" width="180"></rp-table-column>
+        <rp-table-column prop="address" label="Address"></rp-table-column>
+    </rp-table>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        tableData: [{
-          date: '2016-05-02',
-          name: 'John Smith',
-          address: 'No.1518,  Jinshajiang Road, Putuo District'
-        }, {
-          date: '2016-05-04',
-          name: 'John Smith',
-          address: 'No.1518,  Jinshajiang Road, Putuo District'
-        }, {
-          date: '2016-05-01',
-          name: 'John Smith',
-          address: 'No.1518,  Jinshajiang Road, Putuo District'
-        }],
-        loading: true
-      };
+    export default {
+        data() {
+            return {
+                tableData: [
+                    {
+                        date: '2016-05-02',
+                        name: 'John Smith',
+                        address: 'No.1518,  Jinshajiang Road, Putuo District'
+                    },
+                    {
+                        date: '2016-05-04',
+                        name: 'John Smith',
+                        address: 'No.1518,  Jinshajiang Road, Putuo District'
+                    },
+                    {
+                        date: '2016-05-01',
+                        name: 'John Smith',
+                        address: 'No.1518,  Jinshajiang Road, Putuo District'
+                    }
+                ],
+                loading: true
+            }
+        }
     }
-  };
 </script>
 ```
+
 :::
 
 ### Full screen loading
@@ -126,84 +113,91 @@ Show a full screen animation while loading data.
 
 ```html
 <template>
-  <el-button
-    type="primary"
-    @click="openFullScreen1"
-    v-loading.fullscreen.lock="fullscreenLoading">
-    As a directive
-  </el-button>
-  <el-button
-    type="primary"
-    @click="openFullScreen2">
-    As a service
-  </el-button>
+    <rp-button type="primary" @click="openFullScreen1" v-loading.fullscreen.lock="fullscreenLoading">
+        As a directive
+    </rp-button>
+    <rp-button type="primary" @click="openFullScreen2">
+        As a service
+    </rp-button>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        fullscreenLoading: false
-      }
-    },
-    methods: {
-      openFullScreen1() {
-        this.fullscreenLoading = true;
-        setTimeout(() => {
-          this.fullscreenLoading = false;
-        }, 2000);
-      },
-      openFullScreen2() {
-        const loading = this.$loading({
-          lock: true,
-          text: 'Loading',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-        });
-        setTimeout(() => {
-          loading.close();
-        }, 2000);
-      }
+    export default {
+        data() {
+            return {
+                fullscreenLoading: false
+            }
+        },
+        methods: {
+            openFullScreen1() {
+                this.fullscreenLoading = true
+                setTimeout(() => {
+                    this.fullscreenLoading = false
+                }, 2000)
+            },
+            openFullScreen2() {
+                const loading = this.$loading({
+                    lock: true,
+                    text: 'Loading',
+                    spinner: 'rp-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                })
+                setTimeout(() => {
+                    loading.close()
+                }, 2000)
+            }
+        }
     }
-  }
 </script>
 ```
+
 :::
 
 ### Service
+
 You can also invoke Loading with a service. Import Loading service:
+
 ```javascript
-import { Loading } from 'element-ui';
+import { Loading } from 'ruipeng-ui'
 ```
+
 Invoke it:
+
 ```javascript
-Loading.service(options);
+Loading.service(options)
 ```
+
 The parameter `options` is the configuration of Loading, and its details can be found in the following table. `LoadingService` returns a Loading instance, and you can close it by invoking its `close` method:
+
 ```javascript
-let loadingInstance = Loading.service(options);
-this.$nextTick(() => { // Loading should be closed asynchronously
-  loadingInstance.close();
-});
+let loadingInstance = Loading.service(options)
+this.$nextTick(() => {
+    // Loading should be closed asynchronously
+    loadingInstance.close()
+})
 ```
+
 Note that in this case the full screen Loading is singleton. If a new full screen Loading is invoked before an existing one is closed, the existing full screen Loading instance will be returned instead of actually creating another Loading instance:
+
 ```javascript
-let loadingInstance1 = Loading.service({ fullscreen: true });
-let loadingInstance2 = Loading.service({ fullscreen: true });
-console.log(loadingInstance1 === loadingInstance2); // true
+let loadingInstance1 = Loading.service({ fullscreen: true })
+let loadingInstance2 = Loading.service({ fullscreen: true })
+console.log(loadingInstance1 === loadingInstance2) // true
 ```
+
 Calling the `close` method on any one of them can close this full screen Loading.
 
 If Element is imported entirely, a globally method `$loading` will be registered to Vue.prototype. You can invoke it like this: `this.$loading(options)`, and it also returns a Loading instance.
 
 ### Options
-| Attribute      | Description          | Type      | Accepted Values       | Default  |
-|---------- |-------------- |---------- |--------------------------------  |-------- |
-| target | the DOM node Loading needs to cover. Accepts a DOM object or a string. If it's a string, it will be passed to `document.querySelector` to get the corresponding DOM node | object/string | — | document.body |
-| body | same as the `body` modifier of `v-loading` | boolean | — | false |
-| fullscreen | same as the `fullscreen` modifier of `v-loading` | boolean | — | true |
-| lock | same as the `lock` modifier of `v-loading` | boolean | — | false |
-| text | loading text that displays under the spinner | string | — | — |
-| spinner | class name of the custom spinner | string | — | — |
-| background | background color of the mask | string | — | — |
-| customClass | custom class name for Loading | string | — | — |
+
+| Attribute   | Description                                                                                                                                                              | Type          | Accepted Values | Default       |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- | --------------- | ------------- |
+| target      | the DOM node Loading needs to cover. Accepts a DOM object or a string. If it's a string, it will be passed to `document.querySelector` to get the corresponding DOM node | object/string | —               | document.body |
+| body        | same as the `body` modifier of `v-loading`                                                                                                                               | boolean       | —               | false         |
+| fullscreen  | same as the `fullscreen` modifier of `v-loading`                                                                                                                         | boolean       | —               | true          |
+| lock        | same as the `lock` modifier of `v-loading`                                                                                                                               | boolean       | —               | false         |
+| text        | loading text that displays under the spinner                                                                                                                             | string        | —               | —             |
+| spinner     | class name of the custom spinner                                                                                                                                         | string        | —               | —             |
+| background  | background color of the mask                                                                                                                                             | string        | —               | —             |
+| customClass | custom class name for Loading                                                                                                                                            | string        | —               | —             |

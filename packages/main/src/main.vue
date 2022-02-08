@@ -1,12 +1,12 @@
 <template>
-  <main class="el-main">
-    <slot></slot>
-  </main>
+    <main class="rp-main">
+        <slot></slot>
+    </main>
 </template>
 
 <script>
-  export default {
-    name: 'ElMain',
-    componentName: 'ElMain'
-  };
+export default {
+    name: 'RpMain',
+    componentName: 'RpMain'
+}
 </script>

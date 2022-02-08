@@ -1,13 +1,13 @@
 <template>
-  <i :class="'el-icon-' + name"></i>
+    <i :class="'rp-icon-' + name"></i>
 </template>
 
 <script>
-  export default {
-    name: 'ElIcon',
+export default {
+    name: 'RpIcon',
 
     props: {
-      name: String
+        name: String
     }
-  };
+}
 </script>

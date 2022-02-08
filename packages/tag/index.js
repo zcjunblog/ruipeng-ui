@@ -1,8 +1,8 @@
-import ElTag from './src/tag';
+import RpTag from './src/tag'
 
 /* istanbul ignore next */
-ElTag.install = function(Vue) {
-  Vue.component(ElTag.name, ElTag);
-};
+RpTag.install = function(Vue) {
+    Vue.component(RpTag.name, RpTag)
+}
 
-export default ElTag;
+export default RpTag

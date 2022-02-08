@@ -1,17 +1,21 @@
 {
-  "globals": {
-    "ga": true,
-    "chrome": true
-  },
-  "plugins": ["html", "json"],
-  "extends": "elemefe",
-  "rules": {
-    "no-restricted-globals": ["error", "event", "fdescribe"]
-  },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "ecmaFeatures": {
-      "jsx": true
+    "globals": {
+        "ga": true,
+        "chrome": true
+    },
+    "plugins": ["html", "json"],
+    "extends": "elemefe",
+    "rules": {
+        "no-restricted-globals": ["error", "event", "fdescribe"],
+        // js部分不要分号
+        "semi": [0, "always"],
+        // element的代码风格与我们的prettier设置的代码风格有冲突 缩进检测暂时关闭
+        "indent": "off"
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true
+        }
     }
-  }
 }

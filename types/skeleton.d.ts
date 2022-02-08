@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 import { VNode } from 'vue'
 
-interface ElSkeletonSlots {
+interface RpSkeletonSlots {
   /* default slot:  Real rendering DOM */
   default: VNode[]
 
@@ -12,7 +12,7 @@ interface ElSkeletonSlots {
 }
 
 /** When loading data, and you need a rich experience for visual and interactions for your end users */
-export declare class ElSkeleton extends ElementUIComponent {
+export declare class RpSkeleton extends RpementUIComponent {
   /** whether showing the animation; default: false */
   animated: boolean
 
@@ -28,6 +28,6 @@ export declare class ElSkeleton extends ElementUIComponent {
   /** Rendering delay in millseconds; default: 0 */
   throttle: number
 
-  $slots: ElSkeletonSlots
+  $slots: RpSkeletonSlots
 
 }

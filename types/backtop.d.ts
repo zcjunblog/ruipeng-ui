@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Backtop Component */
-export declare class ElBacktop extends ElementUIComponent {
+export declare class RpBacktop extends RpementUIComponent {
   /** Backtop target */
   target: string
   

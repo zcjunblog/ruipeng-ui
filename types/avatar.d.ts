@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Avatar Component */
-export declare class ElAvatar extends ElementUIComponent {
+export declare class RpAvatar extends RpementUIComponent {
   icon: string;
 
   size: string | number;

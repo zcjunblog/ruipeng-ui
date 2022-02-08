@@ -1,8 +1,8 @@
-import ElCheckbox from './src/checkbox';
+import RpCheckbox from './src/checkbox'
 
 /* istanbul ignore next */
-ElCheckbox.install = function(Vue) {
-  Vue.component(ElCheckbox.name, ElCheckbox);
-};
+RpCheckbox.install = function(Vue) {
+    Vue.component(RpCheckbox.name, RpCheckbox)
+}
 
-export default ElCheckbox;
+export default RpCheckbox

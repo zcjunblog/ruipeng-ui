@@ -1,8 +1,8 @@
-import ElTableColumn from '../table/src/table-column';
+import RpTableColumn from '../table/src/table-column'
 
 /* istanbul ignore next */
-ElTableColumn.install = function(Vue) {
-  Vue.component(ElTableColumn.name, ElTableColumn);
-};
+RpTableColumn.install = function(Vue) {
+    Vue.component(RpTableColumn.name, RpTableColumn)
+}
 
-export default ElTableColumn;
+export default RpTableColumn

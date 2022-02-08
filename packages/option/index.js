@@ -1,8 +1,8 @@
-import ElOption from '../select/src/option';
+import RpOption from '../select/src/option'
 
 /* istanbul ignore next */
-ElOption.install = function(Vue) {
-  Vue.component(ElOption.name, ElOption);
-};
+RpOption.install = function(Vue) {
+    Vue.component(RpOption.name, RpOption)
+}
 
-export default ElOption;
+export default RpOption

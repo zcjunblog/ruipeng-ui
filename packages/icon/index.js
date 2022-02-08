@@ -1,8 +1,8 @@
-import ElIcon from './src/icon.vue';
+import RpIcon from './src/icon.vue'
 
 /* istanbul ignore next */
-ElIcon.install = function(Vue) {
-  Vue.component(ElIcon.name, ElIcon);
-};
+RpIcon.install = function(Vue) {
+    Vue.component(RpIcon.name, RpIcon)
+}
 
-export default ElIcon;
+export default RpIcon

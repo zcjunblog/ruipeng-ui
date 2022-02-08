@@ -1,4 +1,4 @@
-export * from './element-ui'
+export * from './ruipeng-ui'
 
-import * as ElementUI from './element-ui'
-export default ElementUI
+import * as RpementUI from './ruipeng-ui'
+export default RpementUI

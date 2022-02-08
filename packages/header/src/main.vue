@@ -1,20 +1,20 @@
 <template>
-  <header class="el-header" :style="{ height }">
-    <slot></slot>
-  </header>
+    <header class="rp-header" :style="{ height }">
+        <slot></slot>
+    </header>
 </template>
 
 <script>
-  export default {
-    name: 'ElHeader',
+export default {
+    name: 'RpHeader',
 
-    componentName: 'ElHeader',
+    componentName: 'RpHeader',
 
     props: {
-      height: {
-        type: String,
-        default: '60px'
-      }
+        height: {
+            type: String,
+            default: '60px'
+        }
     }
-  };
+}
 </script>

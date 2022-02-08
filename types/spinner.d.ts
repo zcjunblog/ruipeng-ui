@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Spinner Component */
-export declare class ElSpinner extends ElementUIComponent {
+export declare class RpSpinner extends RpementUIComponent {
   /** The type of spinner */
   type: string
   	

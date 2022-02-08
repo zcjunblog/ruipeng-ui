@@ -1,10 +1,16 @@
-import { ElementUIComponent } from './component'
+/*
+ * @Date: 2022-01-27 17:13:01
+ * @LastEditors: zhaozc
+ * @LastEditTime: 2022-02-08 17:10:29
+ * @FilePath: \ruipeng-ui\types\alert.d.ts
+ */
+import { RpementUIComponent } from './component'
 
 export type AlertType = 'success' | 'warning' | 'info' | 'error'
 export type AlertEffect = 'dark' | 'light'
 
 /** Alert Component */
-export declare class ElAlert extends ElementUIComponent {
+export declare class RpAlert extends RpementUIComponent {
   /** Title */
   title: string
 

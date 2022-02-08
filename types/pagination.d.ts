@@ -1,7 +1,7 @@
-import { ElementUIComponent } from './component'
+import { RpementUIComponent } from './component'
 
 /** Pagination Component */
-export declare class ElPagination extends ElementUIComponent {
+export declare class RpPagination extends RpementUIComponent {
   /** Whether to use small pagination */
   small: boolean
 
@@ -21,7 +21,7 @@ export declare class ElPagination extends ElementUIComponent {
   currentPage: number
 
   /**
-   * Layout of Pagination. Elements separated with a comma.
+   * Layout of Pagination. Rpements separated with a comma.
    * Accepted values: `sizes`, `prev`, `pager`, `next`, `jumper`, `->`, `total`, `slot`
    */
   layout: string

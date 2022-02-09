@@ -125,7 +125,7 @@
       height: 53px;
       line-height: 52px;
       font-size: 14px;
-      color: #1f9f85;
+      color: #409EFF;
       text-align: center;
       border: 0;
       border-top: 1px solid #eaeefb;
@@ -143,7 +143,7 @@
 
       &:hover {
         color: #fff;
-        background: #1f9f85;
+        background: #409EFF;
       }
     }
     &:hover {
@@ -291,64 +291,7 @@
       </div>
     </div>
     <div class="jumbotron" ref="indexMainImg">
-      <img src="~examples/assets/images/theme-index-blue.png" alt="">
-      <div class="jumbotron-red" :style="{
-           height: mainImgOffset + 'px'
-         }">
-        <img src="~examples/assets/images/theme-index-red.png" alt="">
-      </div>
-    </div>
-    <div class="cards">
-      <ul class="container">
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/guide.png" alt="">
-            <h3><%= 3 ></h3>
-            <p><%= 4 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/guide/design"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/component.png" alt="">
-            <h3><%= 6 ></h3>
-            <p><%= 7 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/component/layout"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/theme-index-icon.svg" alt="">
-            <h3><%= 10 ></h3>
-            <p><%= 11 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/theme"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/resource.png" alt="">
-            <h3><%= 8 ></h3>
-            <p><%= 9 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/resource"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-      </ul>
+      <img src="~examples/assets/images/theme-index.svg" alt="">
     </div>
   </div>
 </template>

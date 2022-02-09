@@ -317,12 +317,12 @@
                     </li>
 
                     <!-- gap -->
-                    <li class="nav-item" v-show="isComponentPage">
+                    <!-- <li class="nav-item" v-show="isComponentPage">
                         <div class="nav-gap"></div>
-                    </li>
+                    </li> -->
 
                     <!-- 版本选择器 -->
-                    <li class="nav-item nav-versions" v-show="isComponentPage">
+                    <!-- <li class="nav-item nav-versions" v-show="isComponentPage">
                         <rp-dropdown trigger="click" class="nav-dropdown" :class="{ 'is-active': verDropdownVisible }">
                             <span>
                                 {{ version }}
@@ -334,7 +334,7 @@
                                 </rp-dropdown-item>
                             </rp-dropdown-menu>
                         </rp-dropdown>
-                    </li>
+                    </li> -->
 
                     <!-- 语言选择器 -->
                     <li class="nav-item lang-item">

@@ -72,7 +72,7 @@
 
     img {
       margin: 75px auto 35px;
-      height: 87px;
+      height: 60px;
     }
     h3 {
       margin: 0 0 10px;

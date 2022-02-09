@@ -448,9 +448,9 @@
         <h4>Carousel</h4>
         <rp-row>
             <rp-carousel height="150px">
-                <rp-carousrp-item v-for="item in 4" :key="item">
+                <rp-carousel-item v-for="item in 4" :key="item">
                     <h3>{{ item }}</h3>
-                </rp-carousrp-item>
+                </rp-carousel-item>
             </rp-carousel>
         </rp-row>
         <h4>Collapse</h4>

@@ -27,6 +27,7 @@
     }
 
     .nav-item {
+        margin-right: 8px;
         a {
             font-size: 16px;
             color: #333;
@@ -42,6 +43,8 @@
 
             &.active {
                 color: #1f9f85;
+                background-color: #e9f5f3;
+                padding-left: 8px;
             }
         }
 
@@ -60,6 +63,8 @@
                 &:hover,
                 &.active {
                     color: #1f9f85;
+                    background-color: #e9f5f3;
+                    padding-left: 8px;
                 }
             }
         }

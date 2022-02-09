@@ -1,15 +1,16 @@
 <template>
     <footer class="footer">
         <div class="container">
-            <div class="footer-main">
+            Ruipeng UI {{ version && version }}
+            <!-- <div class="footer-main">
                 <h4>{{ langConfig.links }}</h4>
             </div>
             <div class="footer-main">
                 <h4>{{ langConfig.community }}</h4>
-            </div>
-            <div class="footer-social">
-                <p class="footer-social-title">Ruipeng {{ version && version.slice(0, 3) }} Fullerene</p>
-            </div>
+            </div> -->
+            <!-- <div class="footer-social">
+                <p class="footer-social-title">Ruipeng UI {{ version && version }}</p>
+            </div> -->
         </div>
     </footer>
 </template>
@@ -17,9 +18,11 @@
 <style lang="scss">
 .footer {
     background-color: #f7fbfd;
+    height: 120px;
     width: 100%;
     padding: 40px 150px;
     box-sizing: border-box;
+    margin-top: -120px;
 
     .container {
         box-sizing: border-box;

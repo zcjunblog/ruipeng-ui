@@ -142,11 +142,11 @@ export default {
     componentName: 'RpSelect',
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
 
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -158,8 +158,8 @@ export default {
     },
 
     computed: {
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
 
         readonly() {
@@ -203,11 +203,11 @@ export default {
         },
 
         selectSize() {
-            return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
         },
 
         selectDisabled() {
-            return this.disabled || (this.elForm || {}).disabled
+            return this.disabled || (this.rpForm || {}).disabled
         },
 
         collapseTagSize() {

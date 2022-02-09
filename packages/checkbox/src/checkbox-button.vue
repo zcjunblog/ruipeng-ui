@@ -46,10 +46,10 @@ export default {
     mixins: [Emitter],
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -128,12 +128,12 @@ export default {
             }
         },
 
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
 
         size() {
-            return this._checkboxGroup.checkboxGroupSize || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this._checkboxGroup.checkboxGroupSize || this._rpFormItemSize || (this.$ELEMENT || {}).size
         },
 
         /* used to make the isDisabled judgment under max/min props */
@@ -144,8 +144,8 @@ export default {
 
         isDisabled() {
             return this._checkboxGroup
-                ? this._checkboxGroup.disabled || this.disabled || (this.elForm || {}).disabled || this.isLimitDisabled
-                : this.disabled || (this.elForm || {}).disabled
+                ? this._checkboxGroup.disabled || this.disabled || (this.rpForm || {}).disabled || this.isLimitDisabled
+                : this.disabled || (this.rpForm || {}).disabled
         }
     },
     methods: {

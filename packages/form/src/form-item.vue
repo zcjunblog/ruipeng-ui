@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-01-27 17:13:00
  * @LastEditors: zhaozc
- * @LastEditTime: 2022-02-08 18:16:42
+ * @LastEditTime: 2022-02-09 14:45:00
  * @FilePath: \ruipeng-ui\packages\form\src\form-item.vue
 -->
 <template>
@@ -9,12 +9,12 @@
         class="rp-form-item"
         :class="[
             {
-                'rp-form-item--feedback': elForm && elForm.statusIcon,
+                'rp-form-item--feedback': rpForm && rpForm.statusIcon,
                 'is-error': validateState === 'error',
                 'is-validating': validateState === 'validating',
                 'is-success': validateState === 'success',
                 'is-required': isRequired || required,
-                'is-no-asterisk': elForm && elForm.hideRequiredAsterisk
+                'is-no-asterisk': rpForm && rpForm.hideRequiredAsterisk
             },
             sizeClass ? 'rp-form-item--' + sizeClass : ''
         ]"
@@ -32,7 +32,7 @@
                         class="rp-form-item__error"
                         :class="{
                             'rp-form-item__error--inline':
-                                typeof inlineMessage === 'boolean' ? inlineMessage : (elForm && elForm.inlineMessage) || false
+                                typeof inlineMessage === 'boolean' ? inlineMessage : (rpForm && rpForm.inlineMessage) || false
                         }"
                     >
                         {{ validateMessage }}
@@ -49,19 +49,19 @@ import objectAssign from 'ruipeng-ui/src/utils/merge'
 import { noop, getPropByPath } from 'ruipeng-ui/src/utils/util'
 import LabelWrap from './label-wrap'
 export default {
-    name: 'ElFormItem',
+    name: 'RpFormItem',
 
-    componentName: 'ElFormItem',
+    componentName: 'RpFormItem',
 
     mixins: [emitter],
 
     provide() {
         return {
-            elFormItem: this
+            rpFormItem: this
         }
     },
 
-    inject: ['elForm'],
+    inject: ['rpForm'],
 
     props: {
         label: String,
@@ -124,7 +124,7 @@ export default {
                 if (this.labelWidth === 'auto') {
                     ret.marginLeft = this.computedLabelWidth
                 } else if (this.form.labelWidth === 'auto') {
-                    ret.marginLeft = this.elForm.autoLabelWidth
+                    ret.marginLeft = this.rpForm.autoLabelWidth
                 }
             } else {
                 ret.marginLeft = labelWidth
@@ -134,8 +134,8 @@ export default {
         form() {
             let parent = this.$parent
             let parentName = parent.$options.componentName
-            while (parentName !== 'ElForm') {
-                if (parentName === 'ElFormItem') {
+            while (parentName !== 'RpForm') {
+                if (parentName === 'RpFormItem') {
                     this.isNested = true
                 }
                 parent = parent.$parent
@@ -172,13 +172,13 @@ export default {
             return isRequired
         },
         _formSize() {
-            return this.elForm.size
+            return this.rpForm.size
         },
-        elFormItemSize() {
+        rpFormItemSize() {
             return this.size || this._formSize
         },
         sizeClass() {
-            return this.elFormItemSize || (this.$ELEMENT || {}).size
+            return this.rpFormItemSize || (this.$ELEMENT || {}).size
         }
     },
     data() {
@@ -220,7 +220,7 @@ export default {
                 this.validateMessage = errors ? errors[0].message : ''
 
                 callback(this.validateMessage, invalidFields)
-                this.elForm && this.elForm.$emit('validate', this.prop, !errors, this.validateMessage || null)
+                this.rpForm && this.rpForm.$emit('validate', this.prop, !errors, this.validateMessage || null)
             })
         },
         clearValidate() {
@@ -307,7 +307,7 @@ export default {
     },
     mounted() {
         if (this.prop) {
-            this.dispatch('ElForm', 'el.form.addField', [this])
+            this.dispatch('RpForm', 'el.form.addField', [this])
 
             let initialValue = this.fieldValue
             if (Array.isArray(initialValue)) {
@@ -321,7 +321,7 @@ export default {
         }
     },
     beforeDestroy() {
-        this.dispatch('ElForm', 'el.form.removeField', [this])
+        this.dispatch('RpForm', 'el.form.removeField', [this])
     }
 }
 </script>

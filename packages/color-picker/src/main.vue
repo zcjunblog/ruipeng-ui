@@ -51,10 +51,10 @@ export default {
     },
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -70,16 +70,16 @@ export default {
             return this.displayedRgb(this.color, this.showAlpha)
         },
 
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
 
         colorSize() {
-            return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
         },
 
         colorDisabled() {
-            return this.disabled || (this.elForm || {}).disabled
+            return this.disabled || (this.rpForm || {}).disabled
         }
     },
 

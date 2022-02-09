@@ -27,10 +27,10 @@ export default {
     name: 'RpButton',
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -58,14 +58,14 @@ export default {
     },
 
     computed: {
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
         buttonSize() {
-            return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
         },
         buttonDisabled() {
-            return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.elForm || {}).disabled
+            return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.rpForm || {}).disabled
         }
     },
 

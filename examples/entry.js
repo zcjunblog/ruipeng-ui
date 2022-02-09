@@ -78,7 +78,6 @@ router.afterEach(route => {
         }
     }
     document.title = 'Ruipeng Ui'
-    ga('send', 'event', 'PageView', route.name)
 })
 
 new Vue({

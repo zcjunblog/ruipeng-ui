@@ -55,11 +55,11 @@ export default {
     mixins: [Emitter],
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
 
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -106,17 +106,17 @@ export default {
                 this.$refs.radio && (this.$refs.radio.checked = this.model === this.label)
             }
         },
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
         radioSize() {
-            const temRadioSize = this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            const temRadioSize = this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
             return this.isGroup ? this._radioGroup.radioGroupSize || temRadioSize : temRadioSize
         },
         isDisabled() {
             return this.isGroup
-                ? this._radioGroup.disabled || this.disabled || (this.elForm || {}).disabled
-                : this.disabled || (this.elForm || {}).disabled
+                ? this._radioGroup.disabled || this.disabled || (this.rpForm || {}).disabled
+                : this.disabled || (this.rpForm || {}).disabled
         },
         tabIndex() {
             return this.isDisabled || (this.isGroup && this.model !== this.label) ? -1 : 0

@@ -9,7 +9,7 @@ export default {
     mixins: [Emitter],
 
     inject: {
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -25,11 +25,11 @@ export default {
     },
 
     computed: {
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
         checkboxGroupSize() {
-            return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
         }
     },
 

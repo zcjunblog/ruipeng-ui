@@ -38,10 +38,10 @@ export default {
     mixins: [Emitter],
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -84,14 +84,14 @@ export default {
                 color: this._radioGroup.textColor || ''
             }
         },
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
         size() {
-            return this._radioGroup.radioGroupSize || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this._radioGroup.radioGroupSize || this._rpFormItemSize || (this.$ELEMENT || {}).size
         },
         isDisabled() {
-            return this.disabled || this._radioGroup.disabled || (this.elForm || {}).disabled
+            return this.disabled || this._radioGroup.disabled || (this.rpForm || {}).disabled
         },
         tabIndex() {
             return this.isDisabled || (this._radioGroup && this.value !== this.label) ? -1 : 0

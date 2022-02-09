@@ -67,7 +67,7 @@ export default {
     mixins: [Emitter],
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         }
     },
@@ -365,7 +365,7 @@ export default {
         },
 
         sliderDisabled() {
-            return this.disabled || (this.elForm || {}).disabled
+            return this.disabled || (this.rpForm || {}).disabled
         }
     },
 

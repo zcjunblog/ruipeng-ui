@@ -18,7 +18,7 @@ export default {
     componentName: 'RpRadioGroup',
 
     inject: {
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -34,8 +34,8 @@ export default {
     },
 
     computed: {
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
         _elTag() {
             let tag = (this.$vnode.data || {}).tag
@@ -43,7 +43,7 @@ export default {
             return tag
         },
         radioGroupSize() {
-            return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
         }
     },
 

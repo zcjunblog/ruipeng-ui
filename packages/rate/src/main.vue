@@ -37,7 +37,7 @@ export default {
     mixins: [Migrating],
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         }
     },
@@ -208,7 +208,7 @@ export default {
         },
 
         rateDisabled() {
-            return this.disabled || (this.elForm || {}).disabled
+            return this.disabled || (this.rpForm || {}).disabled
         }
     },
 

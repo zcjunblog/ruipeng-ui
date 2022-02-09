@@ -104,10 +104,10 @@ export default {
     inheritAttrs: false,
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -175,14 +175,14 @@ export default {
     },
 
     computed: {
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
         validateState() {
-            return this.elFormItem ? this.elFormItem.validateState : ''
+            return this.rpFormItem ? this.rpFormItem.validateState : ''
         },
         needStatusIcon() {
-            return this.elForm ? this.elForm.statusIcon : false
+            return this.rpForm ? this.rpForm.statusIcon : false
         },
         validateIcon() {
             return {
@@ -195,10 +195,10 @@ export default {
             return merge({}, this.textareaCalcStyle, { resize: this.resize })
         },
         inputSize() {
-            return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
         },
         inputDisabled() {
-            return this.disabled || (this.elForm || {}).disabled
+            return this.disabled || (this.rpForm || {}).disabled
         },
         nativeInputValue() {
             return this.value === null || this.value === undefined ? '' : String(this.value)
@@ -239,7 +239,7 @@ export default {
         value(val) {
             this.$nextTick(this.resizeTextarea)
             if (this.validateEvent) {
-                this.dispatch('ElFormItem', 'el.form.change', [val])
+                this.dispatch('RpFormItem', 'el.form.change', [val])
             }
         },
         // native input value is set explicitly
@@ -282,7 +282,7 @@ export default {
             this.focused = false
             this.$emit('blur', event)
             if (this.validateEvent) {
-                this.dispatch('ElFormItem', 'el.form.blur', [this.value])
+                this.dispatch('RpFormItem', 'el.form.blur', [this.value])
             }
         },
         select() {

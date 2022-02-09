@@ -405,19 +405,7 @@ export default {
             return /^home/.test(this.$route.name)
         }
     },
-    mounted() {
-        // TODO: zhaozc? 这个testInnerImg有什么用 ?
-        const testInnerImg = new Image()
-        testInnerImg.onload = () => {
-            this.$isEle = true
-            ga('send', 'event', 'DocView', 'Ali', 'Inner')
-        }
-        testInnerImg.onerror = err => {
-            ga('send', 'event', 'DocView', 'Ali', 'Outer')
-            console.error(err)
-        }
-        testInnerImg.src = `https://element.eleme.cn/static/guide.0a8462c.png?t=${Date.now()}`
-    },
+    mounted() {},
     methods: {
         switchVersion(version) {
             if (version === this.version) return

@@ -67,10 +67,10 @@ export default {
     mixins: [Emitter],
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -141,16 +141,16 @@ export default {
 
         isDisabled() {
             return this.isGroup
-                ? this._checkboxGroup.disabled || this.disabled || (this.elForm || {}).disabled || this.isLimitDisabled
-                : this.disabled || (this.elForm || {}).disabled
+                ? this._checkboxGroup.disabled || this.disabled || (this.rpForm || {}).disabled || this.isLimitDisabled
+                : this.disabled || (this.rpForm || {}).disabled
         },
 
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
 
         checkboxSize() {
-            const temCheckboxSize = this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            const temCheckboxSize = this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
             return this.isGroup ? this._checkboxGroup.checkboxGroupSize || temCheckboxSize : temCheckboxSize
         }
     },

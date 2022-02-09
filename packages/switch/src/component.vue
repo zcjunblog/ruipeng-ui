@@ -39,7 +39,7 @@ export default {
     name: 'RpSwitch',
     mixins: [Focus('input'), Migrating, emitter],
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         }
     },
@@ -107,7 +107,7 @@ export default {
             return this.value === this.activeValue
         },
         switchDisabled() {
-            return this.disabled || (this.elForm || {}).disabled
+            return this.disabled || (this.rpForm || {}).disabled
         }
     },
     watch: {

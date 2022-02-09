@@ -57,10 +57,10 @@ export default {
     name: 'RpInputNumber',
     mixins: [Focus('input')],
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -164,14 +164,14 @@ export default {
         controlsAtRight() {
             return this.controls && this.controlsPosition === 'right'
         },
-        _elFormItemSize() {
-            return (this.elFormItem || {}).elFormItemSize
+        _rpFormItemSize() {
+            return (this.rpFormItem || {}).rpFormItemSize
         },
         inputNumberSize() {
-            return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
         },
         inputNumberDisabled() {
-            return this.disabled || !!(this.elForm || {}).disabled
+            return this.disabled || !!(this.rpForm || {}).disabled
         },
         displayValue() {
             if (this.userInput !== null) {

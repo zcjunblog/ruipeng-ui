@@ -169,10 +169,10 @@ export default {
     mixins: [PopperMixin, Emitter, Locale, Migrating],
 
     inject: {
-        elForm: {
+        rpForm: {
             default: ''
         },
-        elFormItem: {
+        rpFormItem: {
             default: ''
         }
     },
@@ -235,14 +235,14 @@ export default {
 
     computed: {
         realSize() {
-            const _elFormItemSize = (this.elFormItem || {}).elFormItemSize
-            return this.size || _elFormItemSize || (this.$ELEMENT || {}).size
+            const _rpFormItemSize = (this.rpFormItem || {}).rpFormItemSize
+            return this.size || _rpFormItemSize || (this.$ELEMENT || {}).size
         },
         tagSize() {
             return ['small', 'mini'].indexOf(this.realSize) > -1 ? 'mini' : 'small'
         },
         isDisabled() {
-            return this.disabled || (this.elForm || {}).disabled
+            return this.disabled || (this.rpForm || {}).disabled
         },
         config() {
             const config = this.props || {}

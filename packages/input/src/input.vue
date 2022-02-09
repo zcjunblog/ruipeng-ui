@@ -1,15 +1,15 @@
 <template>
     <div
         :class="[
-            type rp- 'textarea' ? 'rp-textarea' : 'rp-input',
+            type === 'textarea' ? 'rp-textarea' : 'rp-input',
             inputSize ? 'rp-input--' + inputSize : '',
             {
                 'is-disabled': inputDisabled,
-       rp-      'is-exceed': inputExceed,
-       rp-      'rp-input-group': $slots.prepend || $slots.append,
-       rp-      'rp-input-group--append': $slots.append,
-       rp-      'rp-input-group--prepend': $slots.prepend,
-       rp-      'rp-input--prefix': $slots.prefix || prefixIcon,
+                'is-exceed': inputExceed,
+                'rp-input-group': $slots.prepend || $slots.append,
+                'rp-input-group--append': $slots.append,
+                'rp-input-group--prepend': $slots.prepend,
+                'rp-input--prefix': $slots.prefix || prefixIcon,
                 'rp-input--suffix': $slots.suffix || suffixIcon || clearable || showPassword
             }
         ]"
@@ -17,13 +17,13 @@
         @mouseleave="hovering = false"
     >
         <template v-if="type !== 'textarea'">
-            <!-- 前rp- -->
+            <!-- 前置元素 -->
             <div class="rp-input-group__prepend" v-if="$slots.prepend">
                 <slot name="prepend"></slot>
             </div>
             <input
                 :tabindex="tabindex"
-               rp-if="type !== 'textarea'"
+                v-if="type !== 'textarea'"
                 class="rp-input__inner"
                 v-bind="$attrs"
                 :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
@@ -40,54 +40,54 @@
                 @change="handleChange"
                 :aria-label="label"
             />
-            <!-- 前置rp--->
+            <!-- 前置内容 -->
             <span class="rp-input__prefix" v-if="$slots.prefix || prefixIcon">
-                <srp- name="prefix"></slot>
+                <slot name="prefix"></slot>
                 <i class="rp-input__icon" v-if="prefixIcon" :class="prefixIcon"></i>
             </span>
             <!-- 后置内容 -->
             <span class="rp-input__suffix" v-if="getSuffixVisible()">
                 <span class="rp-input__suffix-inner">
                     <template v-if="!showClear || !showPwdVisible || !isWordLimitVisible">
-               rp-      <slot name="suffix"></slot>
+                        <slot name="suffix"></slot>
                         <i class="rp-input__icon" v-if="suffixIcon" :class="suffixIcon"></i>
-                    <rp-mplate>
+                    </template>
                     <i v-if="showClear" class="rp-input__icon rp-icon-circle-close rp-input__clear" @mousedown.prevent @click="clear"></i>
                     <i v-if="showPwdVisible" class="rp-input__icon rp-icon-view rp-input__clear" @click="handlePasswordVisible"></i>
-                    <srp- v-if="isWordLimitVisible" class="rp-input__count">
+                    <span v-if="isWordLimitVisible" class="rp-input__count">
                         <span class="rp-input__count-inner">{{ textLength }}/{{ upperLimit }}</span>
                     </span>
                 </span>
                 <i class="rp-input__icon" v-if="validateState" :class="['rp-input__validateIcon', validateIcon]"></i>
             </span>
-            <!-- 后置rp--->rp-rp-
+            <!-- 后置元素 -->
             <div class="rp-input-group__append" v-if="$slots.append">
                 <slot name="append"></slot>
             </div>
         </template>
-        <textarearp-rp-rp-
+        <textarea
             v-else
             :tabindex="tabindex"
-            class="rp-textarea__inner"rp-
-            @compositionsrp-t="handleCompositionStart"
+            class="rp-textarea__inner"
+            @compositionstart="handleCompositionStart"
             @compositionupdate="handleCompositionUpdate"
             @compositionend="handleCompositionEnd"
             @input="handleInput"
             ref="textarea"
-            v-bindrp-attrs"
+            v-bind="$attrs"
             :disabled="inputDisabled"
-            :readonlrp-readonly"
+            :readonly="readonly"
             :autocomplete="autoComplete || autocomplete"
             :style="textareaStyle"
             @focus="handleFocus"
-            @blur=rp-ndleBlur"
+            @blur="handleBlur"
             @change="handleChange"
             :aria-label="label"
         ></textarea>
         <span v-if="isWordLimitVisible && type === 'textarea'" class="rp-input__count">{{ textLength }}/{{ upperLimit }}</span>
     </div>
 </template>
-<script>rp-
+<script>
 import emitter from 'ruipeng-ui/src/mixins/emitter'
 import Migrating from 'ruipeng-ui/src/mixins/migrating'
 import calcTextareaHeight from './calcTextareaHeight'
@@ -104,7 +104,7 @@ export default {
     inheritAttrs: false,
 
     inject: {
-        elForm: {rp-
+        elForm: {
             default: ''
         },
         elFormItem: {
@@ -204,9 +204,9 @@ export default {
             return this.value === null || this.value === undefined ? '' : String(this.value)
         },
         showClear() {
-            return thisrp-earable && !this.inputDisabled && !this.readonly && this.nativeInputValue && (this.focused || this.hovering)
-        },rp-
-        showPwdVisrp-e() {
+            return this.clearable && !this.inputDisabled && !this.readonly && this.nativeInputValue && (this.focused || this.hovering)
+        },
+        showPwdVisible() {
             return this.showPassword && !this.inputDisabled && !this.readonly && (!!this.nativeInputValue || this.focused)
         },
         isWordLimitVisible() {
@@ -239,18 +239,18 @@ export default {
         value(val) {
             this.$nextTick(this.resizeTextarea)
             if (this.validateEvent) {
-                this.dispatch('RpFormItem', 'el.form.change', [val])
+                this.dispatch('ElFormItem', 'el.form.change', [val])
             }
         },
         // native input value is set explicitly
         // do not use v-model / :value in template
-        // see: https://github.com/RpemeFE/element/issues/14521
+        // see: https://github.com/ElemeFE/element/issues/14521
         nativeInputValue() {
             this.setNativeInputValue()
         },
         // when change between <input> and <textarea>,
         // update DOM dependent value and styles
-        // https://github.com/RpemeFE/element/issues/14857
+        // https://github.com/ElemeFE/element/issues/14857
         type() {
             this.$nextTick(() => {
                 this.setNativeInputValue()
@@ -282,7 +282,7 @@ export default {
             this.focused = false
             this.$emit('blur', event)
             if (this.validateEvent) {
-                this.dispatch('RpFormItem', 'el.form.blur', [this.value])
+                this.dispatch('ElFormItem', 'el.form.blur', [this.value])
             }
         },
         select() {
@@ -332,17 +332,17 @@ export default {
         },
         handleInput(event) {
             // should not emit input during composition
-            // see: https://github.com/RpemeFE/element/issues/10516
+            // see: https://github.com/ElemeFE/element/issues/10516
             if (this.isComposing) return
 
-            // hack for https://github.com/RpemeFE/element/issues/8548
+            // hack for https://github.com/ElemeFE/element/issues/8548
             // should remove the following line when we don't support IE
             if (event.target.value === this.nativeInputValue) return
 
             this.$emit('input', event.target.value)
 
             // ensure native input value is controlled
-            // see: https://github.com/RpemeFE/element/issues/12850
+            // see: https://github.com/ElemeFE/element/issues/12850
             this.$nextTick(this.setNativeInputValue)
         },
         handleChange(event) {
@@ -373,7 +373,7 @@ export default {
                 el.removeAttribute('style')
             }
         },
-        updateIconOffset() {rp-
+        updateIconOffset() {
             this.calcIconOffset('prefix')
             this.calcIconOffset('suffix')
         },
@@ -390,7 +390,7 @@ export default {
         },
         getInput() {
             return this.$refs.input || this.$refs.textarea
-        },rp-
+        },
         getSuffixVisible() {
             return (
                 this.$slots.suffix ||

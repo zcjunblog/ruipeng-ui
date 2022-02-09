@@ -1,32 +1,38 @@
+<!--
+ * @Date: 2022-01-27 17:13:00
+ * @LastEditors: zhaozc
+ * @LastEditTime: 2022-02-08 18:16:42
+ * @FilePath: \ruipeng-ui\packages\form\src\form-item.vue
+-->
 <template>
     <div
-       rp-ass="rp-form-item"
+        class="rp-form-item"
         :class="[
             {
                 'rp-form-item--feedback': elForm && elForm.statusIcon,
                 'is-error': validateState === 'error',
                 'is-validating': validateState === 'validating',
                 'is-success': validateState === 'success',
-                'rp-required': isRequired || required,
+                'is-required': isRequired || required,
                 'is-no-asterisk': elForm && elForm.hideRequiredAsterisk
-        rp- },
+            },
             sizeClass ? 'rp-form-item--' + sizeClass : ''
         ]"
-    >rp-
-        <labrp-wrap :is-auto-width="labelStyle && labelStyle.width === 'auto'" :update-all="form.labelWidth === 'auto'">
+    >
+        <label-wrap :is-auto-width="labelStyle && labelStyle.width === 'auto'" :update-all="form.labelWidth === 'auto'">
             <label :for="labelFor" class="rp-form-item__label" :style="labelStyle" v-if="label || $slots.label">
-         rp-    <slot name="label">{{ label + form.labelSuffix }}</slot>
-            </larp->
-        </labrp-wrap>
-        <div class="rp-frp--item__content" :style="contentStyle">
+                <slot name="label">{{ label + form.labelSuffix }}</slot>
+            </label>
+        </label-wrap>
+        <div class="rp-form-item__content" :style="contentStyle">
             <slot></slot>
             <transition name="rp-zoom-in-top">
                 <slot v-if="validateState === 'error' && showMessage && form.showMessage" name="error" :error="validateMessage">
                     <div
                         class="rp-form-item__error"
-                   rp-  :class="{
+                        :class="{
                             'rp-form-item__error--inline':
-               rp-              typeof inlineMessage === 'boolean' ? inlineMessage : (elForm && elForm.inlineMessage) || false
+                                typeof inlineMessage === 'boolean' ? inlineMessage : (elForm && elForm.inlineMessage) || false
                         }"
                     >
                         {{ validateMessage }}
@@ -41,11 +47,11 @@ import AsyncValidator from 'async-validator'
 import emitter from 'ruipeng-ui/src/mixins/emitter'
 import objectAssign from 'ruipeng-ui/src/utils/merge'
 import { noop, getPropByPath } from 'ruipeng-ui/src/utils/util'
-import LabelWrap from './labrp-wrap'
+import LabelWrap from './label-wrap'
 export default {
-    name: 'RpFormItem',rp-
+    name: 'ElFormItem',
 
-    componentName: 'RpFormItem',
+    componentName: 'ElFormItem',
 
     mixins: [emitter],
 
@@ -128,8 +134,8 @@ export default {
         form() {
             let parent = this.$parent
             let parentName = parent.$options.componentName
-            while (parentName !== 'RpForm') {
-                if (parentName === 'RpFormItem') {
+            while (parentName !== 'ElForm') {
+                if (parentName === 'ElFormItem') {
                     this.isNested = true
                 }
                 parent = parent.$parent
@@ -247,7 +253,7 @@ export default {
                 this.validateDisabled = false
             })
 
-            this.broadcast('RpTimeSelect', 'fieldReset', this.initialValue)
+            this.broadcast('ElTimeSelect', 'fieldReset', this.initialValue)
         },
         getRules() {
             let formRules = this.form.rules
@@ -301,7 +307,7 @@ export default {
     },
     mounted() {
         if (this.prop) {
-            this.dispatch('RpForm', 'el.form.addField', [this])
+            this.dispatch('ElForm', 'el.form.addField', [this])
 
             let initialValue = this.fieldValue
             if (Array.isArray(initialValue)) {
@@ -315,7 +321,7 @@ export default {
         }
     },
     beforeDestroy() {
-        this.dispatch('RpForm', 'el.form.removeField', [this])
+        this.dispatch('ElForm', 'el.form.removeField', [this])
     }
 }
 </script>

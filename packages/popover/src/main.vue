@@ -83,11 +83,11 @@ export default {
     },
 
     mounted() {
-        let reference = (this.referenceRpm = this.reference || this.$refs.reference)
+        let reference = (this.referenceElm = this.reference || this.$refs.reference)
         const popper = this.popper || this.$refs.popper
 
         if (!reference && this.$refs.wrapper.children) {
-            reference = this.referenceRpm = this.$refs.wrapper.children[0]
+            reference = this.referenceElm = this.$refs.wrapper.children[0]
         }
         // 可访问性
         if (reference) {
@@ -152,15 +152,19 @@ export default {
             this.showPopper = false
         },
         handleFocus() {
-            addClass(this.referenceRpm, 'focusing')
-            if (this.trigger === 'click' || this.trigger === 'focus') this.showPopper = true
+            addClass(this.referenceElm, 'focusing')
+            if (this.trigger === 'click' || this.trigger === 'focus') {
+                this.showPopper = true
+            }
         },
         handleClick() {
-            removeClass(this.referenceRpm, 'focusing')
+            removeClass(this.referenceElm, 'focusing')
         },
         handleBlur() {
-            removeClass(this.referenceRpm, 'focusing')
-            if (this.trigger === 'click' || this.trigger === 'focus') this.showPopper = false
+            removeClass(this.referenceElm, 'focusing')
+            if (this.trigger === 'click' || this.trigger === 'focus') {
+                this.showPopper = false
+            }
         },
         handleMouseEnter() {
             clearTimeout(this._timer)
@@ -193,10 +197,12 @@ export default {
             const popper = this.popper || this.$refs.popper
 
             if (!reference && this.$refs.wrapper.children) {
-                reference = this.referenceRpm = this.$refs.wrapper.children[0]
+                reference = this.referenceElm = this.$refs.wrapper.children[0]
             }
-            if (!this.$el || !reference || this.$el.contains(e.target) || reference.contains(e.target) || !popper || popper.contains(e.target))
+            if (!this.$el || !reference || this.$el.contains(e.target) || reference.contains(e.target) || !popper || popper.contains(e.target)) {
                 return
+            }
+
             this.showPopper = false
         },
         handleAfterEnter() {

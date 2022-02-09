@@ -213,16 +213,16 @@
                         <span>{{ config.name }}</span>
                         <span class="right" v-if="isOfficial">by {{ config.author }}</span>
                         <span class="right more" v-else>
-                            <el-dropdown @command="actionClick">
+                            <rp-dropdown @command="actionClick">
                                 <i class="rp-icon-more"></i>
-                                <el-dropdown-menu slot="dropdown">
-                                    <el-dropdown-item command="rename">{{ getActionDisplayName('rename-theme') }}</el-dropdown-item>
-                                    <el-dropdown-item command="copy">{{ getActionDisplayName('copy-theme') }}</el-dropdown-item>
-                                    <el-dropdown-item command="delete" style="color: #F56C6C;">
+                                <rp-dropdown-menu slot="dropdown">
+                                    <rp-dropdown-item command="rename">{{ getActionDisplayName('rename-theme') }}</rp-dropdown-item>
+                                    <rp-dropdown-item command="copy">{{ getActionDisplayName('copy-theme') }}</rp-dropdown-item>
+                                    <rp-dropdown-item command="delete" style="color: #F56C6C;">
                                         {{ getActionDisplayName('delete-theme') }}
-                                    </el-dropdown-item>
-                                </el-dropdown-menu>
-                            </el-dropdown>
+                                    </rp-dropdown-item>
+                                </rp-dropdown-menu>
+                            </rp-dropdown>
                         </span>
                     </div>
                     <div class="description" v-if="isOfficial">{{ getActionDisplayName(getDescriptionKey(config.name)) }}</div>
@@ -341,7 +341,7 @@ export default {
             return DEFAULT_THEME_CONFIG
         },
         mainColor() {
-            return this.theme.global['$--color-primary'] || '#1989FA'
+            return this.theme.global['$--color-primary'] || '#1f9f85'
         },
         mainColor50() {
             return tintColor(this.mainColor, 0.5)

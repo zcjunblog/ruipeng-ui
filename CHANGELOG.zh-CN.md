@@ -298,7 +298,7 @@ _2019-11-26_
     -   修复 row-style 失效的 bug (#17002 by @a631807682)
     -   修复头部消失的 bug (#17341 by @ziyoung)
 -   Calendar
-    -   导入 el-button 和 el-button-group (#17376 by @masongzhi)
+    -   导入 rp-button 和 rp-button-group (#17376 by @masongzhi)
 -   MessageBox
     -   修复图表位置 (#17410 by @nullptru)
 -   TimePicker
@@ -838,7 +838,7 @@ _2019-04-03_
 #### 修复
 
 -   Form
-    -   修复 `label-width` 为 `auto` 的样式 (#14955 by @ziyoung)
+    -   修复 `labrp-width` 为 `auto` 的样式 (#14955 by @ziyoung)
 
 #### 优化
 
@@ -862,7 +862,7 @@ _2019-04-03_
 -   Dialog
     -   可以设置背景色 (#14939 by @ziyoung)
 -   Form
-    -   `label-width` 支持自动宽度 (#14944 by @ziyoung)
+    -   `labrp-width` 支持自动宽度 (#14944 by @ziyoung)
 
 #### 优化
 
@@ -888,7 +888,7 @@ _2019-03-28_
 -   Table
     -   Table footer 与 body 的对齐一致 (#14730 by @ziyoung)
 -   NavMenu
-    -   修复点击 el-submenu 多次触发 childMenu 问题 (#14443 by @PanJiaChen)
+    -   修复点击 rp-submenu 多次触发 childMenu 问题 (#14443 by @PanJiaChen)
 -   Dropdown
     -   兼容 Vue 2.6 新 v-slot 语法 (#14832 by @ziyoung)
 -   ColorPicker
@@ -982,7 +982,7 @@ _2019-03-01_
 -   Timeline
     -   添加 Timeline 组件 (by @jikkai in #14248)
 -   DropdownItem
-    -   `el-dropdown-item` 支持添加 icon (by @gabrielboliveira in #14088)
+    -   `rp-dropdown-item` 支持添加 icon (by @gabrielboliveira in #14088)
 -   Input
     -   添加 `show-password` 属性，支持配置显示密码按钮 (by @phshy0607 in #13966)
 -   Select
@@ -1000,7 +1000,7 @@ _2019-03-01_
     -   组件对通过 slot 传入的 description 也应用默认样式类 (by @iamkun in #14488)
 -   InputNumber -移除多余的 `parseFloat` (by @JuniorTour in #14172)
 -   Menu
-    -   支持 `el-menu-item` 不添加 index (by @georgyfarniev in #13298)
+    -   支持 `rp-menu-item` 不添加 index (by @georgyfarniev in #13298)
 -   Table
     -   移除无用的 DOM 操作 (by @elfman in #13643)
 -   Upload
@@ -1009,7 +1009,7 @@ _2019-03-01_
     -   移除无用代码 (by @KAionro in #14413)
 -   Docs
     -   添加更多文档说明如何贡献代码 (by @island205 in #14355)
-    -   添加 `el-input` 是受控组件的警示 (by @wacky6 in #14463)
+    -   添加 `rp-input` 是受控组件的警示 (by @wacky6 in #14463)
     -   优化 Table 的文档 (by @luguokong in #14329)
     -   更新 Input 文档 (by @iamkun in #14437)
     -   优化自定义主题文档 (by @wangguohao in #14297)
@@ -1324,7 +1324,7 @@ _2018-07-03_
 
 _2018-06-26_
 
--   修复 Table 的 `class-name` 和 `label-class-name` 属性不支持动态更新的问题，#11626
+-   修复 Table 的 `class-name` 和 `labrp-class-name` 属性不支持动态更新的问题，#11626
 -   修复 Table 在 `highlight-current-row` 为 `false` 时点击行也会触发高亮的问题，#11691 #11563
 -   修复 ButtonGroup 中只有一个 `round` 或 `circle` 的 Button 时的样式错误，#11605
 -   修复在某些情况下 Pagination 的条目数选择器的样式错误，#11622
@@ -1396,7 +1396,7 @@ _2018-05-28_
 -   Radio
     -   修复通过空格可以选中被禁用的 Radio 的问题，#11303
 -   MessageBox
-    -   修复连续打开两个 MessageBox 时 `el-popup-parent--hidden` 无法移除的问题，#11371
+    -   修复连续打开两个 MessageBox 时 `rp-popup-parent--hidden` 无法移除的问题，#11371
 
 ### 2.3.9
 

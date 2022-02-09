@@ -26,7 +26,7 @@ Hover on the dropdown menu to unfold it for more actions.
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;
@@ -137,7 +137,7 @@ Click the triggering element or hover on it.
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;
@@ -177,7 +177,7 @@ Use `hide-on-click` to define if menu closes on clicking.
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;
@@ -211,7 +211,7 @@ Clicking each dropdown item fires an event whose parameter is assigned by each i
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;

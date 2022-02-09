@@ -20,7 +20,7 @@
     export default {
         data() {
             return {
-                color1: '#409EFF',
+                color1: '#1f9f85',
                 color2: null
             }
         }
@@ -100,7 +100,7 @@
     export default {
         data() {
             return {
-                color: '#409EFF'
+                color: '#1f9f85'
             }
         }
     }

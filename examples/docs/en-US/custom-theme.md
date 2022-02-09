@@ -74,7 +74,7 @@ et -i [custom output file]
 In `element-variables.scss` you can find all the variables we used to style Element and they are defined in SCSS format. Here's a snippet:
 
 ```css
-$--color-primary: #409EFF !default;
+$--color-primary: #1f9f85 !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */

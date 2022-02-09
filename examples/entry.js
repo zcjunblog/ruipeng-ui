@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-01-27 17:12:59
  * @LastEditors: zhaozc
- * @LastEditTime: 2022-02-08 16:29:32
+ * @LastEditTime: 2022-02-09 09:54:21
  * @FilePath: \ruipeng-ui\examples\entry.js
  */
 // 官网项目的入口，就是一个普通的 vue 项目

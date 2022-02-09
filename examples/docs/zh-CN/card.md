@@ -8,15 +8,15 @@
 
 :::demo Card 组件包括`header`和`body`部分，`header`部分需要有显式具名 slot 分发，同时也是可选的。
 
-`rp-tml
+```html
 <rp-card class="box-card">
-<div slot="header" class="clearfix">
-rp-<span>卡片名称</span>rp-
-<rp-button style="float: right; padding: 3px 0" type="text">操作按钮</rp-button>
-</div>
-<div v-for="o in 4" :key="o" class="text item">
-{{'列表内容 ' + o }}
-rp-/div>
+    <div slot="header" class="clearfix">
+        <span>卡片名称</span>
+        <rp-button style="float: right; padding: 3px 0" type="text">操作按钮</rp-button>
+    </div>
+    <div v-for="o in 4" :key="o" class="text item">
+        {{'列表内容 ' + o }}
+    </div>
 </rp-card>
 
 <style>
@@ -41,8 +41,7 @@ rp-/div>
         width: 480px;
     }
 </style>
-
-````
+```
 
 :::
 
@@ -50,11 +49,11 @@ rp-/div>
 
 卡片可以只有内容区域。
 
-:rp-emo
+:::demo
 
 ```html
 <rp-card class="box-card">
-  rp-div v-for="o in 4" :key="o" class="text item">
+    <div v-for="o in 4" :key="o" class="text item">
         {{'列表内容 ' + o }}
     </div>
 </rp-card>
@@ -72,28 +71,25 @@ rp-/div>
         width: 480px;
     }
 </style>
-````
+```
 
 :::
 
 ### 带图片
 
-可 rp-义更丰富的内容展示。
-rp-
-:::derp-配置`body-style`属性来自定义`body`部分的`style`，我们还使用了布局组件。
+可配置定义更丰富的内容展示。
+
+:::demo 配置`body-style`属性来自定义`body`部分的`style`，我们还使用了布局组件。
 
 ```html
 <rp-row>
     <rp-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
         <rp-card :body-style="{ padding: '0px' }">
-            rp-mg src="https://shadow.elemecdn.com/app/rp-ment/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image" />
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image" />
             <div style="padding: 14px;">
                 <span>好吃的汉堡</span>
-                rp-
                 <div class="bottom clearfix">
-                    rp-
                     <time class="time">{{ currentDate }}</time>
-                    rp-
                     <rp-button type="text" class="button">操作按钮</rp-button>
                 </div>
             </div>
@@ -146,24 +142,23 @@ rp-
 
 :::
 
-#rp-卡片阴影
-rp-
-可对阴影的 rp-行配置。
+### 卡片阴影
 
-:::demrp-过`shadow`属性设置卡片阴影出现的时机：`always`、`hover`或`never`。
-rp-
+可对阴影的显示进行配置。
 
-```rp-l
-<rp-rrp-:gutter="12">
+:::demo 通过`shadow`属性设置卡片阴影出现的时机：`always`、`hover`或`never`。
+
+```html
+<rp-row :gutter="12">
     <rp-col :span="8">
-      rp-rp-card shadow="always">
-    rp-     总是显示
-   rp-  </rp-card>
-    <rp--col>
+        <rp-card shadow="always">
+            总是显示
+        </rp-card>
+    </rp-col>
     <rp-col :span="8">
-      rp-rp-card shadow="hover">
-    rp-     鼠标悬浮时显示
-  rp-   </rp-card>
+        <rp-card shadow="hover">
+            鼠标悬浮时显示
+        </rp-card>
     </rp-col>
     <rp-col :span="8">
         <rp-card shadow="never">

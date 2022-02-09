@@ -1,7 +1,7 @@
 <template>
     <div :class="carouselClasses" @mouseenter.stop="handleMouseEnter" @mouseleave.stop="handleMouseLeave">
         <div class="rp-carousel__container" :style="{ height: height }">
-            <transition v-if="arrowDisplay" name="carousrp-arrow-left">
+            <transition v-if="arrowDisplay" name="carousel-arrow-left">
                 <button
                     type="button"
                     v-show="(arrow === 'always' || hover) && (loop || activeIndex > 0)"
@@ -13,7 +13,7 @@
                     <i class="rp-icon-arrow-left"></i>
                 </button>
             </transition>
-            <transition v-if="arrowDisplay" name="carousrp-arrow-right">
+            <transition v-if="arrowDisplay" name="carousel-arrow-right">
                 <button
                     type="button"
                     v-show="(arrow === 'always' || hover) && (loop || activeIndex < items.length - 1)"
@@ -111,9 +111,9 @@ export default {
         },
 
         carouselClasses() {
-            const classes = ['rp-carousel', 'rp-carousrp--' + this.direction]
+            const classes = ['rp-carousel', 'rp-carousel--' + this.direction]
             if (this.type === 'card') {
-                classes.push('rp-carousrp--card')
+                classes.push('rp-carousel--card')
             }
             return classes
         },

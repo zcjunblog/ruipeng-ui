@@ -48,7 +48,7 @@
     }
 
     .algolia-highlight {
-        color: #409eff;
+        color: #1f9f85;
         font-weight: bold;
     }
 
@@ -150,7 +150,7 @@ export default {
         initIndex() {
             // TODO: zhaozc: 重新申请一个秘钥 ?
             const client = algoliasearch('4C63BTGP6S', '0729c3c7f4dc8db7395ad0b19c0748d2')
-            this.index = client.initIndex(`ruipeng-${this.lang ? this.langs[this.lang].index : 'zh'}`)
+            this.index = client.initIndex(`element-${this.lang ? this.langs[this.lang].index : 'zh'}`)
         },
 
         querySearch(query, cb) {

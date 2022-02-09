@@ -137,7 +137,7 @@
         }
 
         &:hover {
-            color: #409eff;
+            color: #1f9f85;
             background-color: #f9fafc;
         }
 
@@ -162,9 +162,7 @@
 
 <script type="text/babel">
 import compoLang from '../i18n/component.json'
-import Ruipeng from 'main/index.js'
 import { stripScript, stripStyle, stripTemplate } from '../util'
-const { version } = Ruipeng
 
 export default {
     data() {

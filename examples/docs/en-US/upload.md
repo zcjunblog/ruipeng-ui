@@ -88,7 +88,7 @@ Use `before-upload` hook to limit the upload file format and size.
         overflow: hidden;
     }
     .avatar-uploader .rp-upload:hover {
-        border-color: #409eff;
+        border-color: #1f9f85;
     }
     .avatar-uploader-icon {
         font-size: 28px;

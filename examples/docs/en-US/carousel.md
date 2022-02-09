@@ -4,24 +4,24 @@ Loop a series of images or texts in a limited space
 
 ### Basic usage
 
-:::demo Combine `rp-carousel` with `rp-carousrp-item`, and you'll get a carousel. Content of each slide is completely customizable, and you just need to place it inside `rp-carousrp-item` tag. By default the carousel switches when mouse hovers over an indicator. Set `trigger` to `click`, and the carousel switches only when an indicator is clicked.
+:::demo Combine `rp-carousel` with `rp-carousel-item`, and you'll get a carousel. Content of each slide is completely customizable, and you just need to place it inside `rp-carousel-item` tag. By default the carousel switches when mouse hovers over an indicator. Set `trigger` to `click`, and the carousel switches only when an indicator is clicked.
 
 ```html
 <template>
     <div class="block">
         <span class="demonstration">Switch when indicator is hovered (default)</span>
         <rp-carousel height="150px">
-            <rp-carousrp-item v-for="item in 4" :key="item">
+            <rp-carousel-item v-for="item in 4" :key="item">
                 <h3 class="small">{{ item }}</h3>
-            </rp-carousrp-item>
+            </rp-carousel-item>
         </rp-carousel>
     </div>
     <div class="block">
         <span class="demonstration">Switch when indicator is clicked</span>
         <rp-carousel trigger="click" height="150px">
-            <rp-carousrp-item v-for="item in 4" :key="item">
+            <rp-carousel-item v-for="item in 4" :key="item">
                 <h3 class="small">{{ item }}</h3>
-            </rp-carousrp-item>
+            </rp-carousel-item>
         </rp-carousel>
     </div>
 </template>
@@ -56,9 +56,9 @@ Indicators can be displayed outside the carousel
 ```html
 <template>
     <rp-carousel indicator-position="outside">
-        <rp-carousrp-item v-for="item in 4" :key="item">
+        <rp-carousel-item v-for="item in 4" :key="item">
             <h3>{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -92,9 +92,9 @@ You can define when arrows are displayed
 ```html
 <template>
     <rp-carousel :interval="5000" arrow="always">
-        <rp-carousrp-item v-for="item in 4" :key="item">
+        <rp-carousel-item v-for="item in 4" :key="item">
             <h3>{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -128,9 +128,9 @@ When a page is wide enough but has limited height, you can activate card mode fo
 ```html
 <template>
     <rp-carousel :interval="4000" type="card" height="200px">
-        <rp-carousrp-item v-for="item in 6" :key="item">
+        <rp-carousel-item v-for="item in 6" :key="item">
             <h3 class="medium">{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -162,9 +162,9 @@ By default, `direction` is `horizontal`. Let carousel be displayed in the vertic
 ```html
 <template>
     <rp-carousel height="200px" direction="vertical" :autoplay="false">
-        <rp-carousrp-item v-for="item in 4" :key="item">
+        <rp-carousel-item v-for="item in 4" :key="item">
             <h3 class="medium">{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -214,11 +214,11 @@ By default, `direction` is `horizontal`. Let carousel be displayed in the vertic
 
 | Method        | Description                  | Parameters                                                                                               |
 | ------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------- |
-| setActiveItem | manually switch slide        | index of the slide to be switched to, starting from 0; or the `name` of corresponding `rp-carousrp-item` |
+| setActiveItem | manually switch slide        | index of the slide to be switched to, starting from 0; or the `name` of corresponding `rp-carousel-item` |
 | prev          | switch to the previous slide | —                                                                                                        |
 | next          | switch to the next slide     | —                                                                                                        |
 
-### Carousrp-Item Attributes
+### carousel-Item Attributes
 
 | Attribute | Description                                      | Type   | Accepted Values | Default |
 | --------- | ------------------------------------------------ | ------ | --------------- | ------- |

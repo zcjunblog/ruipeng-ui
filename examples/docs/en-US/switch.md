@@ -110,7 +110,7 @@ Switch is used for switching between two opposing states.
 | inactive-text       | text displayed when in `off` state                                              | string                    | —               | —       |
 | active-value        | switch value when in `on` state                                                 | boolean / string / number | —               | true    |
 | inactive-value      | switch value when in `off` state                                                | boolean / string / number | —               | false   |
-| active-color        | background color when in `on` state                                             | string                    | —               | #409EFF |
+| active-color        | background color when in `on` state                                             | string                    | —               | #1f9f85 |
 | inactive-color      | background color when in `off` state                                            | string                    | —               | #C0CCDA |
 | name                | input name of Switch                                                            | string                    | —               | —       |
 | validate-event      | whether to trigger form validation                                              | boolean                   | -               | true    |

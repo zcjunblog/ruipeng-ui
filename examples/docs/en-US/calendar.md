@@ -37,7 +37,7 @@ Display date.
 </rp-calendar>
 <style>
     .is-selected {
-        color: #1989fa;
+        color: #1f9f85;
     }
 </style>
 ```

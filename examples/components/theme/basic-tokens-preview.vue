@@ -23,8 +23,8 @@
     <div class="component-preview">
         <h4>Color</h4>
         <div class="color">
-            <el-row :gutter="12">
-                <el-col :span="4" v-for="(color, key) in colorLine" :key="key">
+            <rp-row :gutter="12">
+                <rp-col :span="4" v-for="(color, key) in colorLine" :key="key">
                     <div class="demo-color-box" :style="{ background: dataProxy(color) }">
                         {{ color }}
                         <div class="value">{{ dataProxy(color) }}</div>
@@ -37,70 +37,70 @@
                             ></div>
                         </div>
                     </div>
-                </el-col>
-            </el-row>
-            <el-row :gutter="12">
-                <el-col :span="4">
+                </rp-col>
+            </rp-row>
+            <rp-row :gutter="12">
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other" :style="{ background: color_text_primary }">
                         Primary Text
                         <div class="value">{{ color_text_primary }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other" :style="{ background: color_text_regular }">
                         Regular Text
                         <div class="value">{{ color_text_regular }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other" :style="{ background: color_text_secondary }">
                         Secondary Text
                         <div class="value">{{ color_text_secondary }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other" :style="{ background: color_text_placeholder }">
                         Placeholder
                         <div class="value">{{ color_text_placeholder }}</div>
                     </div>
-                </el-col>
-            </el-row>
+                </rp-col>
+            </rp-row>
 
-            <el-row :gutter="12">
-                <el-col :span="4">
+            <rp-row :gutter="12">
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other demo-color-box-lite" :style="{ background: border_color_base }">
                         Border Base
                         <div class="value">{{ border_color_base }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other demo-color-box-lite" :style="{ background: border_color_light }">
                         Border Light
                         <div class="value">{{ border_color_light }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other demo-color-box-lite" :style="{ background: border_color_lighter }">
                         Border Lighter
                         <div class="value">{{ border_color_lighter }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other demo-color-box-lite" :style="{ background: border_color_extra_light }">
                         Border Extralight
                         <div class="value">{{ border_color_extra_light }}</div>
                     </div>
-                </el-col>
-            </el-row>
+                </rp-col>
+            </rp-row>
 
-            <el-row :gutter="12">
-                <el-col :span="4">
+            <rp-row :gutter="12">
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other" :style="{ background: color_black }">
                         Background B
                         <div class="value">{{ color_black }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div
                         class="demo-color-box demo-color-box-other"
                         :style="{ background: color_white, color: '#303133', border: '1px solid #eee' }"
@@ -108,26 +108,26 @@
                         Background W
                         <div class="value">{{ color_white }}</div>
                     </div>
-                </el-col>
-                <el-col :span="4">
+                </rp-col>
+                <rp-col :span="4">
                     <div class="demo-color-box demo-color-box-other bg-transparent">
                         Background
                         <div class="value">Transparent</div>
                     </div>
-                </el-col>
-            </el-row>
+                </rp-col>
+            </rp-row>
         </div>
         <h4>Typography</h4>
-        <el-row :gutter="12">
-            <el-col :span="6" class="heading">
+        <rp-row :gutter="12">
+            <rp-col :span="6" class="heading">
                 <div :style="{ fontSize: font_size_extra_large }">Heading1</div>
                 <div :style="{ fontSize: font_size_large }">Heading2</div>
                 <div :style="{ fontSize: font_size_medium }">Heading3</div>
                 <div :style="{ fontSize: font_size_base }">Heading4</div>
                 <div :style="{ fontSize: font_size_small }">Heading5</div>
                 <div :style="{ fontSize: font_size_extra_small }">Heading6</div>
-            </el-col>
-            <el-col :span="9">
+            </rp-col>
+            <rp-col :span="9">
                 <div class="title">Example body text</div>
                 <p
                     class="paragraph"
@@ -140,8 +140,8 @@
                     With MySpace becoming more popular every day, there is the constant need to be different. There are millions of users. If
                     MySpace layouts are chosen well, then you can enhance your profile a great deal.
                 </p>
-            </el-col>
-            <el-col :span="9">
+            </rp-col>
+            <rp-col :span="9">
                 <div class="title">Example small text</div>
                 <p
                     class="paragraph"
@@ -155,8 +155,8 @@
                     desktops, while delivery people scan bar codes with handhelds and workers in the field stay in touch with the central office
                     via their notebooks. Computer hardware weaves itself through the fabric of our lives.
                 </p>
-            </el-col>
-        </el-row>
+            </rp-col>
+        </rp-row>
     </div>
 </template>
 
@@ -166,7 +166,7 @@ import { tintColor } from '../../color.js'
 import { ACTION_COMPONECT_SELECT, ACTION_USER_CONFIG_UPDATE } from './constant.js'
 
 const original = {
-    color_primary: '#409EFF',
+    color_primary: '#1f9f85',
     color_success: '#67C23A',
     color_warning: '#E6A23C',
     color_danger: '#F56C6C',

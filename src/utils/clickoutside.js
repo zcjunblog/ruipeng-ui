@@ -25,8 +25,9 @@ function createDocumentHandler(el, binding, vnode) {
             el.contains(mousedown.target) ||
             el === mouseup.target ||
             (vnode.context.popperElm && (vnode.context.popperElm.contains(mouseup.target) || vnode.context.popperElm.contains(mousedown.target)))
-        )
+        ) {
             return
+        }
 
         if (binding.expression && el[ctx].methodName && vnode.context[el[ctx].methodName]) {
             vnode.context[el[ctx].methodName]()

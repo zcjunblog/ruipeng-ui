@@ -263,7 +263,7 @@ _2020-04-13_
     -   Fix shortcut key not work at second time issue (#18983) (#19156 by @luckyCao)
     -   Don't show image-viewer when preview is false (#18967 by @inooNgt)
 -   Transfer
-    -   Fix incorrect line-height of el-transfer's first list item when it was used with el-form-item (#18917 by @Hanx)
+    -   Fix incorrect line-height of rp-transfer's first list item when it was used with rp-form-item (#18917 by @Hanx)
 -   InputNumber
     -   Correctly compute inputNumberDisabled (#18439 by @ashuser-pendo)
 -   Chore
@@ -299,7 +299,7 @@ _2019-11-26_
     -   Fixed row-style with display not work (#17002 by @a631807682)
     -   Fix header table not display (#17341 by @ziyoung)
 -   Calendar
-    -   Import el-button and el-button-group (#17376 by @masongzhi)
+    -   Import rp-button and rp-button-group (#17376 by @masongzhi)
 -   MessageBox
     -   Fix icon position error (#17410 by @nullptru)
 -   TimePicker
@@ -447,7 +447,7 @@ _2019-07-25_
 -   Checkbox
     -   Enhance css selector (#16006 by @Hazlank)
 -   Tree
-    -   Make el-tree generic (#15934 by @JeremyWuuuuu)
+    -   Make rp-tree generic (#15934 by @JeremyWuuuuu)
     -   Set isCurrent prop to False (#15870 by @kkkisme)
 -   Dropdown
     -   Fix split-button caret default color (#15931 by @JuniorTour)
@@ -655,7 +655,7 @@ _2019-05-30_
 -   Image
     -   Fix ssr and object-fit compatibility (#15346 by @SimonaliaChen)
 -   Input
-    -   Fix show-word-count style in el-form (#15359 by @lvjiaxuan)
+    -   Fix show-word-count style in rp-form (#15359 by @lvjiaxuan)
     -   Fix clear icon is not centered (#15354 by @YiiGuxing)
 -   Calendar
     -   Fix not correct day of week when the day is Sunday (#15399 by @qingdengyue)
@@ -676,7 +676,7 @@ _2019-05-30_
 -   Loading
     -   Fix dom not change when loading state change quickly (#15123 by @FAKER-A)
 -   Switch
-    -   Label with el-switch repeating event (#15178 by @FAKER-A)
+    -   Label with rp-switch repeating event (#15178 by @FAKER-A)
 -   Slider
     -   Fix style problem when clicking slider bar(#15561 by @luckyCao)
 -   Radio
@@ -771,7 +771,7 @@ _2019-04-25_
 -   Notification
     -   Fix title word break (#15008 by @iamkun)
 -   Form
-    -   Fix switching the rules in el-form not work (#14985 by @luckyCao)
+    -   Fix switching the rules in rp-form not work (#14985 by @luckyCao)
     -   Fix label style (#14969 by @ziyoung)
     -   Required FormItem displays asterisk when label is auto (#15144 by @ziyoung)
 -   Pagination
@@ -842,7 +842,7 @@ _2019-04-03_
 #### Bug fixes
 
 -   Form
-    -   Fix auto `label-width` style (#14955 by @ziyoung)
+    -   Fix auto `labrp-width` style (#14955 by @ziyoung)
 
 #### Optimization
 
@@ -866,7 +866,7 @@ _2019-04-03_
 -   Dialog
     -   Background color can be configured (#14939 by @ziyoung)
 -   Form
-    -   `label-width` supports auto width (#14944 by @ziyoung)
+    -   `labrp-width` supports auto width (#14944 by @ziyoung)
 
 #### Optimization
 
@@ -892,7 +892,7 @@ _2019-03-28_
 -   Table
     -   Footer follows body cell align (#14730 by @ziyoung)
 -   NavMenu
-    -   Fix click el-submenu trigger childMenu pop again bug (#14443 by @PanJiaChen)
+    -   Fix click rp-submenu trigger childMenu pop again bug (#14443 by @PanJiaChen)
 -   Dropdown
     -   Make compatible with 2.6 new v-slot syntax (#14832 by @ziyoung)
 -   ColorPicker
@@ -985,7 +985,7 @@ _2019-03-01_
 -   Timeline
     -   Add timeline component (by @jikkai in #14248)
 -   DropdownItem
-    -   Add icon prop to `el-dropdown-item` (by @gabrielboliveira in #14088)
+    -   Add icon prop to `rp-dropdown-item` (by @gabrielboliveira in #14088)
 -   Input
     -   Add show-password props (by @phshy0607 in #13966)
 -   Select
@@ -1006,7 +1006,7 @@ _2019-03-01_
 -   InputNumber
     -   Remove unnecessary parseFloat (by @JuniorTour in #14172)
 -   Menu
-    -   Add support for `el-menu-item` without index (by @georgyfarniev in #13298)
+    -   Add support for `rp-menu-item` without index (by @georgyfarniev in #13298)
 -   Table
     -   Remove some html DOM operations (by @elfman in #13643)
 -   Upload
@@ -1330,7 +1330,7 @@ _2018-07-03_
 
 _2018-06-26_
 
--   Now `class-name` and `label-class-name` of Table are reactive, #11626
+-   Now `class-name` and `labrp-class-name` of Table are reactive, #11626
 -   Fixed Table still highlighting clicked row when `highlight-current-row` is `false`, #11646
 -   Fixed a style bug of ButtonGroup when it has only one `round` or `circle` Button, #11605
 -   Fixed style of page size Select of Pagination, #11622
@@ -1402,7 +1402,7 @@ _2018-05-28_
 -   Radio
     -   Fixed disabled Radio still being selected when pressing space key, #11303
 -   MessageBox
-    -   Fixed the `el-popup-parent--hidden` class not removed when opening MessageBox in succession, #11371
+    -   Fixed the `rp-popup-parent--hidden` class not removed when opening MessageBox in succession, #11371
 
 ### 2.3.9
 

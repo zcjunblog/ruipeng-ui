@@ -36,7 +36,7 @@ You can use Element's built-in transitions directly. Before that, please read th
         width: 200px;
         height: 100px;
         border-radius: 4px;
-        background-color: #409eff;
+        background-color: #1f9f85;
         text-align: center;
         color: #fff;
         padding: 40px 20px;
@@ -87,7 +87,7 @@ You can use Element's built-in transitions directly. Before that, please read th
         width: 200px;
         height: 100px;
         border-radius: 4px;
-        background-color: #409eff;
+        background-color: #1f9f85;
         text-align: center;
         color: #fff;
         padding: 40px 20px;
@@ -135,7 +135,7 @@ For collapse effect, use the `rp-collapse-transition` component.
         width: 200px;
         height: 100px;
         border-radius: 4px;
-        background-color: #409eff;
+        background-color: #1f9f85;
         text-align: center;
         color: #fff;
         padding: 40px 20px;

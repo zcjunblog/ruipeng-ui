@@ -207,7 +207,7 @@
 | size            | 单选框组尺寸，仅对按钮形式的 Radio 或带有边框的 Radio 有效 | string                    | medium / small / mini | —       |
 | disabled        | 是否禁用                                                   | boolean                   | —                     | false   |
 | text-color      | 按钮形式的 Radio 激活时的文本颜色                          | string                    | —                     | #ffffff |
-| fill            | 按钮形式的 Radio 激活时的填充色和边框色                    | string                    | —                     | #409EFF |
+| fill            | 按钮形式的 Radio 激活时的填充色和边框色                    | string                    | —                     | #1f9f85 |
 
 ### Radio-group Events
 

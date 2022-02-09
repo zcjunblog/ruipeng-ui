@@ -4,7 +4,7 @@
 }
 
 #v3-banner {
-    background-color: #409eff;
+    background-color: #1f9f85;
     min-height: 30px;
     padding: 5px 60px;
     z-index: 19;
@@ -134,18 +134,18 @@
                 color: #888;
 
                 &:hover {
-                    color: #409eff;
+                    color: #1f9f85;
                 }
                 &.active {
                     font-weight: bold;
-                    color: #409eff;
+                    color: #1f9f85;
                 }
             }
         }
 
         a {
             text-decoration: none;
-            color: #1989fa;
+            color: #1f9f85;
             opacity: 0.5;
             display: block;
             padding: 0 22px;
@@ -163,7 +163,7 @@
                 left: calc(50% - 15px);
                 width: 30px;
                 height: 2px;
-                background: #409eff;
+                background: #1f9f85;
             }
         }
     }
@@ -199,7 +199,7 @@
     .is-active {
         span,
         i {
-            color: #409eff;
+            color: #1f9f85;
         }
         i {
             transform: rotateZ(180deg) translateY(3px);
@@ -209,7 +209,7 @@
     &:hover {
         span,
         i {
-            color: #409eff;
+            color: #1f9f85;
         }
     }
 }
@@ -323,32 +323,32 @@
 
                     <!-- 版本选择器 -->
                     <li class="nav-item nav-versions" v-show="isComponentPage">
-                        <el-dropdown trigger="click" class="nav-dropdown" :class="{ 'is-active': verDropdownVisible }">
+                        <rp-dropdown trigger="click" class="nav-dropdown" :class="{ 'is-active': verDropdownVisible }">
                             <span>
                                 {{ version }}
-                                <i class="el-icon-arrow-down el-icon--right"></i>
+                                <i class="rp-icon-arrow-down rp-icon--right"></i>
                             </span>
-                            <el-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleVerDropdownToggle">
-                                <el-dropdown-item v-for="item in Object.keys(versions)" :key="item" @click.native="switchVersion(item)">
+                            <rp-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleVerDropdownToggle">
+                                <rp-dropdown-item v-for="item in Object.keys(versions)" :key="item" @click.native="switchVersion(item)">
                                     {{ item }}
-                                </el-dropdown-item>
-                            </el-dropdown-menu>
-                        </el-dropdown>
+                                </rp-dropdown-item>
+                            </rp-dropdown-menu>
+                        </rp-dropdown>
                     </li>
 
                     <!-- 语言选择器 -->
                     <li class="nav-item lang-item">
-                        <el-dropdown trigger="click" class="nav-dropdown nav-lang" :class="{ 'is-active': langDropdownVisible }">
+                        <rp-dropdown trigger="click" class="nav-dropdown nav-lang" :class="{ 'is-active': langDropdownVisible }">
                             <span>
                                 {{ displayedLang }}
-                                <i class="el-icon-arrow-down el-icon--right"></i>
+                                <i class="rp-icon-arrow-down rp-icon--right"></i>
                             </span>
-                            <el-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleLangDropdownToggle">
-                                <el-dropdown-item v-for="(value, key) in langs" :key="key" @click.native="switchLang(key)">
+                            <rp-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleLangDropdownToggle">
+                                <rp-dropdown-item v-for="(value, key) in langs" :key="key" @click.native="switchLang(key)">
                                     {{ value }}
-                                </el-dropdown-item>
-                            </el-dropdown-menu>
-                        </el-dropdown>
+                                </rp-dropdown-item>
+                            </rp-dropdown-menu>
+                        </rp-dropdown>
                     </li>
                 </ul>
             </div>
@@ -452,10 +452,10 @@ export default {
         }
         xhr.open('GET', '/versions.json')
         xhr.send()
-        let primaryLast = '#409EFF'
+        let primaryLast = '#1f9f85'
         bus.$on(ACTION_USER_CONFIG_UPDATE, val => {
             let primaryColor = val.global['$--color-primary']
-            if (!primaryColor) primaryColor = '#409EFF'
+            if (!primaryColor) primaryColor = '#1f9f85'
             const base64svg = 'data:image/svg+xml;base64,'
             const imgSet = document.querySelectorAll('h1 img')
             imgSet.forEach(img => {

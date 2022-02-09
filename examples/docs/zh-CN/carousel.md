@@ -6,24 +6,24 @@
 
 适用广泛的基础用法
 
-:::demo 结合使用`rp-carousel`和`rp-carousrp-item`标签就得到了一个走马灯。幻灯片的内容是任意的，需要放在`rp-carousrp-item`标签中。默认情况下，在鼠标 hover 底部的指示器时就会触发切换。通过设置`trigger`属性为`click`，可以达到点击触发的效果。
+:::demo 结合使用`rp-carousel`和`rp-carousel-item`标签就得到了一个走马灯。幻灯片的内容是任意的，需要放在`rp-carousel-item`标签中。默认情况下，在鼠标 hover 底部的指示器时就会触发切换。通过设置`trigger`属性为`click`，可以达到点击触发的效果。
 
 ```html
 <template>
     <div class="block">
         <span class="demonstration">默认 Hover 指示器触发</span>
         <rp-carousel height="150px">
-            <rp-carousrp-item v-for="item in 4" :key="item">
+            <rp-carousel-item v-for="item in 4" :key="item">
                 <h3 class="small">{{ item }}</h3>
-            </rp-carousrp-item>
+            </rp-carousel-item>
         </rp-carousel>
     </div>
     <div class="block">
         <span class="demonstration">Click 指示器触发</span>
         <rp-carousel trigger="click" height="150px">
-            <rp-carousrp-item v-for="item in 4" :key="item">
+            <rp-carousel-item v-for="item in 4" :key="item">
                 <h3 class="small">{{ item }}</h3>
-            </rp-carousrp-item>
+            </rp-carousel-item>
         </rp-carousel>
     </div>
 </template>
@@ -58,9 +58,9 @@
 ```html
 <template>
     <rp-carousel indicator-position="outside">
-        <rp-carousrp-item v-for="item in 4" :key="item">
+        <rp-carousel-item v-for="item in 4" :key="item">
             <h3>{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -94,9 +94,9 @@
 ```html
 <template>
     <rp-carousel :interval="5000" arrow="always">
-        <rp-carousrp-item v-for="item in 4" :key="item">
+        <rp-carousel-item v-for="item in 4" :key="item">
             <h3>{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -130,9 +130,9 @@
 ```html
 <template>
     <rp-carousel :interval="4000" type="card" height="200px">
-        <rp-carousrp-item v-for="item in 6" :key="item">
+        <rp-carousel-item v-for="item in 6" :key="item">
             <h3 class="medium">{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -165,9 +165,9 @@
 ```html
 <template>
     <rp-carousel height="200px" direction="vertical" :autoplay="false">
-        <rp-carousrp-item v-for="item in 3" :key="item">
+        <rp-carousel-item v-for="item in 3" :key="item">
             <h3 class="medium">{{ item }}</h3>
-        </rp-carousrp-item>
+        </rp-carousel-item>
     </rp-carousel>
 </template>
 
@@ -217,11 +217,11 @@
 
 | 方法名        | 说明               | 参数                                                                          |
 | ------------- | ------------------ | ----------------------------------------------------------------------------- |
-| setActiveItem | 手动切换幻灯片     | 需要切换的幻灯片的索引，从 0 开始；或相应 `rp-carousrp-item` 的 `name` 属性值 |
+| setActiveItem | 手动切换幻灯片     | 需要切换的幻灯片的索引，从 0 开始；或相应 `rp-carousel-item` 的 `name` 属性值 |
 | prev          | 切换至上一张幻灯片 | —                                                                             |
 | next          | 切换至下一张幻灯片 | —                                                                             |
 
-### Carousrp-Item Attributes
+### carousel-Item Attributes
 
 | 参数  | 说明                                        | 类型   | 可选值 | 默认值 |
 | ----- | ------------------------------------------- | ------ | ------ | ------ |

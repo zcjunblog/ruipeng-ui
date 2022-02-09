@@ -34,7 +34,7 @@ const webpackConfig = {
         modules: ['node_modules']
     },
     devServer: {
-        host: 'localhost',
+        host: '0.0.0.0',
         port: 8085,
         publicPath: '/',
         hot: true
@@ -122,6 +122,7 @@ const webpackConfig = {
         })
     ],
     optimization: {
+        // minimize: false
         minimizer: []
     },
     devtool: '#eval-source-map'

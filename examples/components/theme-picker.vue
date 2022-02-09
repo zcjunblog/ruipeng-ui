@@ -22,7 +22,7 @@
 import Ruipeng from 'main/index.js'
 const { version } = Ruipeng
 
-const ORIGINAL_THEME = '#409EFF'
+const ORIGINAL_THEME = '#1f9f85'
 export default {
     data() {
         return {

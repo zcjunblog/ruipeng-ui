@@ -26,7 +26,7 @@
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;
@@ -137,7 +137,7 @@
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;
@@ -177,7 +177,7 @@
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;
@@ -211,7 +211,7 @@
 <style>
     .rp-dropdown-link {
         cursor: pointer;
-        color: #409eff;
+        color: #1f9f85;
     }
     .rp-icon-arrow-down {
         font-size: 12px;

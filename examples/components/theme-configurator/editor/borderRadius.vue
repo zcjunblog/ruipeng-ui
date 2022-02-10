@@ -1,9 +1,9 @@
 <template>
     <section class="config" :key="displayName">
         <div class="config-label">
-            <el-tooltip :content="displayName" placement="top">
+            <rp-tooltip :content="displayName" placement="top">
                 <span>{{ displayKeyName }}</span>
-            </el-tooltip>
+            </rp-tooltip>
         </div>
         <div class="config-content">
             <theme-input v-if="isGlobal" :val="value" @change="onChange"></theme-input>

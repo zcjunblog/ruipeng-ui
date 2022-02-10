@@ -838,7 +838,7 @@ _2019-04-03_
 #### 修复
 
 -   Form
-    -   修复 `labrp-width` 为 `auto` 的样式 (#14955 by @ziyoung)
+    -   修复 `label-width` 为 `auto` 的样式 (#14955 by @ziyoung)
 
 #### 优化
 
@@ -862,7 +862,7 @@ _2019-04-03_
 -   Dialog
     -   可以设置背景色 (#14939 by @ziyoung)
 -   Form
-    -   `labrp-width` 支持自动宽度 (#14944 by @ziyoung)
+    -   `label-width` 支持自动宽度 (#14944 by @ziyoung)
 
 #### 优化
 
@@ -1097,7 +1097,7 @@ _2019-01-26_
 
 #### 修复
 
--   修复升级 Webpack 4 产生的问题，无法具名 `import` 组件，`ELEMENT.locale()` 调用报错。（by @island205 in #14220）
+-   修复升级 Webpack 4 产生的问题，无法具名 `import` 组件，`RP.locale()` 调用报错。（by @island205 in #14220）
 -   恢复 2.4.11 文档 (by @iamkun in #14222)
 
 ### 2.5.0
@@ -1324,7 +1324,7 @@ _2018-07-03_
 
 _2018-06-26_
 
--   修复 Table 的 `class-name` 和 `labrp-class-name` 属性不支持动态更新的问题，#11626
+-   修复 Table 的 `class-name` 和 `label-class-name` 属性不支持动态更新的问题，#11626
 -   修复 Table 在 `highlight-current-row` 为 `false` 时点击行也会触发高亮的问题，#11691 #11563
 -   修复 ButtonGroup 中只有一个 `round` 或 `circle` 的 Button 时的样式错误，#11605
 -   修复在某些情况下 Pagination 的条目数选择器的样式错误，#11622

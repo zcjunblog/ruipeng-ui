@@ -29,10 +29,10 @@ Ruipeng ui 的 theme-chalk 使用 SCSS 编写，如果你的项目也使用了 S
 
 ```JS
 import Vue from 'vue'
-import Ruipeng from 'ruipeng-ui'
+import RuipengUI from 'ruipeng-ui'
 import './ruipeng-variables.scss'
 
-Vue.use(Ruipeng)
+Vue.use(RuipengUI)
 ```
 
 :::tip

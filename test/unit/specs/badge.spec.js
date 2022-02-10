@@ -1,52 +1,52 @@
-import { createTest, createVue, destroyVM } from '../util';
-import Badge from 'packages/badge';
+import { createTest, createVue, destroyVM } from '../util'
+import Badge from 'packages/badge'
 
 describe('Badge', () => {
-  let vm;
-  afterEach(() => {
-    destroyVM(vm);
-  });
+    let vm
+    afterEach(() => {
+        destroyVM(vm)
+    })
 
-  it('value', () => {
-    vm = createTest(Badge, { value: 80 });
-    expect(vm.content).to.equal(80);
-  });
+    it('value', () => {
+        vm = createTest(Badge, { value: 80 })
+        expect(vm.content).to.equal(80)
+    })
 
-  it('is fixed', () => {
-    vm = createVue(`
-      <el-badge>
+    it('is fixed', () => {
+        vm = createVue(`
+      <rp-badge>
         <button>click</button>
-      </el-badge>
-    `);
+      </rp-badge>
+    `)
 
-    expect(vm.$el.querySelector('.el-badge__content.is-fixed')).to.exist;
-  });
+        expect(vm.$el.querySelector('.rp-badge__content.is-fixed')).to.exist
+    })
 
-  it('is dot', () => {
-    vm = createVue(`
-      <el-badge is-dot>
+    it('is dot', () => {
+        vm = createVue(`
+      <rp-badge is-dot>
         <button>click</button>
-      </el-badge>
-    `);
+      </rp-badge>
+    `)
 
-    expect(vm.$el.querySelector('.el-badge__content.is-dot')).to.exist;
-  });
+        expect(vm.$el.querySelector('.rp-badge__content.is-dot')).to.exist
+    })
 
-  it('is dot with type', () => {
-    vm = createVue(`
-      <el-badge is-dot type="success">
+    it('is dot with type', () => {
+        vm = createVue(`
+      <rp-badge is-dot type="success">
         <button>click</button>
-      </el-badge>
-    `);
+      </rp-badge>
+    `)
 
-    expect(vm.$el.querySelector('.el-badge__content.is-dot')).to.exist;
-    expect(vm.$el.querySelector('.el-badge__content.el-badge__content--success.is-dot')).to.exist;
-  });
+        expect(vm.$el.querySelector('.rp-badge__content.is-dot')).to.exist
+        expect(vm.$el.querySelector('.rp-badge__content.rp-badge__content--success.is-dot')).to.exist
+    })
 
-  it('max', () => {
-    vm = createTest(Badge, { max: 100, value: 200 });
-    expect(vm.content).to.equal('100+');
-    vm = createTest(Badge, { max: 100, value: 80 });
-    expect(vm.content).to.equal(80);
-  });
-});
+    it('max', () => {
+        vm = createTest(Badge, { max: 100, value: 200 })
+        expect(vm.content).to.equal('100+')
+        vm = createTest(Badge, { max: 100, value: 80 })
+        expect(vm.content).to.equal(80)
+    })
+})

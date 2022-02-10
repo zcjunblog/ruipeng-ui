@@ -3,12 +3,12 @@
 @import "common/var";
 
 @include b(form) {
-  @include m(labrp-left) {
+  @include m(label-left) {
     & .rp-form-item__label {
       text-align: left;
     }
   }
-  @include m(labrp-top) {
+  @include m(label-top) {
     & .rp-form-item__label {
       float: none;
       display: inline-block;
@@ -30,7 +30,7 @@
       display: inline-block;
       vertical-align: top;
     }
-    &.rp-form--labrp-top .rp-form-item__content {
+    &.rp-form--label-top .rp-form-item__content {
       display: block;
     }
   }
@@ -84,7 +84,7 @@
     }
   }
 
-  @include e(labrp-wrap) {
+  @include e(label-wrap) {
     float: left;
     .rp-form-item__label {
       display: inline-block;
@@ -96,7 +96,7 @@
     text-align: right;
     vertical-align: middle;
     float: left;
-    font-size: $--form-labrp-font-size;
+    font-size: $--form-label-font-size;
     color: $--color-text-regular;
     line-height: 40px;
     padding: 0 12px 0 0;
@@ -133,7 +133,7 @@
   @include when(required) {
     @include pseudo('not(.is-no-asterisk)') {
       & > .rp-form-item__label:before,
-      & .rp-form-item__labrp-wrap > .rp-form-item__label:before {
+      & .rp-form-item__label-wrap > .rp-form-item__label:before {
         content: '*';
         color: $--color-danger;
         margin-right: 4px;

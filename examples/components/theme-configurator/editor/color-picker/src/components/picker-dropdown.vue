@@ -7,8 +7,8 @@
             </div>
             <alpha-slider v-if="showAlpha" ref="alpha" :color="color"></alpha-slider>
             <predefine v-if="predefine" :color="color" :colors="predefine"></predefine>
-            <div class="el-color-dropdown__btns">
-                <span class="el-color-dropdown__value">
+            <div class="rp-color-dropdown__btns">
+                <span class="rp-color-dropdown__value">
                     <rp-input
                         v-model="customInput"
                         @keyup.native.enter="handleConfirm"
@@ -24,7 +24,7 @@
           @click="$emit('clear')">
           {{ t('rp.colorpicker.clear') }}
         </rp-button> -->
-                <rp-button plain size="mini" type="primary" class="el-color-dropdown__btn" @click="confirmValue">
+                <rp-button plain size="mini" type="primary" class="rp-color-dropdown__btn" @click="confirmValue">
                     {{ t('el.colorpicker.confirm') }}
                 </rp-button>
             </div>

@@ -71,7 +71,7 @@ export default {
                 this.moving = false
             }, 0)
         })
-        // chrome.storage.local.remove('ELEMENT_THEME_USER_CONFIG');
+        // chrome.storage.local.remove('RP_THEME_USER_CONFIG');
         loadUserThemeFromLocal().then(result => {
             if (result) {
                 this.activeTab = 'gallery'

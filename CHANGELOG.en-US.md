@@ -842,7 +842,7 @@ _2019-04-03_
 #### Bug fixes
 
 -   Form
-    -   Fix auto `labrp-width` style (#14955 by @ziyoung)
+    -   Fix auto `label-width` style (#14955 by @ziyoung)
 
 #### Optimization
 
@@ -866,7 +866,7 @@ _2019-04-03_
 -   Dialog
     -   Background color can be configured (#14939 by @ziyoung)
 -   Form
-    -   `labrp-width` supports auto width (#14944 by @ziyoung)
+    -   `label-width` supports auto width (#14944 by @ziyoung)
 
 #### Optimization
 
@@ -1330,7 +1330,7 @@ _2018-07-03_
 
 _2018-06-26_
 
--   Now `class-name` and `labrp-class-name` of Table are reactive, #11626
+-   Now `class-name` and `label-class-name` of Table are reactive, #11626
 -   Fixed Table still highlighting clicked row when `highlight-current-row` is `false`, #11646
 -   Fixed a style bug of ButtonGroup when it has only one `round` or `circle` Button, #11605
 -   Fixed style of page size Select of Pagination, #11622

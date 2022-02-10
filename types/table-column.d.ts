@@ -73,7 +73,7 @@ export declare class RpTableColumn extends RuipengUIComponent {
   /** The order of the sorting strategies used when sorting the data. Works when `sortable` is `true`. */
   sortOrders: SortOrders[]
 
-  /** Whether column width can be resized. Works when border of `el-table` is `true` */
+  /** Whether column width can be resized. Works when border of `rp-table` is `true` */
   resizable: boolean
 
   /** Function that formats content */

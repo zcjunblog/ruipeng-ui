@@ -81,7 +81,7 @@ export default {
 
     computed: {
         dropdownSize() {
-            return this.size || (this.$ELEMENT || {}).size
+            return this.size || (this.$RP || {}).size
         }
     },
 

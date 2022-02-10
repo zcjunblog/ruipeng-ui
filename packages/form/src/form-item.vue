@@ -178,7 +178,7 @@ export default {
             return this.size || this._formSize
         },
         sizeClass() {
-            return this.rpFormItemSize || (this.$ELEMENT || {}).size
+            return this.rpFormItemSize || (this.$RP || {}).size
         }
     },
     data() {

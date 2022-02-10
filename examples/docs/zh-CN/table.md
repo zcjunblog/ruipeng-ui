@@ -1022,7 +1022,7 @@
     <rp-table :data="tableData" style="width: 100%">
         <rp-table-column type="expand">
             <template slot-scope="props">
-                <rp-form labrp-position="left" inline class="demo-table-expand">
+                <rp-form label-position="left" inline class="demo-table-expand">
                     <rp-form-item label="商品名称">
                         <span>{{ props.row.name }}</span>
                     </rp-form-item>
@@ -1694,7 +1694,7 @@
 | align                 | 对齐方式                                                                                                                                                                              | String                                  | left/center/right                                                                                    | left                              |
 | header-align          | 表头对齐方式，若不设置该项，则使用表格的对齐方式                                                                                                                                      | String                                  | left/center/right                                                                                    | —                                 |
 | class-name            | 列的 className                                                                                                                                                                        | string                                  | —                                                                                                    | —                                 |
-| labrp-class-name      | 当前列标题的自定义类名                                                                                                                                                                | string                                  | —                                                                                                    | —                                 |
+| label-class-name      | 当前列标题的自定义类名                                                                                                                                                                | string                                  | —                                                                                                    | —                                 |
 | selectable            | 仅对 type=selection 的列有效，类型为 Function，Function 的返回值用来决定这一行的 CheckBox 是否可以勾选                                                                                | Function(row, index)                    | —                                                                                                    | —                                 |
 | reserve-selection     | 仅对 type=selection 的列有效，类型为 Boolean，为 true 则会在数据更新之后保留之前选中的数据（需指定 `row-key`）                                                                        | Boolean                                 | —                                                                                                    | false                             |
 | filters               | 数据过滤的选项，数组格式，数组中的元素需要有 text 和 value 属性。                                                                                                                     | Array[{ text, value }]                  | —                                                                                                    | —                                 |

@@ -1,10 +1,10 @@
 import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
-/** The resizability of el-input component */
+/** The resizability of rp-input component */
 export type Resizability = 'none' | 'both' | 'horizontal' | 'vertical'
 export type InputType = 'text' | 'textarea'
 
-/** Controls how el-input component automatically sets size */
+/** Controls how rp-input component automatically sets size */
 export interface AutoSize {
   /** Minimum rows to show */
   minRows: number,

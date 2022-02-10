@@ -102,10 +102,10 @@ Like `Dialog`, `Drawer` can do many diverse interaction as you wanted.
 >
     <div class="demo-drawer__content">
         <rp-form :model="form">
-            <rp-form-item label="Name" :labrp-width="formLabelWidth">
+            <rp-form-item label="Name" :label-width="formLabelWidth">
                 <rp-input v-model="form.name" autocomplete="off"></rp-input>
             </rp-form-item>
-            <rp-form-item label="Area" :labrp-width="formLabelWidth">
+            <rp-form-item label="Area" :label-width="formLabelWidth">
                 <rp-select v-model="form.region" placeholder="Please select activity area">
                     <rp-option label="Area1" value="shanghai"></rp-option>
                     <rp-option label="Area2" value="beijing"></rp-option>

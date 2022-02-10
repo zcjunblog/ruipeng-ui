@@ -135,7 +135,7 @@ Display multiple fields in list form.
 
 ```html
 <rp-descriptions title="Customized style list" :column="3" border>
-    <rp-descriptions-item label="Username" labrp-class-name="my-label" content-class-name="my-content">kooriookami</rp-descriptions-item>
+    <rp-descriptions-item label="Username" label-class-name="my-label" content-class-name="my-content">kooriookami</rp-descriptions-item>
     <rp-descriptions-item label="Telephone">18100000000</rp-descriptions-item>
     <rp-descriptions-item label="Place">Suzhou</rp-descriptions-item>
     <rp-descriptions-item label="Remarks">

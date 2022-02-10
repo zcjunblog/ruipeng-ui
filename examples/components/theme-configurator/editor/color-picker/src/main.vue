@@ -77,7 +77,7 @@ export default {
         },
 
         colorSize() {
-            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$RP || {}).size
         },
 
         colorDisabled() {

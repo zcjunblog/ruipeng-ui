@@ -135,7 +135,7 @@
 
 ```html
 <rp-descriptions title="自定义样式列表" :column="3" border>
-    <rp-descriptions-item label="用户名" labrp-class-name="my-label" content-class-name="my-content">kooriookami</rp-descriptions-item>
+    <rp-descriptions-item label="用户名" label-class-name="my-label" content-class-name="my-content">kooriookami</rp-descriptions-item>
     <rp-descriptions-item label="手机号">18100000000</rp-descriptions-item>
     <rp-descriptions-item label="居住地">苏州市</rp-descriptions-item>
     <rp-descriptions-item label="备注">

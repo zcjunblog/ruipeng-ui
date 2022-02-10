@@ -150,7 +150,7 @@ export default {
         },
 
         checkboxSize() {
-            const temCheckboxSize = this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
+            const temCheckboxSize = this.size || this._rpFormItemSize || (this.$RP || {}).size
             return this.isGroup ? this._checkboxGroup.checkboxGroupSize || temCheckboxSize : temCheckboxSize
         }
     },

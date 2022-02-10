@@ -91,7 +91,7 @@
     }
 }
 
-.el-popover.footer-popover {
+.rp-popover.footer-popover {
     padding: 0;
     min-width: 120px;
     line-height: normal;

@@ -1,5 +1,5 @@
 <template>
-    <form class="rp-form" :class="[labelPosition ? 'rp-form--labrp-' + labelPosition : '', { 'rp-form--inline': inline }]">
+    <form class="rp-form" :class="[labelPosition ? 'rp-form--label-' + labelPosition : '', { 'rp-form--inline': inline }]">
         <slot></slot>
     </form>
 </template>

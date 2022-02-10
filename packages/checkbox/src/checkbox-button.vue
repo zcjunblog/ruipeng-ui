@@ -133,7 +133,7 @@ export default {
         },
 
         size() {
-            return this._checkboxGroup.checkboxGroupSize || this._rpFormItemSize || (this.$ELEMENT || {}).size
+            return this._checkboxGroup.checkboxGroupSize || this._rpFormItemSize || (this.$RP || {}).size
         },
 
         /* used to make the isDisabled judgment under max/min props */

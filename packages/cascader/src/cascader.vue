@@ -236,7 +236,7 @@ export default {
     computed: {
         realSize() {
             const _rpFormItemSize = (this.rpFormItem || {}).rpFormItemSize
-            return this.size || _rpFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || _rpFormItemSize || (this.$RP || {}).size
         },
         tagSize() {
             return ['small', 'mini'].indexOf(this.realSize) > -1 ? 'mini' : 'small'

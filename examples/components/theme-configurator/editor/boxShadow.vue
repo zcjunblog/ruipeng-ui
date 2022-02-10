@@ -4,7 +4,7 @@
             <rp-tooltip :content="displayName" placement="top">
                 <span>{{ displayKeyName }}</span>
             </rp-tooltip>
-            <rp-button class="plus-button" size="mini" round icon="el-icon-plus" @click.stop="onAddShadow"></rp-button>
+            <rp-button class="plus-button" size="mini" round icon="rp-icon-plus" @click.stop="onAddShadow"></rp-button>
         </div>
         <div class="config-content" v-for="(each, key) in valueArr" :key="key">
             <div class="content-10">
@@ -49,7 +49,7 @@
 .colorPicker {
     margin-left: 0;
 }
-.content-20 .el-input__suffix-inner span {
+.content-20 .rp-input__suffix-inner span {
     line-height: 28px;
 }
 .content-20 {
@@ -66,7 +66,7 @@
     padding: 5px 0;
 }
 /* ruipeng buton style override */
-.el-button--mini.is-round {
+.rp-button--mini.is-round {
     padding: 3px 3px;
 }
 </style>

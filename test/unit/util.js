@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Ruipeng from 'main/index.js'
+import RuipengUI from 'main/index.js'
 
-Vue.use(Ruipeng)
+Vue.use(RuipengUI)
 
 let id = 0
 

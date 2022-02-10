@@ -28,7 +28,7 @@ export default {
     },
     computed: {
         tagSize() {
-            return this.size || (this.$ELEMENT || {}).size
+            return this.size || (this.$RP || {}).size
         }
     },
     render(h) {

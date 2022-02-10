@@ -95,10 +95,10 @@
 <rp-drawer title="我嵌套了 Form !" :before-close="handleClose" :visible.sync="dialog" direction="ltr" custom-class="demo-drawer" ref="drawer">
     <div class="demo-drawer__content">
         <rp-form :model="form">
-            <rp-form-item label="活动名称" :labrp-width="formLabelWidth">
+            <rp-form-item label="活动名称" :label-width="formLabelWidth">
                 <rp-input v-model="form.name" autocomplete="off"></rp-input>
             </rp-form-item>
-            <rp-form-item label="活动区域" :labrp-width="formLabelWidth">
+            <rp-form-item label="活动区域" :label-width="formLabelWidth">
                 <rp-select v-model="form.region" placeholder="请选择活动区域">
                     <rp-option label="区域一" value="shanghai"></rp-option>
                     <rp-option label="区域二" value="beijing"></rp-option>

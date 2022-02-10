@@ -68,10 +68,10 @@ The content of Dialog can be anything, even a table or a form. This example show
 
 <rp-dialog title="Shipping address" :visible.sync="dialogFormVisible">
     <rp-form :model="form">
-        <rp-form-item label="Promotion name" :labrp-width="formLabelWidth">
+        <rp-form-item label="Promotion name" :label-width="formLabelWidth">
             <rp-input v-model="form.name" autocomplete="off"></rp-input>
         </rp-form-item>
-        <rp-form-item label="Zones" :labrp-width="formLabelWidth">
+        <rp-form-item label="Zones" :label-width="formLabelWidth">
             <rp-select v-model="form.region" placeholder="Please select a zone">
                 <rp-option label="Zone No.1" value="shanghai"></rp-option>
                 <rp-option label="Zone No.2" value="beijing"></rp-option>

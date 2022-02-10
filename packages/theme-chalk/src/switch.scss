@@ -96,12 +96,12 @@
 
   @include m(wide) {
     .rp-switch__label {
-      &.rp-switch__labrp--left {
+      &.rp-switch__label--left {
         span {
           left: 10px;
         }
       }
-      &.rp-switch__labrp--right {
+      &.rp-switch__label--right {
         span {
           right: 10px;
         }
@@ -109,8 +109,8 @@
     }
   }
 
-  & .labrp-fade-enter,
-  & .labrp-fade-leave-active {
+  & .label-fade-enter,
+  & .label-fade-leave-active {
     opacity: 0;
   }
 }

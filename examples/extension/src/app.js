@@ -6,11 +6,11 @@
  */
 import Vue from 'vue'
 import App from './editor/index'
-import Ruipeng from 'main/index.js'
+import RuipengUI from 'main/index.js'
 import 'packages/theme-chalk/src/index.scss'
 
 export default () => {
-    Vue.use(Ruipeng, { zIndex: 100000 })
+    Vue.use(RuipengUI, { zIndex: 100000 })
     const root = document.createElement('div')
     document.body.appendChild(root)
 

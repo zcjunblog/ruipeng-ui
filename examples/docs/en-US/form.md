@@ -9,7 +9,7 @@ It includes all kinds of input items, such as `input`, `select`, `radio` and `ch
 :::demo In each `form` component, you need a `form-item` field to be the container of your input item.
 
 ```html
-<rp-form ref="form" :model="form" labrp-width="120px">
+<rp-form ref="form" :model="form" label-width="120px">
     <rp-form-item label="Activity name">
         <rp-input v-model="form.name"></rp-input>
     </rp-form-item>
@@ -134,7 +134,7 @@ When the vertical space is limited and the form is relatively simple, you can pu
 
 Depending on your design, there are several different ways to align your label element.
 
-:::demo The `labrp-position` attribute decides how labels align, it can be `top` or `left`. When set to `top`, labels will be placed at the top of the form field.
+:::demo The `label-position` attribute decides how labels align, it can be `top` or `left`. When set to `top`, labels will be placed at the top of the form field.
 
 ```html
 <rp-radio-group v-model="labelPosition" size="small">
@@ -143,7 +143,7 @@ Depending on your design, there are several different ways to align your label e
     <rp-radio-button label="top">Top</rp-radio-button>
 </rp-radio-group>
 <div style="margin: 20px;"></div>
-<rp-form :labrp-position="labelPosition" labrp-width="100px" :model="formLabelAlign">
+<rp-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
     <rp-form-item label="Name">
         <rp-input v-model="formLabelAlign.name"></rp-input>
     </rp-form-item>
@@ -179,7 +179,7 @@ Form component allows you to verify your data, helping you find and correct erro
 :::demo Just add the `rules` attribute for `Form` component, pass validation rules, and set `prop` attribute for `Form-Item` as a specific key that needs to be validated. See more information at [async-validator](https://github.com/yiminghe/async-validator).
 
 ```html
-<rp-form :model="ruleForm" :rules="rules" ref="ruleForm" labrp-width="120px" class="demo-ruleForm">
+<rp-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
     <rp-form-item label="Activity name" prop="name">
         <rp-input v-model="ruleForm.name"></rp-input>
     </rp-form-item>
@@ -283,7 +283,7 @@ This example shows how to customize your own validation rules to finish a two-fa
 :::demo Here we use `status-icon` to reflect validation result as an icon.
 
 ```html
-<rp-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" labrp-width="120px" class="demo-ruleForm">
+<rp-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
     <rp-form-item label="Password" prop="pass">
         <rp-input type="password" v-model="ruleForm.pass" autocomplete="off"></rp-input>
     </rp-form-item>
@@ -379,7 +379,7 @@ Custom validate callback function must be called. See more advanced usage at [as
 :::demo In addition to passing all validation rules at once on the form component, you can also pass the validation rules or delete rules on a single form field dynamically.
 
 ```html
-<rp-form :model="dynamicValidateForm" ref="dynamicValidateForm" labrp-width="120px" class="demo-dynamic">
+<rp-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="120px" class="demo-dynamic">
     <rp-form-item
         prop="email"
         label="Email"
@@ -461,7 +461,7 @@ Custom validate callback function must be called. See more advanced usage at [as
 :::demo Number Validate need a `.number` modifier added on the input `v-model` binding，it's used to transform the string value to the number which is provided by Vuejs.
 
 ```html
-<rp-form :model="numberValidateForm" ref="numberValidateForm" labrp-width="100px" class="demo-ruleForm">
+<rp-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
     <rp-form-item
         label="age"
         prop="age"
@@ -508,7 +508,7 @@ Custom validate callback function must be called. See more advanced usage at [as
 :::
 
 :::tip
-When an `rp-form-item` is nested in another `rp-form-item`, its label width will be `0`. You can set `labrp-width` on that `rp-form-item` if needed.
+When an `rp-form-item` is nested in another `rp-form-item`, its label width will be `0`. You can set `label-width` on that `rp-form-item` if needed.
 :::
 
 ### Size control
@@ -518,7 +518,7 @@ All components in a Form inherit their `size` attribute from that Form. Similarl
 :::demo Still you can fine tune each component's `size` if you don't want that component to inherit its size from From or FormIten.
 
 ```html
-<rp-form ref="form" :model="sizeForm" labrp-width="120px" size="mini">
+<rp-form ref="form" :model="sizeForm" label-width="120px" size="mini">
     <rp-form-item label="Activity name">
         <rp-input v-model="sizeForm.name"></rp-input>
     </rp-form-item>
@@ -589,9 +589,9 @@ All components in a Form inherit their `size` attribute from that Form. Similarl
 | model                   | data of form component                                                                                                            | object  | —                     | —       |
 | rules                   | validation rules of form                                                                                                          | object  | —                     | —       |
 | inline                  | whether the form is inline                                                                                                        | boolean | —                     | false   |
-| labrp-position          | position of label. If set to 'left' or 'right', `labrp-width` prop is also required                                               | string  | left / right / top    | right   |
-| labrp-width             | width of label, e.g. '50px'. All its direct child form items will inherit this value. Width `auto` is supported.                  | string  | —                     | —       |
-| labrp-suffix            | suffix of the label                                                                                                               | string  | —                     | —       |
+| label-position          | position of label. If set to 'left' or 'right', `label-width` prop is also required                                               | string  | left / right / top    | right   |
+| label-width             | width of label, e.g. '50px'. All its direct child form items will inherit this value. Width `auto` is supported.                  | string  | —                     | —       |
+| label-suffix            | suffix of the label                                                                                                               | string  | —                     | —       |
 | hide-required-asterisk  | whether to hide a red asterisk (star) next to the required field label.                                                           | boolean | —                     | false   |
 | show-message            | whether to show the error message                                                                                                 | boolean | —                     | true    |
 | inline-message          | whether to display the error message inline with the form item                                                                    | boolean | —                     | false   |
@@ -621,7 +621,7 @@ All components in a Form inherit their `size` attribute from that Form. Similarl
 | -------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------------------------- | ------- |
 | prop           | a key of `model`. In the use of validate and resetFields method, the attribute is required             | string  | keys of model that passed to `form` |
 | label          | label                                                                                                  | string  | —                                   | —       |
-| labrp-width    | width of label, e.g. '50px'. Width `auto` is supported.                                                | string  | —                                   | —       |
+| label-width    | width of label, e.g. '50px'. Width `auto` is supported.                                                | string  | —                                   | —       |
 | required       | whether the field is required or not, will be determined by validation rules if omitted                | boolean | —                                   | false   |
 | rules          | validation rules of form                                                                               | object  | —                                   | —       |
 | error          | field error message, set its value and the field will validate error and show this message immediately | string  | —                                   | —       |

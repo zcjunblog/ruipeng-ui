@@ -168,7 +168,7 @@ export default {
             return (this.rpFormItem || {}).rpFormItemSize
         },
         inputNumberSize() {
-            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$RP || {}).size
         },
         inputNumberDisabled() {
             return this.disabled || !!(this.rpForm || {}).disabled

@@ -2,7 +2,7 @@ import { RuipengUIComponent, RuipengUIComponentSize } from './component'
 
 /** FormItem Component */
 export declare class RpFormItem extends RuipengUIComponent {
-  /** A key of `model` of the enclosing `el-form` component */
+  /** A key of `model` of the enclosing `rp-form` component */
   prop: string
 
   /** Label */

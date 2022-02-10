@@ -88,7 +88,7 @@ export default {
             return (this.rpFormItem || {}).rpFormItemSize
         },
         size() {
-            return this._radioGroup.radioGroupSize || this._rpFormItemSize || (this.$ELEMENT || {}).size
+            return this._radioGroup.radioGroupSize || this._rpFormItemSize || (this.$RP || {}).size
         },
         isDisabled() {
             return this.disabled || this._radioGroup.disabled || (this.rpForm || {}).disabled

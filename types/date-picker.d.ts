@@ -46,7 +46,7 @@ export interface Shortcut {
   onClick?: ShortcutClickEventHandler
 }
 
-/** Options of el-date-picker */
+/** Options of rp-date-picker */
 export interface DatePickerOptions {
   /** An object array to set shortcut options */
   shortcuts?: Shortcut[]

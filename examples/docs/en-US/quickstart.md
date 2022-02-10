@@ -270,7 +270,7 @@ Partial import Element：
 import Vue from 'vue'
 import { Button } from 'ruipeng-ui'
 
-Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 }
+Vue.prototype.$RP = { size: 'small', zIndex: 3000 }
 Vue.use(Button)
 ```
 

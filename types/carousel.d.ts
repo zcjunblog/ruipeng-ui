@@ -45,7 +45,7 @@ export declare class RpCarousel extends RuipengUIComponent {
   /**
    * Manually switch slide by carousel item's name
    *
-   * @param name The name of the corresponding `el-carousel-item`
+   * @param name The name of the corresponding `rp-carousel-item`
    */
   setActiveItem (name: string): void
 

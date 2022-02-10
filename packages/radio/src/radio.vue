@@ -110,7 +110,7 @@ export default {
             return (this.rpFormItem || {}).rpFormItemSize
         },
         radioSize() {
-            const temRadioSize = this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
+            const temRadioSize = this.size || this._rpFormItemSize || (this.$RP || {}).size
             return this.isGroup ? this._radioGroup.radioGroupSize || temRadioSize : temRadioSize
         },
         isDisabled() {

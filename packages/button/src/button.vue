@@ -62,7 +62,7 @@ export default {
             return (this.rpFormItem || {}).rpFormItemSize
         },
         buttonSize() {
-            return this.size || this._rpFormItemSize || (this.$ELEMENT || {}).size
+            return this.size || this._rpFormItemSize || (this.$RP || {}).size
         },
         buttonDisabled() {
             return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.rpForm || {}).disabled

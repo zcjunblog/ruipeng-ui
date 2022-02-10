@@ -478,7 +478,7 @@ export default {
 
     computed: {
         tableSize() {
-            return this.size || (this.$ELEMENT || {}).size
+            return this.size || (this.$RP || {}).size
         },
 
         bodyWrapper() {

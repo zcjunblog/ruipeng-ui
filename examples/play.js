@@ -5,11 +5,11 @@
  * @FilePath: \ruipeng-ui\examples\play.js
  */
 import Vue from 'vue'
-import Ruipeng from 'main/index.js'
+import RuipengUI from 'main/index.js'
 import App from './play/index.vue'
 import 'packages/theme-chalk/src/index.scss'
 
-Vue.use(Ruipeng)
+Vue.use(RuipengUI)
 
 new Vue({
     // eslint-disable-line

@@ -20,7 +20,7 @@ export default {
                 }
             }
             return (
-                <div class="rp-form-item__labrp-wrap" style={style}>
+                <div class="rp-form-item__label-wrap" style={style}>
                     {slots}
                 </div>
             )

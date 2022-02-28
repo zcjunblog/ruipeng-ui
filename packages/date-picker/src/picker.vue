@@ -804,7 +804,7 @@ export default {
             this.picker.defaultValue = this.defaultValue
             this.picker.defaultTime = this.defaultTime
             this.picker.popperClass = this.popperClass
-            this.popperRpm = this.picker.$el
+            this.popperElm = this.picker.$el
             this.picker.width = this.reference.getBoundingClientRect().width
             this.picker.showTime = this.type === 'datetime' || this.type === 'datetimerange'
             this.picker.selectionMode = this.selectionMode

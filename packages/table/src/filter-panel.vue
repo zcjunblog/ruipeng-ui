@@ -165,8 +165,8 @@ export default {
     },
 
     mounted() {
-        this.popperRpm = this.$el
-        this.referenceRpm = this.cell
+        this.popperElm = this.$el
+        this.referenceElm = this.cell
         this.table.bodyWrapper.addEventListener('scroll', () => {
             this.updatePopper()
         })

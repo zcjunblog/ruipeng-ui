@@ -162,7 +162,7 @@ export default {
         if (value) {
             this.color.fromString(value)
         }
-        this.popperRpm = this.$refs.dropdown.$el
+        this.popperElm = this.$refs.dropdown.$el
     },
 
     data() {

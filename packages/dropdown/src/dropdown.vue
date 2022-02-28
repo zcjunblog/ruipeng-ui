@@ -70,10 +70,10 @@ export default {
         return {
             timeout: null,
             visible: false,
-            triggerRpm: null,
+            triggerElm: null,
             menuItems: null,
             menuItemsArray: null,
-            dropdownRpm: null,
+            dropdownElm: null,
             focusing: false,
             listId: `dropdown-menu-${generateId()}`
         }
@@ -129,7 +129,7 @@ export default {
             if (this.disabled) return
             this.removeTabindex()
             if (this.tabindex >= 0) {
-                this.resetTabindex(this.triggerRpm)
+                this.resetTabindex(this.triggerElm)
             }
             clearTimeout(this.timeout)
             this.timeout = setTimeout(
@@ -186,7 +186,7 @@ export default {
                 ev.stopPropagation()
             } else if (keyCode === 13) {
                 // enter选中
-                this.triggerRpmFocus()
+                this.triggerElmFocus()
                 target.click()
                 if (this.hideOnClick) {
                     // click关闭
@@ -195,7 +195,7 @@ export default {
             } else if ([9, 27].indexOf(keyCode) > -1) {
                 // tab // esc
                 this.hide()
-                this.triggerRpmFocus()
+                this.triggerElmFocus()
             }
         },
         resetTabindex(ele) {
@@ -204,50 +204,50 @@ export default {
             ele.setAttribute('tabindex', '0') // 下次期望的聚焦元素
         },
         removeTabindex() {
-            this.triggerRpm.setAttribute('tabindex', '-1')
+            this.triggerElm.setAttribute('tabindex', '-1')
             this.menuItemsArray.forEach(item => {
                 item.setAttribute('tabindex', '-1')
             })
         },
         initAria() {
-            this.dropdownRpm.setAttribute('id', this.listId)
-            this.triggerRpm.setAttribute('aria-haspopup', 'list')
-            this.triggerRpm.setAttribute('aria-controls', this.listId)
+            this.dropdownElm.setAttribute('id', this.listId)
+            this.triggerElm.setAttribute('aria-haspopup', 'list')
+            this.triggerElm.setAttribute('aria-controls', this.listId)
 
             if (!this.splitButton) {
                 // 自定义
-                this.triggerRpm.setAttribute('role', 'button')
-                this.triggerRpm.setAttribute('tabindex', this.tabindex)
-                this.triggerRpm.setAttribute('class', (this.triggerRpm.getAttribute('class') || '') + ' rp-dropdown-selfdefine') // 控制
+                this.triggerElm.setAttribute('role', 'button')
+                this.triggerElm.setAttribute('tabindex', this.tabindex)
+                this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' rp-dropdown-selfdefine') // 控制
             }
         },
         initEvent() {
             let { trigger, show, hide, handleClick, splitButton, handleTriggerKeyDown, handleItemKeyDown } = this
-            this.triggerRpm = splitButton ? this.$refs.trigger.$el : this.$slots.default[0].elm
+            this.triggerElm = splitButton ? this.$refs.trigger.$el : this.$slots.default[0].elm
 
-            let dropdownRpm = this.dropdownRpm
+            let dropdownElm = this.dropdownElm
 
-            this.triggerRpm.addEventListener('keydown', handleTriggerKeyDown) // triggerRpm keydown
-            dropdownRpm.addEventListener('keydown', handleItemKeyDown, true) // item keydown
+            this.triggerElm.addEventListener('keydown', handleTriggerKeyDown) // triggerElm keydown
+            dropdownElm.addEventListener('keydown', handleItemKeyDown, true) // item keydown
             // 控制自定义元素的样式
             if (!splitButton) {
-                this.triggerRpm.addEventListener('focus', () => {
+                this.triggerElm.addEventListener('focus', () => {
                     this.focusing = true
                 })
-                this.triggerRpm.addEventListener('blur', () => {
+                this.triggerElm.addEventListener('blur', () => {
                     this.focusing = false
                 })
-                this.triggerRpm.addEventListener('click', () => {
+                this.triggerElm.addEventListener('click', () => {
                     this.focusing = false
                 })
             }
             if (trigger === 'hover') {
-                this.triggerRpm.addEventListener('mouseenter', show)
-                this.triggerRpm.addEventListener('mouseleave', hide)
-                dropdownRpm.addEventListener('mouseenter', show)
-                dropdownRpm.addEventListener('mouseleave', hide)
+                this.triggerElm.addEventListener('mouseenter', show)
+                this.triggerElm.addEventListener('mouseleave', hide)
+                dropdownElm.addEventListener('mouseenter', show)
+                dropdownElm.addEventListener('mouseleave', hide)
             } else if (trigger === 'click') {
-                this.triggerRpm.addEventListener('click', handleClick)
+                this.triggerElm.addEventListener('click', handleClick)
             }
         },
         handleMenuItemClick(command, instance) {
@@ -256,12 +256,12 @@ export default {
             }
             this.$emit('command', command, instance)
         },
-        triggerRpmFocus() {
-            this.triggerRpm.focus && this.triggerRpm.focus()
+        triggerElmFocus() {
+            this.triggerElm.focus && this.triggerElm.focus()
         },
         initDomOperation() {
-            this.dropdownRpm = this.popperRpm
-            this.menuItems = this.dropdownRpm.querySelectorAll("[tabindex='-1']")
+            this.dropdownElm = this.popperElm
+            this.menuItems = this.dropdownElm.querySelectorAll("[tabindex='-1']")
             this.menuItemsArray = [].slice.call(this.menuItems)
 
             this.initEvent()
@@ -277,9 +277,9 @@ export default {
             hide()
         }
 
-        let triggerRpm = null
+        let triggerElm = null
         if (splitButton) {
-            triggerRpm = (
+            triggerElm = (
                 <rp-button-group>
                     <rp-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick} disabled={disabled}>
                         {this.$slots.default}
@@ -290,20 +290,20 @@ export default {
                 </rp-button-group>
             )
         } else {
-            triggerRpm = this.$slots.default
-            const vnodeData = triggerRpm[0].data || {}
+            triggerElm = this.$slots.default
+            const vnodeData = triggerElm[0].data || {}
             let { attrs = {} } = vnodeData
             if (disabled && !attrs.disabled) {
                 attrs.disabled = true
                 vnodeData.attrs = attrs
             }
         }
-        const menuRpm = disabled ? null : this.$slots.dropdown
+        const menuElm = disabled ? null : this.$slots.dropdown
 
         return (
             <div class="rp-dropdown" v-clickoutside={hide} aria-disabled={disabled}>
-                {triggerRpm}
-                {menuRpm}
+                {triggerElm}
+                {menuElm}
             </div>
         )
     }

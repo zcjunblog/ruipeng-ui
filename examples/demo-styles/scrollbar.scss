@@ -1,0 +1,18 @@
+.demo-block.demo-scrollbar{
+    .scroll-y {
+        height: 300px;
+        .rp-scrollbar__wrap {
+            overflow-x: hidden;
+        }
+    }
+    .scroll-x {
+        width:800px;
+        .box {
+            min-width: 500px;
+            white-space: nowrap;
+        }
+        .el-scrollbar__wrap{
+            overflow-y: hidden;
+        }
+    }
+}

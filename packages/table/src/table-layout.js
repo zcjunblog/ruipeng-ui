@@ -97,8 +97,8 @@ class TableLayout {
         if (this.showHeader && !headerWrapper) return
 
         // fix issue (https://github.com/RpemeFE/element/pull/16956)
-        const headerTrRpm = headerWrapper ? headerWrapper.querySelector('.rp-table__header tr') : null
-        const noneHeader = this.headerDisplayNone(headerTrRpm)
+        const headerTrElm = headerWrapper ? headerWrapper.querySelector('.rp-table__header tr') : null
+        const noneHeader = this.headerDisplayNone(headerTrElm)
 
         const headerHeight = (this.headerHeight = !this.showHeader ? 0 : headerWrapper.offsetHeight)
         if (this.showHeader && !noneHeader && headerWrapper.offsetWidth > 0 && (this.table.columns || []).length > 0 && headerHeight < 2) {

@@ -180,9 +180,9 @@ export default {
             /* istanbul ignore if */
             if (!val) return
             this.$nextTick(_ => {
-                const inputRpm = this.$refs.input.$el
-                if (inputRpm) {
-                    this.pickerWidth = inputRpm.getBoundingClientRect().width + 10
+                const inputElm = this.$refs.input.$el
+                if (inputElm) {
+                    this.pickerWidth = inputElm.getBoundingClientRect().width + 10
                 }
             })
         },

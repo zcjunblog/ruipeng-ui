@@ -44,8 +44,8 @@ export default {
     },
 
     mounted() {
-        this.dropdown.popperRpm = this.popperRpm = this.$el
-        this.referenceRpm = this.dropdown.$el
+        this.dropdown.popperElm = this.popperElm = this.$el
+        this.referenceElm = this.dropdown.$el
         // compatible with 2.6 new v-slot syntax
         // issue link https://github.com/RpemeFE/element/issues/14345
         this.dropdown.initDomOperation()

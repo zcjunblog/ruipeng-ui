@@ -299,6 +299,10 @@
                         {
                             "path": "/drawer",
                             "title": "Drawer 抽屉"
+                        },
+                        {
+                            "path": "/scrollbar",
+                            "title": "scrollbar 滚动条"
                         }
                     ]
                 }
@@ -605,6 +609,10 @@
                         {
                             "path": "/drawer",
                             "title": "Drawer"
+                        },
+                        {
+                            "path": "/scrollbar",
+                            "title": "scrollbar"
                         }
                     ]
                 }

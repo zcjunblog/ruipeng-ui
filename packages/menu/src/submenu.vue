@@ -225,8 +225,8 @@ export default {
             this.currentPlacement = this.mode === 'horizontal' && this.isFirstLevel ? 'bottom-start' : 'right-start'
         },
         initPopper() {
-            this.referenceRpm = this.$el
-            this.popperRpm = this.$refs.menu
+            this.referenceElm = this.$el
+            this.popperElm = this.$refs.menu
             this.updatePlacement()
         }
     },

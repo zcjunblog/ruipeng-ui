@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-01-27 17:12:59
  * @LastEditors: zhaozc
- * @LastEditTime: 2022-02-09 09:54:21
+ * @LastEditTime: 2022-02-11 15:29:50
  * @FilePath: \ruipeng-ui\examples\entry.js
  */
 // 官网项目的入口，就是一个普通的 vue 项目
@@ -26,6 +26,7 @@ import title from './i18n/title'
 
 // 组件库样式
 import 'packages/theme-chalk/src/index.scss'
+// 组件库文档md文件演示demo的样式
 import './demo-styles/index.scss'
 import './assets/styles/common.css'
 import './assets/styles/fonts/style.css'

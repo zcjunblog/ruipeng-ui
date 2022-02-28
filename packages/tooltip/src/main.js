@@ -110,13 +110,13 @@ export default {
     },
 
     mounted() {
-        this.referenceRpm = this.$el
+        this.referenceElm = this.$el
         if (this.$el.nodeType === 1) {
             this.$el.setAttribute('aria-describedby', this.tooltipId)
             this.$el.setAttribute('tabindex', this.tabindex)
-            on(this.referenceRpm, 'mouseenter', this.show)
-            on(this.referenceRpm, 'mouseleave', this.hide)
-            on(this.referenceRpm, 'focus', () => {
+            on(this.referenceElm, 'mouseenter', this.show)
+            on(this.referenceElm, 'mouseleave', this.hide)
+            on(this.referenceElm, 'focus', () => {
                 if (!this.$slots.default || !this.$slots.default.length) {
                     this.handleFocus()
                     return
@@ -128,8 +128,8 @@ export default {
                     this.handleFocus()
                 }
             })
-            on(this.referenceRpm, 'blur', this.handleBlur)
-            on(this.referenceRpm, 'click', this.removeFocusing)
+            on(this.referenceElm, 'blur', this.handleBlur)
+            on(this.referenceElm, 'click', this.removeFocusing)
         }
         // fix issue https://github.com/RpemeFE/element/issues/14424
         if (this.value && this.popperVM) {
@@ -143,9 +143,9 @@ export default {
     watch: {
         focusing(val) {
             if (val) {
-                addClass(this.referenceRpm, 'focusing')
+                addClass(this.referenceElm, 'focusing')
             } else {
-                removeClass(this.referenceRpm, 'focusing')
+                removeClass(this.referenceElm, 'focusing')
             }
         }
     },
@@ -232,7 +232,7 @@ export default {
     },
 
     destroyed() {
-        const reference = this.referenceRpm
+        const reference = this.referenceElm
         if (reference.nodeType === 1) {
             off(reference, 'mouseenter', this.show)
             off(reference, 'mouseleave', this.hide)

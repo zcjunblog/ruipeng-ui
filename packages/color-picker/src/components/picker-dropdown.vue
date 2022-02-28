@@ -84,8 +84,8 @@ export default {
     },
 
     mounted() {
-        this.$parent.popperRpm = this.popperRpm = this.$el
-        this.referenceRpm = this.$parent.$el
+        this.$parent.popperElm = this.popperElm = this.$el
+        this.referenceElm = this.$parent.$el
     },
 
     watch: {
